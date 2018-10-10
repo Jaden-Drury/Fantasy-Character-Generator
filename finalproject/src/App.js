@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Babarian from '.\Barbarian.js';
+
 
 class App extends Component {
     // constructor(props){
@@ -22,7 +24,7 @@ class App extends Component {
               <option></option>
           </select>
 
-
+        <Barbarian />
 
       </div>
     );

@@ -9,3 +9,4 @@ class Barbarian extends Component {
 
 
 }
+export default Barbarian;
