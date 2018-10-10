@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Barbarian from './Barbarian.js';
+import Barbarian from './classes/Barbarian.js';
 
 
 class App extends Component {
