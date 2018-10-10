@@ -1,0 +1,13 @@
+.App {
+  background-image: url('./185bd5f7e236127545bc873dd42230b1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+
+  text-align: center;
+  color: white;
+
+
+}
