@@ -12,6 +12,12 @@
 
 }
 
-select{
-
+.Custom{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+}
+.Custom h2{
+    padding-right: 20px;
 }

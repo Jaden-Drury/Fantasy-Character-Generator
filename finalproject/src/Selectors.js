@@ -5,8 +5,6 @@
 import React, { Component } from 'react';
 
 
-
-
 class Selectors extends Component {
 
     constructor(props){
@@ -14,23 +12,46 @@ class Selectors extends Component {
         this.state = {
             class: "",
             race: "",
-            level: ""
+            level: "",
         };
+
+        // This binding is necessary to make `this` work in the callback
+        this.handleChange = this.handleChange.bind(this)
+        this.handleChangeRace = this.handleChangeRace.bind(this)
+        this.handleChangeLevel = this.handleChangeLevel.bind(this)
+        this.generate = this.generate.bind(this)
     }
 
-    generate(){
 
-        console.log('the button was clicked');
+    handleChange(event) {
+        this.setState({class: event.target.value}); //the function that pulls from the class selector and sets the state of class to it
+    }
+
+    handleChangeRace(event){
+        this.setState({race: event.target.value}); //the function that pulls from the race selector and sets the state of race to it
+    }
+
+    handleChangeLevel(event){
+        this.setState({level: event.target.value}); //the function that pulls from the level selector and sets the state of level to it
+    }
+
+
+    generate(){
+        console.log("Class : " + this.state.class);
+        console.log("Race: " + this.state.race);        //this is a console log in the browser to see the updated state when the generate button is clicked
+        console.log("Level: " + this.state.level);
     }
 
 
     render() {
-        console.log(this.state.class)
         return (
             <div className="Selectors">
 
                 <div className="Custom">
-                    <select >
+
+                    <h2> Class: </h2>
+
+                    <select value={this.state.class} onChange={this.handleChange}>
                         <option value={""}>Select a Class</option>
                         <option value={"Barbarian"}>Barbarian</option>
                         <option value={"Bard"}>Bard</option>
@@ -51,7 +72,30 @@ class Selectors extends Component {
                 <br/>
 
                 <div className="Custom">
-                    <select>
+
+                    <h2> Race: </h2>
+
+                    <select value={this.state.race} onChange={this.handleChangeRace}>
+                        <option value={""}>Select a Race</option>
+                        <option value={"Dragonborn"}>Dragonborn</option>
+                        <option value={"Dwarf"}>Dwarf</option>
+                        <option value={"Elf"}>Elf</option>
+                        <option value={"Gnome"}>Gnome</option>
+                        <option value={"Half-Elf"}>Half-Elf</option>
+                        <option value={"Half-Orc"}>Half-Orc</option>
+                        <option value={"Halfling"}>Halfling</option>
+                        <option value={"Human"}>Human</option>
+                        <option value={"Tiefling"}>Tiefling</option>
+                    </select>
+                </div>
+
+                <br/>
+
+                <div className="Custom">
+
+                    <h2> Level: </h2>
+
+                    <select value={this.state.level} onChange={this.handleChangeLevel}>
                         <option value={""}>Select a Level</option>
                         <option value={"1"}>1</option>
                         <option value={"2"}>2</option>
@@ -89,26 +133,12 @@ class Selectors extends Component {
                 <br/>
 
                 <div className="Custom">
-                    <select>
-                        <option value={""}>Select a Race</option>
-                        <option value={"Dragonborn"}>Dragonborn</option>
-                        <option value={"Dwarf"}>Dwarf</option>
-                        <option value={"Elf"}>Elf</option>
-                        <option value={"Gnome"}>Gnome</option>
-                        <option value={"Half-Elf"}>Half-Elf</option>
-                        <option value={"Half-Orc"}>Half-Orc</option>
-                        <option value={"Halfling"}>Halfling</option>
-                        <option value={"Human"}>Human</option>
-                        <option value={"Tiefling"}>Tiefling</option>
-                    </select>
-                </div>
-
-                <br/>
-
-                <div className="Custom">
                     <button onClick={this.generate} >Generate Character</button>
                 </div>
 
+                {/*<p> Your Class is: {this.state.class} </p>*/}
+                {/*/!*<p> Your Race is: {this.state.race} </p>*!/      this block renders the input information on the screen*/}
+                {/*<p> Your Level is: {this.state.level} </p>*/}
 
             </div>
         );
