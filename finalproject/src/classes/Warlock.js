@@ -5,8 +5,16 @@
 import React, { Component } from 'react';
 
 class Warlock extends Component {
+    render() {
+        return (
 
+            <div>
 
+                <p> Warlock </p>
 
-
+            </div>
+        )
+    }
 }
+
+export default Warlock;
