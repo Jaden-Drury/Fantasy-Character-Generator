@@ -6,8 +6,16 @@
 import React, { Component } from 'react';
 
 class Rogue extends Component {
+    render() {
+        return (
 
+            <div>
 
+                <p> Rogue </p>
 
-
+            </div>
+        )
+    }
 }
+
+export default Rogue;
