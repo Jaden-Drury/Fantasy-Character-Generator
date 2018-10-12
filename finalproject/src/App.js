@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Barbarian from './classes/Barbarian.js';
+import Selectors from './Selectors';
 
 
 class App extends Component {
@@ -17,11 +17,9 @@ class App extends Component {
     return (
       <div className="App">
 
-        <h1>Character Gen</h1>
+        <h1>D&D 5e Character Generator</h1>
 
-          <select>
-              <option></option>
-          </select>
+        <Selectors/>
 
 
       </div>
