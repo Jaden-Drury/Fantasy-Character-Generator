@@ -23,7 +23,7 @@ class App extends Component {
         <div className="App">
 
 
-            <h1>D&D 5e Character Generator</h1>
+            <h1>D&D 5E CHARACTER GENERATOR</h1>
 
         <Selectors/>
 
