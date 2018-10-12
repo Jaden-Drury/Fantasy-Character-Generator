@@ -1,7 +1,7 @@
 /**
  * Created by jadendrury on 10/11/18.
  */
-import React, {Component} from './react';
+import React, {Component} from 'react';
 
 
 class PopUp extends Component{

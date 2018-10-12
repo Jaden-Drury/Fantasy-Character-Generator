@@ -3,7 +3,12 @@
  */
 
 import React, { Component } from 'react';
-
+import Printable from './Printable';
+import {
+    BrowserRouter as Router,
+    Route,
+    Link
+} from 'react-router-dom'
 
 class Selectors extends Component {
 
@@ -13,6 +18,7 @@ class Selectors extends Component {
             class: "",
             race: "",
             level: "",
+            PrintableVisible: false,
         };
 
         // This binding is necessary to make `this` work in the callback
@@ -45,6 +51,7 @@ class Selectors extends Component {
 
     render() {
         return (
+            <Router>
             <div className="Selectors">
 
                 <div className="Custom">
@@ -132,15 +139,18 @@ class Selectors extends Component {
 
                 <br/>
 
+                <Route path="/Printable" component={Printable} />
+
                 <div className="Custom">
+                    <Link to="/Printable" target={'blank'}>
+
                     <button onClick={this.generate} >Generate Character</button>
+
+                    </Link>
                 </div>
 
-                {/*<p> Your Class is: {this.state.class} </p>*/}
-                {/*/!*<p> Your Race is: {this.state.race} </p>*!/      this block renders the input information on the screen*/}
-                {/*<p> Your Level is: {this.state.level} </p>*/}
-
             </div>
+            </Router>
         );
     }
 }
