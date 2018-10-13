@@ -4,6 +4,7 @@
 
 import React, { Component } from 'react';
 import Printable from './Printable';
+import './App.css';
 import {
     BrowserRouter as Router,
     Route,
