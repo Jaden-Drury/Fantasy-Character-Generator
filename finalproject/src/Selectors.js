@@ -29,17 +29,17 @@ class Selectors extends Component {
     }
 
 
-    handleChange(event) {
-        this.setState({class: event.target.value}); //the function that pulls from the class selector and sets the state of class to it
-    }
+    handleChange(event){
+    this.setState({class: event.target.value}); //the function that pulls from the class selector and sets the state of class to it
+}
 
-    handleChangeRace(event){
-        this.setState({race: event.target.value}); //the function that pulls from the race selector and sets the state of race to it
-    }
+handleChangeRace(event){
+    this.setState({race: event.target.value}); //the function that pulls from the race selector and sets the state of race to it
+}
 
-    handleChangeLevel(event){
-        this.setState({level: event.target.value}); //the function that pulls from the level selector and sets the state of level to it
-    }
+handleChangeLevel(event){
+    this.setState({level: event.target.value}); //the function that pulls from the level selector and sets the state of level to it
+}
 
 
     generate(){

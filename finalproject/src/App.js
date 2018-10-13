@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Selectors from './Selectors';
+// import ClassSkills from './ClassSkills';
 
 class App extends Component {
     constructor(props){
@@ -10,12 +11,12 @@ class App extends Component {
         };
     }
 
-    componentDidMount(){
-        if(this.state.PrintableVisible === true) {
-            console.log("true");
-        }
-        console.log("false");
-    }//https://reactjs.org/docs/conditional-rendering.html
+    // componentDidMount(){
+    //     if(this.state.PrintableVisible === true) {
+    //         console.log("true");
+    //     }
+    //     console.log("false");
+    // }//https://reactjs.org/docs/conditional-rendering.html
 
 
   render() {
@@ -26,6 +27,7 @@ class App extends Component {
             <h1>D&D 5e Character Generator</h1>
 
         <Selectors/>
+
 
       </div>
     );
