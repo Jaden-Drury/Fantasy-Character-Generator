@@ -1,35 +1,37 @@
 import React, { Component } from 'react';
 import './App.css';
 import Selectors from './Selectors';
+import Printable from './Printable';
 // import ClassSkills from './ClassSkills';
 
 class App extends Component {
     constructor(props){
         super(props);
         this.state = {
-            PrintableVisible: true,
+            PrintableVisible: false,
         };
     }
-
-    // componentDidMount(){
-    //     if(this.state.PrintableVisible === true) {
-    //         console.log("true");
-    //     }
-    //     console.log("false");
-    // }//https://reactjs.org/docs/conditional-rendering.html
-
+    printable(){
+        console.log(this.props.PrintableVisible)
+        if(this.state.PrintableVisible === true) {
+            console.log("PrintableVisable is True");
+            return(
+                <Printable/>
+            )
+        }else {
+            return(
+            <Selectors/>
+            )
+        }
+    }
 
   render() {
     return (
         <div className="App">
 
+            {this.printable()}
 
-            <h1>D&D 5E CHARACTER GENERATOR</h1>
-
-        <Selectors/>
-
-
-      </div>
+        </div>
     );
   }
 }

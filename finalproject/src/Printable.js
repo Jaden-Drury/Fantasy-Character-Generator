@@ -11,7 +11,7 @@ render(){
         <div className="Printable">
 
 
-            <p> This will print </p>
+            <p> This is the character sheet page </p>
 
 
         </div>

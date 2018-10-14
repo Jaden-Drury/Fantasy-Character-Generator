@@ -3,12 +3,12 @@
  */
 
 import React, { Component } from 'react';
-import Printable from './Printable';
+// import App from './App';
 import './App.css';
 import {
     BrowserRouter as Router,
-    Route,
-    Link
+    // Route,
+    // Link
 } from 'react-router-dom'
 
 class Selectors extends Component {
@@ -19,7 +19,7 @@ class Selectors extends Component {
             class: "",
             race: "",
             level: "",
-            PrintableVisible: false,
+            PrintableVisible: "return statement", //we need to return this value over to APP.js, so we can use the generate button to change it's state here
         };
 
         // This binding is necessary to make `this` work in the callback
@@ -27,26 +27,28 @@ class Selectors extends Component {
         this.handleChangeRace = this.handleChangeRace.bind(this)
         this.handleChangeLevel = this.handleChangeLevel.bind(this)
         this.generate = this.generate.bind(this)
-    }
 
+    }
 
     handleChange(event){
     this.setState({class: event.target.value}); //the function that pulls from the class selector and sets the state of class to it
-}
+    }
 
-handleChangeRace(event){
+    handleChangeRace(event){
     this.setState({race: event.target.value}); //the function that pulls from the race selector and sets the state of race to it
-}
+    }
 
-handleChangeLevel(event){
+    handleChangeLevel(event){
     this.setState({level: event.target.value}); //the function that pulls from the level selector and sets the state of level to it
-}
+    }
 
 
     generate(){
         console.log("Class : " + this.state.class);
         console.log("Race: " + this.state.race);        //this is a console log in the browser to see the updated state when the generate button is clicked
         console.log("Level: " + this.state.level);
+        console.log(this.state.PrintableVisible)
+        return(this.state.PrintableVisible);
     }
 
 
@@ -56,6 +58,9 @@ handleChangeLevel(event){
             <div className="Selectors">
 
                 <div className="Custom">
+
+                    <h1>D&D 5E CHARACTER GENERATOR</h1>
+
 
                     <h2> Class: </h2>
 
@@ -140,14 +145,14 @@ handleChangeLevel(event){
 
                 <br/>
 
-                <Route path="/Printable" component={Printable} />
+                {/*<Route path="/Printable" component={Printable} />*/}
 
                 <div className="Custom">
-                    <Link to="/Printable" target={'blank'}>
+                    {/*<Link to="/Printable" target={'blank'}>*/}
 
-                    <button onClick={this.generate} >Generate Character</button>
+                    <button onClick={this.generate}>Generate Character</button>
 
-                    </Link>
+                    {/*</Link>*/}
                 </div>
 
             </div>
