@@ -11,6 +11,13 @@ class App extends Component {
             PrintableVisible: false,
         };
     }
+
+    changeState(state){
+        this.setState({
+            PrintableVisible: state,
+        })
+    }
+
     printable(){
         console.log(this.props.PrintableVisible)
         if(this.state.PrintableVisible === true) {
