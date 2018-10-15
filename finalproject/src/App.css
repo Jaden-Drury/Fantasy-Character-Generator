@@ -2,38 +2,46 @@
 @import url('https://fonts.googleapis.com/css?family=VT323');
 
 .App {
-  background-image: url('./185bd5f7e236127545bc873dd42230b1.jpg');
+  background-image: url('./Fantasy_World.png');
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   height: 100vh;
-  position: fixed;
-  font-family: 'Balthazar', serif;
-  text-align: center;
-  color: white;
-  padding:20px;
 }
 
 h1{
-    font-size:50pt;
-}
-
-html{
-    background-color:white;
-}
-
-.Custom{
-    margin: 0 auto;
+    font-family: 'Balthazar', serif;
+    text-align: center;
+    padding-top:50px;
+    margin-top:0px;
+    font-size:60pt;
+    color: white;
+    text-shadow: 4px 4px black;
 }
 
 .Custom h2{
     display:block;
-    padding-right: 20px;
     font-family: 'VT323', monospace;
-    font-size:40pt;
-    margin:0;
+    text-align:center;
+    padding-right:20px;
+    margin-top:0px;
+    margin-bottom:0px;
+    font-size:45pt;
+    color: white;
+    text-shadow: 4px 4px black;
 }
 
 select{
     font-family: 'Balthazar', serif;
+    margin-left:690px;
+    padding:5px;
+    font-size:20px;
 }
+
+button {
+    font-family:'Balthazar', serif;
+    margin-left: 635px;
+    margin-top:35px;
+    font-size:30px;
+}
+
