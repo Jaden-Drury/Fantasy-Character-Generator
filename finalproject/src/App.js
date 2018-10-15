@@ -10,26 +10,28 @@ class App extends Component {
         this.state = {
             PrintableVisible: false,
         };
-    }
-
-    changeState(state){
-        this.setState({
-            PrintableVisible: state,
-        })
+        this.generate = this.generate.bind(this)
     }
 
     printable(){
-        console.log(this.props.PrintableVisible)
         if(this.state.PrintableVisible === true) {
-            console.log("PrintableVisable is True");
             return(
                 <Printable/>
             )
         }else {
             return(
-            <Selectors/>
-            )
+                <Selectors/>
+        )
         }
+    }
+
+    generate(){
+        if(this.state.PrintableVisible ===false){
+            this.setState({PrintableVisible: true})
+        }else{
+            this.setState({PrintableVisible: false})
+        }
+
     }
 
   render() {
@@ -37,6 +39,8 @@ class App extends Component {
         <div className="App">
 
             {this.printable()}
+            <button onClick={this.generate}>Generate Character</button>
+
 
         </div>
     );

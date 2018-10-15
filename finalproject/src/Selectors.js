@@ -5,11 +5,6 @@
 import React, { Component } from 'react';
 // import App from './App';
 import './App.css';
-import {
-    BrowserRouter as Router,
-    // Route,
-    // Link
-} from 'react-router-dom'
 
 class Selectors extends Component {
 
@@ -19,15 +14,12 @@ class Selectors extends Component {
             class: "",
             race: "",
             level: "",
-            PrintableVisible: "return statement", //we need to return this value over to APP.js, so we can use the generate button to change it's state here
         };
 
         // This binding is necessary to make `this` work in the callback
         this.handleChange = this.handleChange.bind(this)
         this.handleChangeRace = this.handleChangeRace.bind(this)
         this.handleChangeLevel = this.handleChangeLevel.bind(this)
-        this.generate = this.generate.bind(this)
-
     }
 
     handleChange(event){
@@ -43,18 +35,8 @@ class Selectors extends Component {
     }
 
 
-    generate(){
-        console.log("Class : " + this.state.class);
-        console.log("Race: " + this.state.race);        //this is a console log in the browser to see the updated state when the generate button is clicked
-        console.log("Level: " + this.state.level);
-        console.log(this.state.PrintableVisible)
-        return(this.state.PrintableVisible);
-    }
-
-
     render() {
         return (
-            <Router>
             <div className="Selectors">
 
                 <div className="Custom">
@@ -65,7 +47,7 @@ class Selectors extends Component {
 
                     <h2> Class: </h2>
 
-                    <select value={this.state.class} onChange={this.handleChange}>
+                    <select value={this.state.class} onChange={this.handleChange} classchoice={this.state.class}>
                         <option value={""}>Select a Class</option>
                         <option value={"Barbarian"}>Barbarian</option>
                         <option value={"Bard"}>Bard</option>
@@ -146,18 +128,8 @@ class Selectors extends Component {
 
                 <br/>
 
-                {/*<Route path="/Printable" component={Printable} />*/}
-
-                <div className="Custom">
-                    {/*<Link to="/Printable" target={'blank'}>*/}
-
-                    <button onClick={this.generate}>Generate Character</button>
-
-                    {/*</Link>*/}
-                </div>
 
             </div>
-            </Router>
         );
     }
 }
