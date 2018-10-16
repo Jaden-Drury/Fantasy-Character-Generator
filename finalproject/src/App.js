@@ -9,18 +9,34 @@ class App extends Component {
         super(props);
         this.state = {
             PrintableVisible: false,
+            userClass:"",
+            race:"",
+            level:""
         };
         this.generate = this.generate.bind(this)
     }
 
+    setClass(userClass){
+        this.setState({userClass:userClass});
+    }
+
+    setRace(race){
+        this.setState({race})
+    }
+
+    setLevel(level){
+        this.setState({level});
+    }
+
+
     printable(){
         if(this.state.PrintableVisible === true) {
             return(
-                <Printable/>
+                <Printable userClass={this.state.userClass} race={this.state.race} level={this.state.level} />
             )
         }else {
             return(
-                <Selectors/>
+                <Selectors setClass={(userClass)=>this.setClass(userClass)} setRace={(race)=>this.setRace(race)} setLevel={(level)=>this.setLevel(level)}/>
         )
         }
     }
