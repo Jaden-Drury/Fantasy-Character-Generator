@@ -45,3 +45,18 @@ button {
     font-size:30px;
 }
 
+.Printable p{
+    color: white;
+    margin-top: 0px;
+    padding-top: 0px;
+    text-align: center;
+}
+
+.Printable{
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.caller{
+    display:none;
+}

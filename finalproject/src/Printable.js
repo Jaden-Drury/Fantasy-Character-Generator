@@ -3,10 +3,13 @@
  */
 
 import React, { Component } from 'react';
+import './App.css';
+
 
 class Printable extends Component{
 
 render(){
+    console.log(this.props)
     return(
         <div className="Printable">
 

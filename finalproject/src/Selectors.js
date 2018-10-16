@@ -3,8 +3,8 @@
  */
 
 import React, { Component } from 'react';
-// import App from './App';
 import './App.css';
+import Printable from './Printable';
 
 class Selectors extends Component {
 
@@ -38,6 +38,10 @@ class Selectors extends Component {
     render() {
         return (
             <div className="Selectors">
+
+                <div className="caller">
+                <Printable passClass={this.state.class} passRace={this.state.race} passLevel={this.state.level}/>
+                </div>
 
                 <div className="Custom">
 
