@@ -11,7 +11,8 @@ class App extends Component {
             PrintableVisible: false,
             userClass:"",
             race:"",
-            level:""
+            level:"",
+            buttonText: "Generate Character"
         };
         this.generate = this.generate.bind(this)
     }
@@ -36,16 +37,19 @@ class App extends Component {
             )
         }else {
             return(
+                //reminder from Bryon. Shit rolls downhill
                 <Selectors setClass={(userClass)=>this.setClass(userClass)} setRace={(race)=>this.setRace(race)} setLevel={(level)=>this.setLevel(level)}/>
-        )
+            )
         }
     }
 
     generate(){
         if(this.state.PrintableVisible ===false){
             this.setState({PrintableVisible: true})
+            this.setState({buttonText: "Go Back"});
         }else{
             this.setState({PrintableVisible: false})
+            this.setState({buttonText: "Generate Character"});
         }
 
     }
@@ -55,7 +59,7 @@ class App extends Component {
         <div className="App">
 
             {this.printable()}
-            <button onClick={this.generate}>Generate Character</button>
+            <button onClick={this.generate}>{this.state.buttonText}</button>
 
 
         </div>
