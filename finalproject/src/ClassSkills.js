@@ -21,19 +21,28 @@ class ClassSkills extends Component {
         }
     }
 
-    setScores(){
-        const skillArray=[15, 14, 13, 12, 10, 8];
+    rollDice(){
+        const min = 1;
+        const max = 6;
+        const random = Math.ceil(Math.random() * max-min + min);
+        return(random);
+    }
+    
+    addDiceRollsTogether(){
+        //const skillArray=[15, 14, 13, 12, 10, 8];
+
+        var rollOne = this.rollDice();
+        var rollTwo = this.rollDice();
+        var rollThree = this.rollDice();
+
+        var total = +rollOne + +rollTwo + +rollThree;
+
+        console.log(total);
+
         // this.setState({str: skillArray[0]});
     }
 
-    rollDice(){
-        const min = 1;
-        const max = 7;
-        const random = Math.floor(Math.random() * max-min + min);
-        console.log(random);
-    }
-
-    componentDidMount(){
+    change(){
         const min = 2;
         const max = 8;
         const random = Math.floor(Math.random() * max-min + min);
@@ -42,9 +51,10 @@ class ClassSkills extends Component {
 
 
     render(){
-        this.setScores()
         console.log(this.state.str)
+        this.addDiceRollsTogether();
         return(<div className="ClassSkills">
+        
 
 
         <h1>CLASS SKILLS</h1>
