@@ -25,12 +25,12 @@ render(){
 
 
             <h3 id="charSheet">Character Sheet</h3>
-            <div class="wrapper">
+            <div className="wrapper">
                 <h3>Class: {this.props.userClass}</h3>
                 <h3>Race: {this.props.race}</h3>
                 <h3>Level: {this.props.level}</h3>
             </div>
-            <ol class="statList">
+            <ol className="statList">
                 <li>Strength</li>
                 <li>Dexterity</li>
                 <li>Constitution</li>

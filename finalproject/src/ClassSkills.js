@@ -6,11 +6,24 @@ import React, { Component } from 'react';
 
 class ClassSkills extends Component {
 
+    //[15, 14, 13, 12, 10, 8] the standard ability score array
+
     constructor(props){
         super(props);
         this.state = {
             d6: 0,
+            str: 0,
+            dex: 0,
+            con: 0,
+            int: 0,
+            wis: 0,
+            cha: 0,
         }
+    }
+
+    setScores(){
+        const skillArray=[15, 14, 13, 12, 10, 8];
+        // this.setState({str: skillArray[0]});
     }
 
     rollDice(){
@@ -29,10 +42,12 @@ class ClassSkills extends Component {
 
 
     render(){
+        this.setScores()
+        console.log(this.state.str)
         return(<div className="ClassSkills">
 
 
-
+        <h1>CLASS SKILLS</h1>
 
 
 

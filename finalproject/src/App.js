@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Selectors from './Selectors';
 import Printable from './Printable';
-// import ClassSkills from './ClassSkills';
+import ClassSkills from './ClassSkills';
 
 class App extends Component {
     constructor(props){
@@ -43,6 +43,12 @@ class App extends Component {
         }
     }
 
+    stats(){
+        return(
+            <ClassSkills/>
+        )
+    }
+
     generate(){
         if(this.state.PrintableVisible ===false){
             this.setState({PrintableVisible: true})
@@ -59,8 +65,8 @@ class App extends Component {
         <div className="App">
 
             {this.printable()}
+            {this.stats()}
             <button onClick={this.generate}>{this.state.buttonText}</button>
-
 
         </div>
     );
