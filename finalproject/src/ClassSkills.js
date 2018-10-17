@@ -12,13 +12,22 @@ class ClassSkills extends Component {
         super(props);
         this.state = {
             d6: 0,
-            str: 0,
-            dex: 0,
-            con: 0,
-            int: 0,
-            wis: 0,
-            cha: 0,
+            str: 1,
+            dex: 2,
+            con: 3,
+            int: 4,
+            wis: 5,
+            cha: 6,
         }
+    }
+
+    componentDidMount(){
+        this.props.setStr(this.state.str);
+        this.props.setDex(this.state.dex);
+        this.props.setCon(this.state.con);
+        this.props.setInt(this.state.int);
+        this.props.setWis(this.state.wis);
+        this.props.setCha(this.state.cha);
     }
 
     rollDice(){

@@ -12,7 +12,12 @@ class App extends Component {
             userClass:"",
             race:"",
             level:"",
-            str:0,
+            str: 0,
+            dex: 0,
+            con: 0,
+            int: 0,
+            wis: 0,
+            cha: 0,
             buttonText: "Generate Character"
         };
         this.generate = this.generate.bind(this)
@@ -24,6 +29,26 @@ class App extends Component {
 
     setStr(str){
         this.setState({str:str});
+    }
+
+    setDex(dex){
+        this.setState({dex:dex});
+    }
+
+    setCon(con){
+        this.setState({con:con});
+    }
+
+    setInt(int){
+        this.setState({int:int});
+    }
+
+    setWis(wis){
+        this.setState({wis:wis});
+    }
+
+    setCha(cha){
+        this.setState({cha:cha});
     }
 
     setRace(race){
@@ -38,7 +63,7 @@ class App extends Component {
     printable(){
         if(this.state.PrintableVisible === true) {
             return(
-                <Printable userClass={this.state.userClass} race={this.state.race} level={this.state.level} />
+                <Printable userClass={this.state.userClass} race={this.state.race} level={this.state.level} str={this.state.str} dex={this.state.dex}  con={this.state.con}  int={this.state.int}  wis={this.state.wis}  cha={this.state.cha}/>
             )
         }else {
             return(
@@ -65,8 +90,11 @@ class App extends Component {
         <div className="App">
 
             {this.printable()}
+
             <button onClick={this.generate}>{this.state.buttonText}</button>
-            <ClassSkills setStr={(str)=>this.setStr(str)}/>        
+
+            <ClassSkills setStr={(str)=>this.setStr(str)} setDex={(dex)=>this.setDex(dex)} setCon={(con)=>this.setCon(con)} setInt={(int)=>this.setInt(int)} setWis={(wis)=>this.setWis(wis)} setCha={(cha)=>this.setCha(cha)}/>
+
             </div>
     );
   }

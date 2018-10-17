@@ -31,12 +31,12 @@ render(){
                 <h3>Level: {this.props.level}</h3>
             </div>
             <ol className="statList">
-                <li>Strength</li>
-                <li>Dexterity</li>
-                <li>Constitution</li>
-                <li>Intelligence</li>
-                <li>Wisdom</li>
-                <li>Charisma</li>
+                <li>Strength {this.props.str}</li>
+                <li>Dexterity {this.props.dex}</li>
+                <li>Constitution {this.props.con}</li>
+                <li>Intelligence {this.props.int}</li>
+                <li>Wisdom {this.props.wis}</li>
+                <li>Charisma {this.props.cha}</li>
             </ol>
 
 
