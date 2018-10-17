@@ -52,12 +52,17 @@ class ClassSkills extends Component {
 
     render(){
         console.log(this.state.str)
+        console.log(this.state.dex)
+        console.log(this.state.int)
+        console.log(this.state.con)
+        console.log(this.state.wis)
+        console.log(this.state.cha)
+        // {this.setState({str: 5})}
         this.addDiceRollsTogether();
         return(<div className="ClassSkills">
         
 
-
-        <h1>CLASS SKILLS</h1>
+            
 
 
 

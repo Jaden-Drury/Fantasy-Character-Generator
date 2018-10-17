@@ -4,6 +4,7 @@
 
 import React, { Component } from 'react';
 import './App.css';
+// import ClassSkills from './ClassSkills'
 
 
 class Printable extends Component{
@@ -22,7 +23,6 @@ render(){
     return(
 
         <div className="Printable">
-
 
             <h3 id="charSheet">Character Sheet</h3>
             <div className="wrapper">
