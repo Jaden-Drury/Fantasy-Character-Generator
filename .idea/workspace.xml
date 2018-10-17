@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2ce05456-cc53-4eeb-9513-9412e74900ab" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/finalproject/src/App.js" afterPath="$PROJECT_DIR$/finalproject/src/App.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/finalproject/src/ClassSkills.js" afterPath="$PROJECT_DIR$/finalproject/src/ClassSkills.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/finalproject/src/Printable.js" afterPath="$PROJECT_DIR$/finalproject/src/Printable.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -59,9 +57,21 @@
       <file leaf-file-name="ClassSkills.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/finalproject/src/ClassSkills.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="29" column="42" lean-forward="true" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+            <state relative-caret-position="332">
+              <caret line="64" column="36" lean-forward="true" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.test.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/finalproject/src/App.test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -266,12 +276,12 @@
       <workItem from="1539625965786" duration="3342000" />
       <workItem from="1539654627793" duration="4147000" />
       <workItem from="1539796601241" duration="864000" />
-      <workItem from="1539797534235" duration="5042000" />
+      <workItem from="1539797534235" duration="5955000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38327000" />
+    <option name="totallyTimeSpent" value="39240000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="830" extended-state="6" />
@@ -529,16 +539,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/finalproject/src/App.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/finalproject/src/Selectors.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -569,10 +569,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/finalproject/src/App.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/finalproject/src/ClassSkills.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="29" column="42" lean-forward="true" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+        <state relative-caret-position="332">
+          <caret line="64" column="36" lean-forward="true" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
           <folding />
         </state>
       </provider>
