@@ -61,7 +61,6 @@ class App extends Component {
             {this.printable()}
             <button onClick={this.generate}>{this.state.buttonText}</button>
 
-
         </div>
     );
   }
