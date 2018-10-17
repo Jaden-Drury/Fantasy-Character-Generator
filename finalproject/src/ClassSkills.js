@@ -21,6 +21,16 @@ class ClassSkills extends Component {
         }
     }
 
+    componentWillMount(){
+        // var statArray = [15, 14, 13, 12, 10, 8];
+        this.setState({str: this.getRandomScore()})
+        this.setState({dex: this.getRandomScore()})
+        this.setState({con: this.getRandomScore()})
+        this.setState({int: this.getRandomScore()})
+        this.setState({wis: this.getRandomScore()})
+        this.setState({cha: this.getRandomScore()})
+    }
+
     componentDidMount(){
         this.props.setStr(this.state.str);
         this.props.setDex(this.state.dex);
@@ -38,13 +48,17 @@ class ClassSkills extends Component {
         return(random);
     }
 
-    getRandomIndex(){
-        const min = 0;
-        const max = 5;
-        const random = Math.floor(Math.random() * max-min + min);
-        return(random);
+    getRandomScore(){
+            var statArray = [15, 14, 13, 12, 10, 8];
+            var num = Math.floor(Math.random() * statArray.length);
+            var statValue = statArray[num]
+            console.log(statArray)
+            statArray.splice(num, 1)
+            console.log(statArray)
+
+        return statValue;
     }
-    
+
     addDiceRollsTogether(){
 
         var rollOne = this.rollDice();
@@ -54,16 +68,10 @@ class ClassSkills extends Component {
         var total = +rollOne + +rollTwo + +rollThree;
 
         console.log(total);
-
-        // this.setState({str: skillArray[0]});
     }
 
 
     render(){
-        var skillArray=[15, 14, 13, 12, 10, 8];
-        console.log(skillArray)
-        console.log(skillArray[this.getRandomIndex()])
-        // this.addDiceRollsTogether();
         return(<div className="ClassSkills">
 
 
