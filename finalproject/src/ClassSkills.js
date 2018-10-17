@@ -28,11 +28,10 @@ class ClassSkills extends Component {
         console.log(this.state.con)
         console.log(this.state.wis)
         console.log(this.state.cha)
+        // {this.setState({str: 5})}
         return(<div className="ClassSkills">
 
-            {this.setState({str: 5})}
-
-        <h1>CLASS SKILLS</h1>
+            
 
 
 

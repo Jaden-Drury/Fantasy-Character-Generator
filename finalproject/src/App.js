@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Selectors from './Selectors';
 import Printable from './Printable';
-// import ClassSkills from './ClassSkills';
+import ClassSkills from './ClassSkills';
 
 class App extends Component {
     constructor(props){
@@ -12,6 +12,7 @@ class App extends Component {
             userClass:"",
             race:"",
             level:"",
+            str:0,
             buttonText: "Generate Character"
         };
         this.generate = this.generate.bind(this)
@@ -21,12 +22,16 @@ class App extends Component {
         this.setState({userClass:userClass});
     }
 
+    setStr(str){
+        this.setState({str:str});
+    }
+
     setRace(race){
-        this.setState({race})
+        this.setState({race:race})
     }
 
     setLevel(level){
-        this.setState({level});
+        this.setState({level:level});
     }
 
 
@@ -52,6 +57,7 @@ class App extends Component {
             this.setState({buttonText: "Generate Character"});
         }
 
+
     }
 
   render() {
@@ -60,8 +66,8 @@ class App extends Component {
 
             {this.printable()}
             <button onClick={this.generate}>{this.state.buttonText}</button>
-
-        </div>
+            <ClassSkills setStr={(str)=>this.setStr(str)}/>        
+            </div>
     );
   }
 }
