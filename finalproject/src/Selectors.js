@@ -49,7 +49,7 @@ class Selectors extends Component {
                 <div className="Custom">
 
 
-                    <h1>D&D 5E CHARACTER GENERATOR</h1>
+                    <h1>D&amp;D 5E CHARACTER GENERATOR</h1>
 
                     <h2> Class: </h2>
 

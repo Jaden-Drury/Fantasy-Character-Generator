@@ -24,10 +24,20 @@ render(){
         <div className="Printable">
 
 
-            <p> This is the character sheet page </p>
-            <h3>Class {this.props.userClass}</h3>
-            <h3>Race {this.props.race}</h3>
-            <h3>Level {this.props.level}</h3>
+            <h3 id="charSheet">Character Sheet</h3>
+            <div class="wrapper">
+                <h3>Class: {this.props.userClass}</h3>
+                <h3>Race: {this.props.race}</h3>
+                <h3>Level: {this.props.level}</h3>
+            </div>
+            <ol class="statList">
+                <li>Strength</li>
+                <li>Dexterity</li>
+                <li>Constitution</li>
+                <li>Intelligence</li>
+                <li>Wisdom</li>
+                <li>Charisma</li>
+            </ol>
 
 
         </div>

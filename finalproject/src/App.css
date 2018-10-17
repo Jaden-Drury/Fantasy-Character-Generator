@@ -20,49 +20,75 @@ h1{
 }
 
 .Custom h2{
-    display:block;
     font-family: 'VT323', monospace;
     text-align:center;
     padding-right:20px;
     margin-top:0px;
     margin-bottom:0px;
     font-size:45pt;
-    color: white;
-    text-shadow: 4px 4px black;
+    color: red;
+    text-shadow: 3px 3px black;
 }
 
 select{
     font-family: 'Balthazar', serif;
-    margin-left:690px;
+    margin: 10px auto;
+    display: block;
     padding:5px;
     font-size:20px;
 }
 
 button {
     font-family:'Balthazar', serif;
-    margin-left: 635px;
-    margin-top:35px;
+    margin:20px auto;
+    display: block;
     font-size:30px;
 }
 
-.Printable p{
-    color: white;
-    margin-top: 0px;
-    padding-top: 0px;
+#charSheet{
+    margin:0px auto;
+    padding-top:20px;
     text-align: center;
-}
-.Printable h3{
-    color: white;
-    margin-top: 0px;
-    padding-top: 0px;
-    text-align: center;
+    font-size:32pt;
 }
 
-.Printable{
+.Printable h3{
     margin-top: 0px;
     padding-top: 0px;
+    text-align: center;
+    margin: 40px 20px;
 }
 
 .caller{
     display:none;
+}
+
+.Printable{
+    width:70%;
+    height:100vh;
+    top:100px;
+    margin:0 auto;
+    background-color: white;
+    font-family: 'VT323', monospace;
+}
+
+.statList{
+    list-style: none;
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.statList li{
+    padding:15px 0px 80px 0px;
+    width:100px;
+    border:1px black solid;
+    text-align: center;
+    margin:0 10px;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
 }
