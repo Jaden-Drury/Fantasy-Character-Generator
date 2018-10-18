@@ -63,11 +63,16 @@ class Selectors extends Component {
                 </div>
 
                 <div className="Custom">
-
-
                     <h1>D&amp;D 5E CHARACTER GENERATOR</h1>
 
-                    <h2> Class: </h2>
+                    <form>
+                        <h2>Player:</h2>
+                        <input onChange={this.handleChangeName} placeholder="Input player Name" type="text"/>
+                        <h2>Character:</h2>
+                        <input onChange={this.handleChangecName} placeholder="Input character Name" type="text"/>
+                    </form>
+
+                    <h2>Class:</h2>
 
                     <select value={this.state.class} onChange={this.handleChange} classchoice={this.state.class}>
                         <option value={""}>Select a Class</option>
@@ -84,14 +89,8 @@ class Selectors extends Component {
                         <option value={"Warlock"}>Warlock</option>
                         <option value={"Wizard"}>Wizard</option>
                     </select>
-                    <br/>
-                </div>
 
-                <br/>
-
-                <div className="Custom">
-
-                    <h2> Race: </h2>
+                    <h2>Race:</h2>
 
                     <select value={this.state.race} onChange={this.handleChangeRace}>
                         <option value={""}>Select a Race</option>
@@ -105,13 +104,8 @@ class Selectors extends Component {
                         <option value={"Human"}>Human</option>
                         <option value={"Tiefling"}>Tiefling</option>
                     </select>
-                </div>
 
-                <br/>
-
-                <div className="Custom">
-
-                    <h2> Level: </h2>
+                    <h2>Level:</h2>
 
                     <select value={this.state.level} onChange={this.handleChangeLevel}>
                         <option value={""}>Select a Level</option>
@@ -146,17 +140,7 @@ class Selectors extends Component {
                         <option value={"29"}>29</option>
                         <option value={"30"}>30</option>
                     </select>
-                </div>
 
-                <br/>
-                <div className="Custom">
-                    <form>
-                        Player: Name
-                        <input onChange={this.handleChangeName} placeholder="Player Name" type="text"/>
-                        <br/>
-                        Character: Name
-                        <input onChange={this.handleChangecName} placeholder="Character Name" type="text"/>
-                    </form>
                 </div>
 
             </div>
