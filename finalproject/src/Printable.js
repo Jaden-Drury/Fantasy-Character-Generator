@@ -27,7 +27,9 @@ render(){
                 <h3>Class: {this.props.userClass}</h3>
                 <h3>Race: {this.props.race}</h3>
                 <h3>Level: {this.props.level}</h3>
-                <h3>Player Name: </h3>
+                <h3>Player Name: {this.props.pName}</h3>
+                <h3>Character Name: {this.props.cName}</h3>
+
             </div>
             <ol className="statList">
                 <li>Strength <br/> {this.props.str}</li>

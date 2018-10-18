@@ -9,6 +9,8 @@ class App extends Component {
         super(props);
         this.state = {
             PrintableVisible: false,
+            pName: "",
+            cName: "",
             userClass:"",
             race:"",
             level:"",
@@ -59,16 +61,23 @@ class App extends Component {
         this.setState({level:level});
     }
 
+    setPlayerName(pName){
+        this.setState({pName:pName});
+    }
+    setCharacterName(cName){
+        this.setState({cName:cName});
+    }
+
 
     printable(){
         if(this.state.PrintableVisible === true) {
             return(
-                <Printable userClass={this.state.userClass} race={this.state.race} level={this.state.level} str={this.state.str} dex={this.state.dex}  con={this.state.con}  int={this.state.int}  wis={this.state.wis}  cha={this.state.cha}/>
+                <Printable pName={this.state.pName} cName={this.state.cName} userClass={this.state.userClass} race={this.state.race} level={this.state.level} str={this.state.str} dex={this.state.dex}  con={this.state.con}  int={this.state.int}  wis={this.state.wis}  cha={this.state.cha}/>
             )
         }else {
             return(
                 //reminder from Bryon. Shit rolls downhill
-                <Selectors setClass={(userClass)=>this.setClass(userClass)} setRace={(race)=>this.setRace(race)} setLevel={(level)=>this.setLevel(level)}/>
+                <Selectors setPlayerName={(pName)=>this.setPlayerName(pName)} setCharacterName={(cName)=>this.setCharacterName(cName)} setClass={(userClass)=>this.setClass(userClass)} setRace={(race)=>this.setRace(race)} setLevel={(level)=>this.setLevel(level)}/>
             )
         }
     }

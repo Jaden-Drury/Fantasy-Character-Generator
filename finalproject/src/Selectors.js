@@ -15,12 +15,17 @@ class Selectors extends Component {
             class: "",
             race: "",
             level: "",
+            pName: "",
+            cName: ""
         };
 
         // This binding is necessary to make `this` work in the callback
         this.handleChange = this.handleChange.bind(this)
         this.handleChangeRace = this.handleChangeRace.bind(this)
         this.handleChangeLevel = this.handleChangeLevel.bind(this)
+        this.handleChangeName = this.handleChangeName.bind(this)
+        this.handleChangecName = this.handleChangecName.bind(this)
+
     }
 
     handleChange(event){
@@ -38,13 +43,23 @@ class Selectors extends Component {
     this.props.setLevel(event.target.value)
     }
 
+    handleChangeName(event){
+        this.setState({pName: event.target.value})
+        this.props.setPlayerName(event.target.value)
+    }
+
+    handleChangecName(event){
+        this.setState({cName: event.target.value})
+        this.props.setCharacterName(event.target.value)
+    }
+
 
     render() {
         return (
             <div className="Selectors">
 
                 <div className="caller">
-                <Printable passClass={this.state.class} passRace={this.state.race} passLevel={this.state.level} passpName={this.state.pName}/>
+                <Printable passName={this.state.pName} passcName={this.state.cName} passClass={this.state.class} passRace={this.state.race} passLevel={this.state.level}/>
                 </div>
 
                 <div className="Custom">
@@ -134,7 +149,15 @@ class Selectors extends Component {
                 </div>
 
                 <br/>
-
+                <div className="Custom">
+                    <form>
+                        Player: Name
+                        <input onChange={this.handleChangeName} placeholder="Player Name" type="text"/>
+                        <br/>
+                        Character: Name
+                        <input onChange={this.handleChangecName} placeholder="Character Name" type="text"/>
+                    </form>
+                </div>
 
             </div>
         );
