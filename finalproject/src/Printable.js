@@ -12,9 +12,7 @@ class Printable extends Component{
     constructor(props){
         super(props);
         this.state = {
-            class: "",
-            race: "",
-            level: ""
+
         };
     }
 
@@ -29,6 +27,7 @@ render(){
                 <h3>Class: {this.props.userClass}</h3>
                 <h3>Race: {this.props.race}</h3>
                 <h3>Level: {this.props.level}</h3>
+                <h3>Player Name: </h3>
             </div>
             <ol className="statList">
                 <li>Strength <br/> {this.props.str}</li>

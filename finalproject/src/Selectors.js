@@ -38,12 +38,13 @@ class Selectors extends Component {
     this.props.setLevel(event.target.value)
     }
 
+
     render() {
         return (
             <div className="Selectors">
 
                 <div className="caller">
-                <Printable passClass={this.state.class} passRace={this.state.race} passLevel={this.state.level}/>
+                <Printable passClass={this.state.class} passRace={this.state.race} passLevel={this.state.level} passpName={this.state.pName}/>
                 </div>
 
                 <div className="Custom">

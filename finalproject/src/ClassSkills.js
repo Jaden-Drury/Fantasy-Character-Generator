@@ -18,17 +18,24 @@ class ClassSkills extends Component {
             int: 4,
             wis: 5,
             cha: 6,
+            statArray:[15, 14, 13, 12, 10, 8],
         }
     }
 
     componentWillMount(){
         // var statArray = [15, 14, 13, 12, 10, 8];
-        this.setState({str: this.getRandomScore()})
-        this.setState({dex: this.getRandomScore()})
-        this.setState({con: this.getRandomScore()})
-        this.setState({int: this.getRandomScore()})
-        this.setState({wis: this.getRandomScore()})
-        this.setState({cha: this.getRandomScore()})
+        this.setState({str: this.getRandomScore(this.state.statArray)})
+        console.log("str set")
+        this.setState({dex: this.getRandomScore(this.state.statArray)})
+        console.log("dex set")
+        this.setState({con: this.getRandomScore(this.state.statArray)})
+        console.log("con set")
+        this.setState({int: this.getRandomScore(this.state.statArray)})
+        console.log("int set")
+        this.setState({wis: this.getRandomScore(this.state.statArray)})
+        console.log("wis set")
+        this.setState({cha: this.getRandomScore(this.state.statArray)})
+        console.log("cha set")
     }
 
     componentDidMount(){
@@ -48,13 +55,12 @@ class ClassSkills extends Component {
         return(random);
     }
 
-    getRandomScore(){
-            var statArray = [15, 14, 13, 12, 10, 8];
-            var num = Math.floor(Math.random() * statArray.length);
-            var statValue = statArray[num]
-            console.log(statArray)
-            statArray.splice(num, 1)
-            console.log(statArray)
+    getRandomScore(array){
+        var num = Math.floor(Math.random() * array.length);
+        var statValue = array[num]
+        console.log(array)
+        array.splice(num, 1)
+        console.log(array)
 
         return statValue;
     }

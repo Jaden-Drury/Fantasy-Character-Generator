@@ -76,7 +76,7 @@ class App extends Component {
     generate(){
         if(this.state.PrintableVisible ===false){
             this.setState({PrintableVisible: true})
-            this.setState({buttonText: "Go Back"});
+            this.setState({buttonText: "Generate New Sheet"});
         }else{
             this.setState({PrintableVisible: false})
             this.setState({buttonText: "Generate Character"});
