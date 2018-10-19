@@ -47,14 +47,6 @@ class ClassSkills extends Component {
         this.props.setCha(this.state.cha);
     }
 
-
-    rollDice(){
-        const min = 1;
-        const max = 6;
-        const random = Math.ceil(Math.random() * max-min + min);
-        return(random);
-    }
-
     getRandomScore(array){
         var num = Math.floor(Math.random() * array.length);
         var statValue = array[num]
@@ -63,6 +55,13 @@ class ClassSkills extends Component {
         console.log(array)
 
         return statValue;
+    }
+
+    rollDice(){
+        const min = 1;
+        const max = 6;
+        const random = Math.ceil(Math.random() * max-min + min);
+        return(random);
     }
 
     addDiceRollsTogether(){
@@ -79,12 +78,6 @@ class ClassSkills extends Component {
 
     render(){
         return(<div className="ClassSkills">
-
-
-
-
-
-
 
         </div>);
     }
