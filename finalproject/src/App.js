@@ -70,28 +70,33 @@ class App extends Component {
 
 
     printable(){
-        if(this.state.PrintableVisible === true) {
-            return(
-                <Printable pName={this.state.pName} cName={this.state.cName} userClass={this.state.userClass} race={this.state.race} level={this.state.level} str={this.state.str} dex={this.state.dex}  con={this.state.con}  int={this.state.int}  wis={this.state.wis}  cha={this.state.cha}/>
-            )
-        }else {
-            return(
-                //reminder from Bryon. Shit rolls downhill
-                <Selectors setPlayerName={(pName)=>this.setPlayerName(pName)} setCharacterName={(cName)=>this.setCharacterName(cName)} setClass={(userClass)=>this.setClass(userClass)} setRace={(race)=>this.setRace(race)} setLevel={(level)=>this.setLevel(level)}/>
-            )
+        try{
+            if (this.state.PrintableVisible === true){
+                return(
+                    <Printable pName={this.state.pName} cName={this.state.cName} userClass={this.state.userClass} race={this.state.race} level={this.state.level} str={this.state.str} dex={this.state.dex}  con={this.state.con}  int={this.state.int}  wis={this.state.wis}  cha={this.state.cha}/>
+                )
+            } else {
+                return(
+                    <Selectors setPlayerName={(pName)=>this.setPlayerName(pName)} setCharacterName={(cName)=>this.setCharacterName(cName)} setClass={(userClass)=>this.setClass(userClass)} setRace={(race)=>this.setRace(race)} setLevel={(level)=>this.setLevel(level)}/>
+                )
+            }
+        } catch (Exception){
+            console.log(Exception);
         }
     }
 
     generate(){
-        if(this.state.PrintableVisible ===false){
-            this.setState({PrintableVisible: true})
-            this.setState({buttonText: "Generate New Sheet"});
-        }else{
-            this.setState({PrintableVisible: false})
-            this.setState({buttonText: "Generate Character"});
+        try{
+            if (this.state.PrintableVisible ===false){
+                this.setState({PrintableVisible: true})
+                this.setState({buttonText: "Generate New Sheet"});
+            } else{
+                this.setState({PrintableVisible: false})
+                this.setState({buttonText: "Generate Character"});
+            }
+        } catch (Exception){
+            console.log(Exception);
         }
-
-
     }
 
   render() {
@@ -100,11 +105,13 @@ class App extends Component {
 
             {this.printable()}
 
-            <button className="generate" onClick={this.generate}>{this.state.buttonText}</button>
+            <button className="generate" onClick={this.generate}>
+                {this.state.buttonText}
+            </button>
 
             <ClassSkills setStr={(str)=>this.setStr(str)} setDex={(dex)=>this.setDex(dex)} setCon={(con)=>this.setCon(con)} setInt={(int)=>this.setInt(int)} setWis={(wis)=>this.setWis(wis)} setCha={(cha)=>this.setCha(cha)}/>
 
-            </div>
+        </div>
     );
   }
 }

@@ -1,12 +1,6 @@
-/**
- * Created by jadendrury on 10/12/18.
- */
 import React, { Component } from 'react';
 
-
 class ClassSkills extends Component {
-
-    //[15, 14, 13, 12, 10, 8] the standard ability score array
 
     constructor(props){
         super(props);
@@ -23,19 +17,12 @@ class ClassSkills extends Component {
     }
 
     componentWillMount(){
-        // var statArray = [15, 14, 13, 12, 10, 8];
-        this.setState({str: this.getRandomScore(this.state.statArray)})
-        console.log("str set")
-        this.setState({dex: this.getRandomScore(this.state.statArray)})
-        console.log("dex set")
-        this.setState({con: this.getRandomScore(this.state.statArray)})
-        console.log("con set")
-        this.setState({int: this.getRandomScore(this.state.statArray)})
-        console.log("int set")
-        this.setState({wis: this.getRandomScore(this.state.statArray)})
-        console.log("wis set")
-        this.setState({cha: this.getRandomScore(this.state.statArray)})
-        console.log("cha set")
+        this.setState({str: this.getRandomScore(this.state.statArray)});
+        this.setState({dex: this.getRandomScore(this.state.statArray)});
+        this.setState({con: this.getRandomScore(this.state.statArray)});
+        this.setState({int: this.getRandomScore(this.state.statArray)});
+        this.setState({wis: this.getRandomScore(this.state.statArray)});
+        this.setState({cha: this.getRandomScore(this.state.statArray)});
     }
 
     componentDidMount(){
@@ -47,7 +34,6 @@ class ClassSkills extends Component {
         this.props.setCha(this.state.cha);
     }
 
-
     rollDice(){
         const min = 1;
         const max = 6;
@@ -58,35 +44,21 @@ class ClassSkills extends Component {
     getRandomScore(array){
         var num = Math.floor(Math.random() * array.length);
         var statValue = array[num]
-        console.log(array)
         array.splice(num, 1)
-        console.log(array)
-
         return statValue;
     }
 
     addDiceRollsTogether(){
-
         var rollOne = this.rollDice();
         var rollTwo = this.rollDice();
         var rollThree = this.rollDice();
-
         var total = +rollOne + +rollTwo + +rollThree;
-
-        console.log(total);
+        return total;
     }
-
 
     render(){
-        return(<div className="ClassSkills">
-
-
-
-
-
-
-
-        </div>);
+        return(<div className="ClassSkills"></div>);
     }
 }
+
 export default ClassSkills;
