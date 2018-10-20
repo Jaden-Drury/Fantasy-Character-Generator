@@ -5,7 +5,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Printable from './Printable';
-// import App from './App'
 
 class Selectors extends Component {
 
@@ -29,18 +28,18 @@ class Selectors extends Component {
     }
 
     handleChange(event){
-    this.setState({class: event.target.value});//the function that pulls from the class selector and sets the state of class to it
-    this.props.setClass(event.target.value);
+        this.setState({class: event.target.value}); //the function that pulls from the class selector and sets the state of class to it
+        this.props.setClass(event.target.value);
     }
 
     handleChangeRace(event){
-    this.setState({race: event.target.value}); //the function that pulls from the race selector and sets the state of race to it
-    this.props.setRace(event.target.value);
+        this.setState({race: event.target.value}); //the function that pulls from the race selector and sets the state of race to it
+        this.props.setRace(event.target.value);
     }
 
     handleChangeLevel(event){
-    this.setState({level: event.target.value}); //the function that pulls from the level selector and sets the state of level to it
-    this.props.setLevel(event.target.value)
+        this.setState({level: event.target.value}); //the function that pulls from the level selector and sets the state of level to it
+        this.props.setLevel(event.target.value)
     }
 
     handleChangeName(event){
@@ -59,7 +58,7 @@ class Selectors extends Component {
             <div className="Selectors">
 
                 <div className="caller">
-                <Printable passName={this.state.pName} passcName={this.state.cName} passClass={this.state.class} passRace={this.state.race} passLevel={this.state.level}/>
+                    <Printable passName={this.state.pName} passcName={this.state.cName} passClass={this.state.class} passRace={this.state.race} passLevel={this.state.level}/>
                 </div>
 
                 <div className="Custom">
