@@ -107,7 +107,7 @@ class App extends Component {
             {this.printable()}
 
             {/*/!*Uncomment The below line to enable testing*!/*/}
-            {/*<ReactTest playerName={this.state.playerName} characterName={this.state.characterName} userClass={this.state.userClass} race={this.state.race} level={this.state.level}/>*/}
+            <ReactTest playerName={this.state.playerName} characterName={this.state.characterName} userClass={this.state.userClass} race={this.state.race} level={this.state.level} strength={this.state.strength} intelligence={this.state.intelligence} constitution={this.state.constitution} wisdom={this.state.wisdom} dexterity={this.state.dexterity} charisma={this.state.charisma}/>
             {/*/!*Uncomment The above line to enable testing*!/*/}
 
             <button className="generate" onClick={this.generate}>

@@ -56,6 +56,21 @@ class ReactTest extends Component{
         }
     }
 
+    SkillsNotZero(){
+        if(this.props.strength === 0 || this.props.intelligence === 0 || this.props.constitution === 0 || this.props.wisdom === 0 || this.props.dexterity === 0 || this.props.charisma === 0 ){
+            console.log("Test is False and Fails")
+            return(
+                <Fail/>
+            )
+        }else{
+            console.log("Test is True and Passes")
+            return(
+                <Pass/>
+            )
+
+        }
+    }
+
     render(){
         this.NameNotNull()
         return(
@@ -64,6 +79,7 @@ class ReactTest extends Component{
 
                 {this.NameNotNull()}
                 {this.DropNotNull()}
+                {this.SkillsNotZero()}
 
             </div>
         );
