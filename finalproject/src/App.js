@@ -3,14 +3,15 @@ import './App.css';
 import Selectors from './Selectors';
 import Printable from './Printable';
 import ClassSkills from './ClassSkills';
+import ReactTest from './testRender/ReactTest.js'
 
 class App extends Component {
     constructor(props){
         super(props);
         this.state = {
             PrintableVisible: false,
-            playerName: "",
-            characterName: "",
+            playerName: null,
+            characterName: null,
             userClass:"",
             race:"",
             level:"",
@@ -73,7 +74,7 @@ class App extends Component {
         try{
             if (this.state.PrintableVisible === true){
                 return(
-                    <Printable playerName={this.state.playerName} characterName={this.state.characterName} userClass={this.state.userClass} race={this.state.race} level={this.state.level} strength={this.state.strength} dexterity={this.state.dexterity}  constitution={this.state.constitution}  intelligence={this.state.intelligence}  wisdom={this.state.wisdom}  charisma={this.state.charisma}/>
+                        <Printable playerName={this.state.playerName} characterName={this.state.characterName} userClass={this.state.userClass} race={this.state.race} level={this.state.level} strength={this.state.strength} dexterity={this.state.dexterity}  constitution={this.state.constitution}  intelligence={this.state.intelligence}  wisdom={this.state.wisdom}  charisma={this.state.charisma}/>
                 )
             } else {
                 return(
@@ -104,6 +105,10 @@ class App extends Component {
         <div className="App">
 
             {this.printable()}
+
+            {/*/!*Uncomment The below line to enable testing*!/*/}
+            <ReactTest playerName={this.state.playerName} characterName={this.state.characterName}/>
+            {/*/!*Uncomment The above line to enable testing*!/*/}
 
             <button className="generate" onClick={this.generate}>
                 {this.state.buttonText}

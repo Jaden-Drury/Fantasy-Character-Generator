@@ -143,3 +143,18 @@ form input{
     font-size:12pt;
     border:1px solid black;
 }
+
+.ReactTest{
+    color: white;
+}
+
+.red-green-refactor-fail{
+    background-color: red;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+.red-green-refactor-pass{
+    background-color: green;
+    margin-top: 0px;
+    padding-top: 0px;
+}

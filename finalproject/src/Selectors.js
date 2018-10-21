@@ -14,8 +14,8 @@ class Selectors extends Component {
             class: "",
             race: "",
             level: "",
-            playerName: "",
-            characterName: ""
+            playerName: null,
+            characterName: null
         };
 
         // This binding is necessary to make `this` work in the callback
