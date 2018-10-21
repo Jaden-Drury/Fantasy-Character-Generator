@@ -107,7 +107,7 @@ class Selectors extends Component {
                     <h2>Level:</h2>
 
                     <select value={this.state.level} onChange={this.handleChangeLevel}>
-                        {/*<option value={""}>Select a Level</option>*/}
+                        <option value={""}>Select a Level</option>
                         <option value={"1"}>1</option>
                         {/*<option value={"2"}>2</option>*/}
                         {/*<option value={"3"}>3</option>*/}
