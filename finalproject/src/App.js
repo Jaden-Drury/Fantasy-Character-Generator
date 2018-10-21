@@ -12,9 +12,9 @@ class App extends Component {
             PrintableVisible: false,
             playerName: null,
             characterName: null,
-            userClass:"",
-            race:"",
-            level:"",
+            userClass: null,
+            race:null,
+            level:null,
             strength: 0,
             dexterity: 0,
             constitution: 0,
@@ -107,7 +107,7 @@ class App extends Component {
             {this.printable()}
 
             {/*/!*Uncomment The below line to enable testing*!/*/}
-            <ReactTest playerName={this.state.playerName} characterName={this.state.characterName}/>
+            {/*<ReactTest playerName={this.state.playerName} characterName={this.state.characterName} userClass={this.state.userClass} race={this.state.race} level={this.state.level}/>*/}
             {/*/!*Uncomment The above line to enable testing*!/*/}
 
             <button className="generate" onClick={this.generate}>

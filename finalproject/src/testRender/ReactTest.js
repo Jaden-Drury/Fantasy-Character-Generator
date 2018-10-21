@@ -7,6 +7,9 @@ import '../App.css';
 import Fail from './fail'
 import Pass from './pass'
 
+//testing set up this way is useful as desierable as it is easy for state and props to not get
+//passed properly or correctly, as well as it's possible for them to get deformed along the way
+//these tests can check if the user input is actually getting passed correctly if at all
 
 class ReactTest extends Component{
 
@@ -38,6 +41,21 @@ class ReactTest extends Component{
         }
     }
 
+    DropNotNull(){
+        if(this.props.userClass === null || this.props.race === null || this.props.level === null){ //this is a example of how testing is set up
+            console.log("Test is False and Fails")
+            return(
+                <Fail/>
+            )
+        }else{
+            console.log("Test is True and Passes")
+            return(
+                <Pass/>
+            )
+
+        }
+    }
+
     render(){
         this.NameNotNull()
         return(
@@ -45,6 +63,7 @@ class ReactTest extends Component{
             <div className="ReactTest">
 
                 {this.NameNotNull()}
+                {this.DropNotNull()}
 
             </div>
         );

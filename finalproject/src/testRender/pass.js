@@ -8,7 +8,7 @@ class Pass extends Component{
     render(){
         return(
             <div className="red-green-refactor-pass">
-                <div><p>Tests all Pass</p></div>
+                <div><p>Tests Passes</p></div>
             </div>
         )
     }
