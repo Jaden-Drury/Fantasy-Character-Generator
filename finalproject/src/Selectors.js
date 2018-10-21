@@ -14,8 +14,8 @@ class Selectors extends Component {
             class: "",
             race: "",
             level: "",
-            pName: "",
-            cName: ""
+            playerName: "",
+            characterName: ""
         };
 
         // This binding is necessary to make `this` work in the callback
@@ -43,12 +43,12 @@ class Selectors extends Component {
     }
 
     handleChangeName(event){
-        this.setState({pName: event.target.value})
+        this.setState({playerName: event.target.value})
         this.props.setPlayerName(event.target.value)
     }
 
     handleChangecName(event){
-        this.setState({cName: event.target.value})
+        this.setState({characterName: event.target.value})
         this.props.setCharacterName(event.target.value)
     }
 

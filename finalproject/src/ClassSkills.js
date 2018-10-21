@@ -6,39 +6,32 @@ class ClassSkills extends Component {
         super(props);
         this.state = {
             d6: 0,
-            str: 1,
-            dex: 2,
-            con: 3,
-            int: 4,
-            wis: 5,
-            cha: 6,
-            statArray:[15, 14, 13, 12, 10, 8],
+            strength: 1,
+            dexterity: 2,
+            constitution: 3,
+            intelligence: 4,
+            wisdom: 5,
+            charisma: 6,
+            basicStatArray:[15, 14, 13, 12, 10, 8],
         }
     }
 
     componentWillMount(){
-        this.setState({str: this.getRandomScore(this.state.statArray)});
-        this.setState({dex: this.getRandomScore(this.state.statArray)});
-        this.setState({con: this.getRandomScore(this.state.statArray)});
-        this.setState({int: this.getRandomScore(this.state.statArray)});
-        this.setState({wis: this.getRandomScore(this.state.statArray)});
-        this.setState({cha: this.getRandomScore(this.state.statArray)});
+        this.setState({strength: this.getRandomScore(this.state.basicStatArray)});
+        this.setState({dexterity: this.getRandomScore(this.state.basicStatArray)});
+        this.setState({constitution: this.getRandomScore(this.state.basicStatArray)});
+        this.setState({intelligence: this.getRandomScore(this.state.basicStatArray)});
+        this.setState({wisdom: this.getRandomScore(this.state.basicStatArray)});
+        this.setState({charisma: this.getRandomScore(this.state.basicStatArray)});
     }
 
     componentDidMount(){
-        this.props.setStr(this.state.str);
-        this.props.setDex(this.state.dex);
-        this.props.setCon(this.state.con);
-        this.props.setInt(this.state.int);
-        this.props.setWis(this.state.wis);
-        this.props.setCha(this.state.cha);
-    }
-
-    rollDice(){
-        const min = 1;
-        const max = 6;
-        const random = Math.ceil(Math.random() * max-min + min);
-        return(random);
+        this.props.setStr(this.state.strength);
+        this.props.setDex(this.state.dexterity);
+        this.props.setCon(this.state.constitution);
+        this.props.setInt(this.state.intelligence);
+        this.props.setWis(this.state.wisdom);
+        this.props.setCha(this.state.charisma);
     }
 
     getRandomScore(array){
@@ -46,6 +39,13 @@ class ClassSkills extends Component {
         var statValue = array[num]
         array.splice(num, 1)
         return statValue;
+    }
+
+    rollDice(){
+        const min = 1;
+        const max = 6;
+        const randomNumber = Math.ceil(Math.random() * max-min + min);
+        return(randomNumber);
     }
 
     addDiceRollsTogether(){

@@ -9,17 +9,17 @@ class App extends Component {
         super(props);
         this.state = {
             PrintableVisible: false,
-            pName: "",
-            cName: "",
+            playerName: "",
+            characterName: "",
             userClass:"",
             race:"",
             level:"",
-            str: 0,
-            dex: 0,
-            con: 0,
-            int: 0,
-            wis: 0,
-            cha: 0,
+            strength: 0,
+            dexterity: 0,
+            constitution: 0,
+            intelligence: 0,
+            wisdom: 0,
+            charisma: 0,
             buttonText: "Generate Character"
         };
         this.generate = this.generate.bind(this)
@@ -29,28 +29,28 @@ class App extends Component {
         this.setState({userClass:userClass});
     }
 
-    setStr(str){
-        this.setState({str:str});
+    setStr(strengthParameter){
+        this.setState({strength:strengthParameter});
     }
 
-    setDex(dex){
-        this.setState({dex:dex});
+    setDex(dexterityParameter){
+        this.setState({dexterity:dexterityParameter});
     }
 
-    setCon(con){
-        this.setState({con:con});
+    setCon(constitutionParameter){
+        this.setState({constitution:constitutionParameter});
     }
 
-    setInt(int){
-        this.setState({int:int});
+    setInt(intelligenceParameter){
+        this.setState({intelligence:intelligenceParameter});
     }
 
-    setWis(wis){
-        this.setState({wis:wis});
+    setWis(wisdomParameter){
+        this.setState({wisdom:wisdomParameter});
     }
 
-    setCha(cha){
-        this.setState({cha:cha});
+    setCha(charismaParameter){
+        this.setState({charisma:charismaParameter});
     }
 
     setRace(race){
@@ -61,11 +61,11 @@ class App extends Component {
         this.setState({level:level});
     }
 
-    setPlayerName(pName){
-        this.setState({pName:pName});
+    setPlayerName(playerNameParameter){
+        this.setState({playerName:playerNameParameter});
     }
-    setCharacterName(cName){
-        this.setState({cName:cName});
+    setCharacterName(characterNameParameter){
+        this.setState({characterName:characterNameParameter});
     }
 
 
@@ -73,11 +73,11 @@ class App extends Component {
         try{
             if (this.state.PrintableVisible === true){
                 return(
-                    <Printable pName={this.state.pName} cName={this.state.cName} userClass={this.state.userClass} race={this.state.race} level={this.state.level} str={this.state.str} dex={this.state.dex}  con={this.state.con}  int={this.state.int}  wis={this.state.wis}  cha={this.state.cha}/>
+                    <Printable playerName={this.state.playerName} characterName={this.state.characterName} userClass={this.state.userClass} race={this.state.race} level={this.state.level} strength={this.state.strength} dexterity={this.state.dexterity}  constitution={this.state.constitution}  intelligence={this.state.intelligence}  wisdom={this.state.wisdom}  charisma={this.state.charisma}/>
                 )
             } else {
                 return(
-                    <Selectors setPlayerName={(pName)=>this.setPlayerName(pName)} setCharacterName={(cName)=>this.setCharacterName(cName)} setClass={(userClass)=>this.setClass(userClass)} setRace={(race)=>this.setRace(race)} setLevel={(level)=>this.setLevel(level)}/>
+                    <Selectors setPlayerName={(playerNameParameter)=>this.setPlayerName(playerNameParameter)} setCharacterName={(characterNameParameter)=>this.setCharacterName(characterNameParameter)} setClass={(userClass)=>this.setClass(userClass)} setRace={(race)=>this.setRace(race)} setLevel={(level)=>this.setLevel(level)}/>
                 )
             }
         } catch (Exception){

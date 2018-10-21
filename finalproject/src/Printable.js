@@ -19,8 +19,8 @@ class Printable extends Component{
                 <h3 id="charSheet">Character Sheet</h3>
 
                 <div className="wrapper">
-                    <h3 className="names">Player Name: {this.props.pName}</h3>
-                    <h3 className="names">Character Name: {this.props.cName}</h3>
+                    <h3 className="names">Player Name: {this.props.playerName}</h3>
+                    <h3 className="names">Character Name: {this.props.characterName}</h3>
                 </div>
 
                 <div className="wrapper">
@@ -30,12 +30,12 @@ class Printable extends Component{
                 </div>
 
                 <ol className="statList">
-                    <li>Strength <br/> <label className="statNum">{this.props.str}</label></li>
-                    <li>Dexterity <br/> <label className="statNum">{this.props.dex}</label></li>
-                    <li>Constitution <br/> <label className="statNum">{this.props.con}</label></li>
-                    <li>Intelligence <br/> <label className="statNum">{this.props.int}</label></li>
-                    <li>Wisdom <br/> <label className="statNum">{this.props.wis}</label></li>
-                    <li>Charisma <br/> <label className="statNum">{this.props.cha}</label></li>
+                    <li>Strength <br/> <label className="statNum">{this.props.strength}</label></li>
+                    <li>Dexterity <br/> <label className="statNum">{this.props.dexterity}</label></li>
+                    <li>Constitution <br/> <label className="statNum">{this.props.constitution}</label></li>
+                    <li>Intelligence <br/> <label className="statNum">{this.props.intelligence}</label></li>
+                    <li>Wisdom <br/> <label className="statNum">{this.props.wisdom}</label></li>
+                    <li>Charisma <br/> <label className="statNum">{this.props.charisma}</label></li>
                 </ol>
 
             </div>
