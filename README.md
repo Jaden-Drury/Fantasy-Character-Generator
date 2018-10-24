@@ -25,3 +25,4 @@ A graphical case of whether tests are passing or failing displays in the same br
 
 2: The file where tests are located is in the testRender directory.
 
+
