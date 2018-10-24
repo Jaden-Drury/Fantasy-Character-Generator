@@ -18,7 +18,7 @@ To enable testing:
 
 1: Open the app.js file in a text editor. On or around line 110 there will be a tag for <ReactTest /> or in full
 
-   <ReactTest playerName={this.state.playerName} characterName={this.state.characterName} userClass={this.state.userClass} race={this.state.race} level={this.state.level} strength={this.state.strength} intelligence={this.state.intelligence} constitution={this.state.constitution} wisdom={this.state.wisdom} dexterity={this.state.dexterity} charisma={this.state.charisma}/>
+    <ReactTest playerName={this.state.playerName} characterName={this.state.characterName} userClass={this.state.userClass} race={this.state.race} level={this.state.level} strength={this.state.strength} intelligence={this.state.intelligence} constitution={this.state.constitution} wisdom={this.state.wisdom} dexterity={this.state.dexterity} charisma={this.state.charisma}/>
     
 Comment out this line to disable testing, and uncomment it to enable testing.
 A graphical case of whether tests are passing or failing displays in the same browser window that opens when you run the npm start command. 

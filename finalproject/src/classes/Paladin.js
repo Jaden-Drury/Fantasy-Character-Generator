@@ -6,6 +6,14 @@
 import React, { Component } from 'react';
 
 class Paladin extends Component {
+
+    super(props){
+        this.state = {
+
+            hitDie: "1d10",
+        }
+    }
+
     render() {
         return (
 

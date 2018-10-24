@@ -5,6 +5,14 @@
 import React, { Component } from 'react';
 
 class Sorcerer extends Component {
+
+    super(props){
+        this.state = {
+
+            hitDie: "1d6",
+        }
+    }
+
     render() {
         return (
 

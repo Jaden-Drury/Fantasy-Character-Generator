@@ -5,6 +5,14 @@
 import React, { Component } from 'react';
 
 class Fighter extends Component {
+
+    super(props){
+        this.state = {
+
+            hitDie: "1d10",
+        }
+    }
+
     render() {
         return (
 
