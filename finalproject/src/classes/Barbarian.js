@@ -9,7 +9,19 @@ class Barbarian extends Component {
         this.state = {
 
             hitDie: "1d12",
+            hitPoints: 0,
      }
+    }
+
+    rollHitDie(){
+        const min = 1;
+        const max = 12;
+        const randomNumber = Math.ceil(Math.random() * max-min + min);
+        return(randomNumber);
+    }
+
+    setHitPoints(){
+        this.hitPoints = rollHitDie();
     }
 
 

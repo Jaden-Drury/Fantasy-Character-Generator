@@ -11,7 +11,19 @@ class Bard extends Component {
         this.state = {
 
             hitDie: "1d8",
+            hitPoints: 0,
         }
+    }
+
+    rollHitDie(){
+        const min = 1;
+        const max = 8;
+        const randomNumber = Math.ceil(Math.random() * max-min + min);
+        return(randomNumber);
+    }
+
+    setHitPoints(){
+        this.hitPoints = rollHitDie();
     }
 
     render() {

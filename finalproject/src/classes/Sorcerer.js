@@ -10,7 +10,19 @@ class Sorcerer extends Component {
         this.state = {
 
             hitDie: "1d6",
+            hitPoints: 0,
         }
+    }
+
+    rollHitDie(){
+        const min = 1;
+        const max = 6;
+        const randomNumber = Math.ceil(Math.random() * max-min + min);
+        return(randomNumber);
+    }
+
+    setHitPoints(){
+        this.hitPoints = rollHitDie();
     }
 
     render() {

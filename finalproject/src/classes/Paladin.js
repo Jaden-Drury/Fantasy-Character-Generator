@@ -11,9 +11,21 @@ class Paladin extends Component {
         this.state = {
 
             hitDie: "1d10",
+            hitPoints: 0,
         }
     }
 
+    rollHitDie(){
+        const min = 1;
+        const max = 10;
+        const randomNumber = Math.ceil(Math.random() * max-min + min);
+        return(randomNumber);
+    }
+
+    setHitPoints(){
+        this.hitPoints = rollHitDie();
+    }
+    
     render() {
         return (
 
