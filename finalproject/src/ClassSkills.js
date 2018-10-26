@@ -6,12 +6,12 @@ class ClassSkills extends Component {
         super(props);
         this.state = {
             d6: 0,
-            strength: 1,
-            dexterity: 2,
-            constitution: 3,
-            intelligence: 4,
-            wisdom: 5,
-            charisma: 6,
+            strength: 0,
+            dexterity: 0,
+            constitution: 0,
+            intelligence: 0,
+            wisdom: 0,
+            charisma: 0,
             basicStatArray:[15, 14, 13, 12, 10, 8],
         }
     }

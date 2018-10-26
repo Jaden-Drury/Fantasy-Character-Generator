@@ -27,6 +27,7 @@ class Printable extends Component{
                     <h3>Class: {this.props.userClass}</h3>
                     <h3>Race: {this.props.race}</h3>
                     <h3>Level: {this.props.level}</h3>
+                    <h3>HP: {this.props.hitPoints}</h3>
                 </div>
 
                 <ol className="statList">

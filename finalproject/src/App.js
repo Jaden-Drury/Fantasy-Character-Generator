@@ -4,6 +4,7 @@ import Selectors from './Selectors';
 import Printable from './Printable';
 import ClassSkills from './ClassSkills';
 import ReactTest from './testRender/ReactTest.js'
+import Barbarian from './classes/Barbarian.js'
 
 class App extends Component {
     constructor(props){
@@ -21,7 +22,8 @@ class App extends Component {
             intelligence: 0,
             wisdom: 0,
             charisma: 0,
-            buttonText: "Generate Character"
+            buttonText: "Generate Character",
+            hitPoints: 0,
         };
         this.generate = this.generate.bind(this)
     }
@@ -69,12 +71,16 @@ class App extends Component {
         this.setState({characterName:characterNameParameter});
     }
 
+    setHitPoints(HP){
+        this.setState({hitPoints: HP});
+    }
+
 
     printable(){
         try{
             if (this.state.PrintableVisible === true){
                 return(
-                        <Printable playerName={this.state.playerName} characterName={this.state.characterName} userClass={this.state.userClass} race={this.state.race} level={this.state.level} strength={this.state.strength} dexterity={this.state.dexterity}  constitution={this.state.constitution}  intelligence={this.state.intelligence}  wisdom={this.state.wisdom}  charisma={this.state.charisma}/>
+                        <Printable hitPoints={this.state.hitPoints} playerName={this.state.playerName} characterName={this.state.characterName} userClass={this.state.userClass} race={this.state.race} level={this.state.level} strength={this.state.strength} dexterity={this.state.dexterity}  constitution={this.state.constitution}  intelligence={this.state.intelligence}  wisdom={this.state.wisdom}  charisma={this.state.charisma}/>
                 )
             } else {
                 return(
@@ -115,7 +121,7 @@ class App extends Component {
             </button>
 
             <ClassSkills setStr={(str)=>this.setStr(str)} setDex={(dex)=>this.setDex(dex)} setCon={(con)=>this.setCon(con)} setInt={(int)=>this.setInt(int)} setWis={(wis)=>this.setWis(wis)} setCha={(cha)=>this.setCha(cha)}/>
-
+            <Barbarian setHitPoints={(HP)=>this.setHitPoints(HP)}/>
         </div>
     );
   }
