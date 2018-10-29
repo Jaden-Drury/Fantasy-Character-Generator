@@ -3,9 +3,19 @@ import './App.css';
 import Selectors from './Selectors';
 import Printable from './Printable';
 import ClassSkills from './ClassSkills';
-//import ReactTest from './testRender/ReactTest.js'
-
-import Barbarian from './classes/Barbarian.js'
+//import ReactTest from './testRender/ReactTest.js';
+import Barbarian from './classes/Barbarian.js';
+import Bard from './classes/Bard.js';
+import Cleric from './classes/Cleric.js';
+import Druid from './classes/Druid.js';
+import Fighter from './classes/Fighter.js';
+import Monk from './classes/Monk.js';
+import Paladin from './classes/Paladin.js';
+import Ranger from './classes/Ranger.js';
+import Rogue from './classes/Rogue.js';
+import Sorcerer from './classes/Sorcerer.js';
+import Warlock from './classes/Warlock.js';
+import Wizard from './classes/Wizard.js';
 
 class App extends Component {
     constructor(props){
@@ -96,8 +106,29 @@ class App extends Component {
     basePoints(){
         try {
             if (this.state.userClass === "Barbarian") {
-                console.log(true)
                 return <Barbarian setHitPoints={(HP)=>this.setHitPoints(HP)}/>
+            } if (this.state.userClass === "Bard") {
+                return <Bard setHitPoints={(HP)=>this.setHitPoints(HP)}/>
+            } if (this.state.userClass === "Cleric") {
+                return <Cleric setHitPoints={(HP)=>this.setHitPoints(HP)}/>
+            } if (this.state.userClass === "Druid") {
+                return <Druid setHitPoints={(HP)=>this.setHitPoints(HP)}/>
+            } if (this.state.userClass === "Fighter") {
+                return <Fighter setHitPoints={(HP)=>this.setHitPoints(HP)}/>
+            } if (this.state.userClass === "Monk") {
+                return <Monk setHitPoints={(HP)=>this.setHitPoints(HP)}/>
+            } if (this.state.userClass === "Paladin") {
+                return <Paladin setHitPoints={(HP)=>this.setHitPoints(HP)}/>
+            } if (this.state.userClass === "Ranger") {
+                return <Ranger setHitPoints={(HP)=>this.setHitPoints(HP)}/>
+            } if (this.state.userClass === "Rogue") {
+                return <Rogue setHitPoints={(HP)=>this.setHitPoints(HP)}/>
+            } if (this.state.userClass === "Sorcerer") {
+                return <Sorcerer setHitPoints={(HP)=>this.setHitPoints(HP)}/>
+            } if (this.state.userClass === "Warlock") {
+                return <Warlock setHitPoints={(HP)=>this.setHitPoints(HP)}/>
+            } if (this.state.userClass === "Wizard") {
+                return <Wizard setHitPoints={(HP)=>this.setHitPoints(HP)}/>
             } else {
                 console.log(false)
             }

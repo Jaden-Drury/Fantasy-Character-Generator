@@ -5,13 +5,22 @@
 import React, { Component } from 'react';
 
 class Fighter extends Component {
-
-    super(props){
+    constructor(props){
+        super(props);
         this.state = {
 
             hitDie: "1d10",
             hitPoints: 0,
         }
+    }
+
+    componentDidMount(){
+        this.props.setHitPoints(this.state.hitPoints);
+    }
+
+    componentWillMount(){
+        this.setState({hitPoints: this.rollHitDie()});
+
     }
 
     rollHitDie(){
@@ -21,16 +30,12 @@ class Fighter extends Component {
         return(randomNumber);
     }
 
-    setHitPoints(){
-        this.hitPoints = rollHitDie();
-    }
-
     render() {
         return (
 
             <div>
 
-                <p> Fighter </p>
+                {/* <p> Fighter </p> */}
 
             </div>
         )

@@ -6,14 +6,23 @@
 import React, { Component } from 'react';
 
 class Rogue extends Component {
-
-    super(props){
+    constructor(props){
+        super(props);
         this.state = {
 
             hitDie: "1d8",
             hitPoints: 0,
         }
     }    
+
+    componentDidMount(){
+        this.props.setHitPoints(this.state.hitPoints);
+    }
+
+    componentWillMount(){
+        this.setState({hitPoints: this.rollHitDie()});
+
+    }
         
     rollHitDie(){
         const min = 1;
@@ -22,16 +31,12 @@ class Rogue extends Component {
         return(randomNumber);
     }
 
-    setHitPoints(){
-        this.hitPoints = rollHitDie();
-    }
-
     render() {
         return (
 
             <div>
 
-                <p> Rogue </p>
+                {/* <p> Rogue </p> */}
 
             </div>
         )
