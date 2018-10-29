@@ -9,7 +9,7 @@ class Barbarian extends Component {
         super(props);
         this.state = {
             hitDie: "1d12",
-            hitPoints: 200,
+            hitPoints: 0,
         };
     }
 
@@ -30,10 +30,9 @@ class Barbarian extends Component {
     }
 
     render() {
-        this.rollHitDie()
         return (
 
-            <div className="Classes">
+            <div>
 
                 <p> Barbarian </p>
 

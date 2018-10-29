@@ -3,7 +3,8 @@ import './App.css';
 import Selectors from './Selectors';
 import Printable from './Printable';
 import ClassSkills from './ClassSkills';
-import ReactTest from './testRender/ReactTest.js'
+//import ReactTest from './testRender/ReactTest.js'
+
 import Barbarian from './classes/Barbarian.js'
 
 class App extends Component {
@@ -92,6 +93,19 @@ class App extends Component {
         }
     }
 
+    basePoints(){
+        try {
+            if (this.state.userClass === "Barbarian") {
+                console.log(true)
+                return <Barbarian setHitPoints={(HP)=>this.setHitPoints(HP)}/>
+            } else {
+                console.log(false)
+            }
+        } catch (Exception) {
+            console.log(Exception)
+        }
+    }
+
     generate(){
         try{
             if (this.state.PrintableVisible ===false){
@@ -111,6 +125,7 @@ class App extends Component {
         <div className="App">
 
             {this.printable()}
+            {this.basePoints()}
 
             {/*/!*Uncomment The below line to enable testing*!/*/}
             {/*<ReactTest playerName={this.state.playerName} characterName={this.state.characterName} userClass={this.state.userClass} race={this.state.race} level={this.state.level} strength={this.state.strength} intelligence={this.state.intelligence} constitution={this.state.constitution} wisdom={this.state.wisdom} dexterity={this.state.dexterity} charisma={this.state.charisma}/>*/}
@@ -121,7 +136,7 @@ class App extends Component {
             </button>
 
             <ClassSkills setStr={(str)=>this.setStr(str)} setDex={(dex)=>this.setDex(dex)} setCon={(con)=>this.setCon(con)} setInt={(int)=>this.setInt(int)} setWis={(wis)=>this.setWis(wis)} setCha={(cha)=>this.setCha(cha)}/>
-            <Barbarian setHitPoints={(HP)=>this.setHitPoints(HP)}/>
+            
         </div>
     );
   }
