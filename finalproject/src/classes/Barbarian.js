@@ -34,7 +34,7 @@ class Barbarian extends Component {
 
             <div>
 
-                <p> Barbarian </p>
+                {/* <p> Barbarian </p> */}
 
             </div>
         )
