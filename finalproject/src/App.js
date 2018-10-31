@@ -105,7 +105,6 @@ class App extends Component {
 
     basePoints(){
         try {
-<<<<<<< HEAD
             switch (this.state.userClass){ 
                 case "Barbarian": 
                     this.state.hitPoints = 12;
@@ -113,34 +112,6 @@ class App extends Component {
                 case "Bard":
                     this.state.hitPoints = 8;
                     break;
-=======
-            if (this.state.userClass === "Barbarian") {
-                return <Barbarian setHitPoints={(HP)=>this.setHitPoints(HP)}/>
-            } if (this.state.userClass === "Bard") {
-                return <Bard setHitPoints={(HP)=>this.setHitPoints(HP)}/>
-            } if (this.state.userClass === "Cleric") {
-                return <Cleric setHitPoints={(HP)=>this.setHitPoints(HP)}/>
-            } if (this.state.userClass === "Druid") {
-                return <Druid setHitPoints={(HP)=>this.setHitPoints(HP)}/>
-            } if (this.state.userClass === "Fighter") {
-                return <Fighter setHitPoints={(HP)=>this.setHitPoints(HP)}/>
-            } if (this.state.userClass === "Monk") {
-                return <Monk setHitPoints={(HP)=>this.setHitPoints(HP)}/>
-            } if (this.state.userClass === "Paladin") {
-                return <Paladin setHitPoints={(HP)=>this.setHitPoints(HP)}/>
-            } if (this.state.userClass === "Ranger") {
-                return <Ranger setHitPoints={(HP)=>this.setHitPoints(HP)}/>
-            } if (this.state.userClass === "Rogue") {
-                return <Rogue setHitPoints={(HP)=>this.setHitPoints(HP)}/>
-            } if (this.state.userClass === "Sorcerer") {
-                return <Sorcerer setHitPoints={(HP)=>this.setHitPoints(HP)}/>
-            } if (this.state.userClass === "Warlock") {
-                return <Warlock setHitPoints={(HP)=>this.setHitPoints(HP)}/>
-            } if (this.state.userClass === "Wizard") {
-                return <Wizard setHitPoints={(HP)=>this.setHitPoints(HP)}/>
-            } else {
-                console.log(false)
->>>>>>> 5309af47d4ba7b9be88087bf2fa9ce5751fe9a05
             }
         } catch (Exception) {
             console.log(Exception)
