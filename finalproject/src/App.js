@@ -95,11 +95,13 @@ class App extends Component {
 
     basePoints(){
         try {
-            if (this.state.userClass === "Barbarian") {
-                console.log(true)
-                return <Barbarian setHitPoints={(HP)=>this.setHitPoints(HP)}/>
-            } else {
-                console.log(false)
+            switch (this.state.userClass){ 
+                case "Barbarian": 
+                    this.state.hitPoints = 12;
+                    break;
+                case "Bard":
+                    this.state.hitPoints = 8;
+                    break;
             }
         } catch (Exception) {
             console.log(Exception)
