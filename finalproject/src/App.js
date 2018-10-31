@@ -82,11 +82,6 @@ class App extends Component {
         this.setState({characterName:characterNameParameter});
     }
 
-    setHitPoints(HP){
-        this.setState({hitPoints: HP});
-    }
-
-
     printable(){
         try{
             if (this.state.PrintableVisible === true){
@@ -103,7 +98,7 @@ class App extends Component {
         }
     }
 
-    basePoints(){
+    baseHitPoints(){
         try {
             switch (this.state.userClass){ 
                 case "Barbarian": 
@@ -111,6 +106,36 @@ class App extends Component {
                     break;
                 case "Bard":
                     this.state.hitPoints = 8;
+                    break;
+                case "Cleric":
+                    this.state.hitPoitns = 8;
+                    break;
+                case "Druid":
+                    this.state.hitPoints = 8;
+                    break;
+                case "Fighter": 
+                    this.state.hitPoints = 10;
+                    break;
+                case "Monk":
+                    this.state.hitPoints = 8;
+                    break;
+                case "Paladin":
+                    this.state.hitPoitns = 10;
+                    break;
+                case "Ranger":
+                    this.state.hitPoints = 10;
+                    break;
+                case "Rogue": 
+                    this.state.hitPoints = 8;
+                    break;
+                case "Sorcerer":
+                    this.state.hitPoints = 6;
+                    break;
+                case "Warlock":
+                    this.state.hitPoitns = 8;
+                    break;
+                case "Wizard":
+                    this.state.hitPoints = 6;
                     break;
             }
         } catch (Exception) {
