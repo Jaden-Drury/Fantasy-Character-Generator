@@ -212,7 +212,7 @@ class App extends Component {
     return (
         <div className="App">
 
-            {this.basePoints()}
+            {this.baseHitPoints()}
             {this.printable()}
 
             {/*/!*Uncomment The below line to enable testing*!/*/}
