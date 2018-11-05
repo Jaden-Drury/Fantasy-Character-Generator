@@ -4,18 +4,18 @@ import Selectors from './Selectors';
 import Printable from './Printable';
 import ClassSkills from './ClassSkills';
 //import ReactTest from './testRender/ReactTest.js';
-import Barbarian from './classes/Barbarian.js';
-import Bard from './classes/Bard.js';
-import Cleric from './classes/Cleric.js';
-import Druid from './classes/Druid.js';
-import Fighter from './classes/Fighter.js';
-import Monk from './classes/Monk.js';
-import Paladin from './classes/Paladin.js';
-import Ranger from './classes/Ranger.js';
-import Rogue from './classes/Rogue.js';
-import Sorcerer from './classes/Sorcerer.js';
-import Warlock from './classes/Warlock.js';
-import Wizard from './classes/Wizard.js';
+// import Barbarian from './classes/Barbarian.js';
+// import Bard from './classes/Bard.js';
+// import Cleric from './classes/Cleric.js';
+// import Druid from './classes/Druid.js';
+// import Fighter from './classes/Fighter.js';
+// import Monk from './classes/Monk.js';
+// import Paladin from './classes/Paladin.js';
+// import Ranger from './classes/Ranger.js';
+// import Rogue from './classes/Rogue.js';
+// import Sorcerer from './classes/Sorcerer.js';
+// import Warlock from './classes/Warlock.js';
+// import Wizard from './classes/Wizard.js';
 
 class App extends Component {
     constructor(props){
@@ -102,40 +102,42 @@ class App extends Component {
         try {
             switch (this.state.userClass){ 
                 case "Barbarian": 
-                    this.state.hitPoints = 12;
+                    this.setState.hitPoints = 12;
                     break;
                 case "Bard":
-                    this.state.hitPoints = 8;
+                    this.setState.hitPoints = 8;
                     break;
                 case "Cleric":
-                    this.state.hitPoitns = 8;
+                    this.setState.hitPoitns = 8;
                     break;
                 case "Druid":
-                    this.state.hitPoints = 8;
+                    this.setState.hitPoints = 8;
                     break;
                 case "Fighter": 
-                    this.state.hitPoints = 10;
+                    this.setState.hitPoints = 10;
                     break;
                 case "Monk":
-                    this.state.hitPoints = 8;
+                    this.setState.hitPoints = 8;
                     break;
                 case "Paladin":
-                    this.state.hitPoitns = 10;
+                    this.setState.hitPoitns = 10;
                     break;
                 case "Ranger":
-                    this.state.hitPoints = 10;
+                    this.setState.hitPoints = 10;
                     break;
                 case "Rogue": 
-                    this.state.hitPoints = 8;
+                    this.setState.hitPoints = 8;
                     break;
                 case "Sorcerer":
-                    this.state.hitPoints = 6;
+                    this.setState.hitPoints = 6;
                     break;
                 case "Warlock":
-                    this.state.hitPoitns = 8;
+                    this.setState.hitPoitns = 8;
                     break;
                 case "Wizard":
-                    this.state.hitPoints = 6;
+                    this.setState.hitPoints = 6;
+                    break;
+                default:
                     break;
             }
         } catch (Exception) {
@@ -145,35 +147,35 @@ class App extends Component {
 
     abilityModifiers(skill) {
         if (skill === 1){
-            this.state.modifier = -5;
+            this.setState.modifier = -5;
         } if (skill === 2 || skill === 3){
-            this.state.modifier = -4;
+            this.setState.modifier = -4;
         } if (skill === 4 || skill === 5){
-            this.state.modifier = -3;
+            this.setState.modifier = -3;
         } if (skill === 6 || skill === 7){
-            this.state.modifier = -2;
+            this.setState.modifier = -2;
         } if (skill === 8 || skill === 9){
-            this.state.modifier = -1;
+            this.setState.modifier = -1;
         } if (skill === 12 || skill === 13){
-            this.state.modifier = 1;
+            this.setState.modifier = 1;
         } if (skill === 14 || skill === 15){
-            this.state.modifier = 2;
+            this.setState.modifier = 2;
         } if (skill === 16 || skill === 17){
-            this.state.modifier = 3;
+            this.setState.modifier = 3;
         } if (skill === 18 || skill === 19){
-            this.state.modifier = 4;
+            this.setState.modifier = 4;
         } if (skill === 20 || skill === 21){
-            this.state.modifier = 5;
+            this.setState.modifier = 5;
         } if (skill === 22 || skill === 23){
-            this.state.modifier = 6;
+            this.setState.modifier = 6;
         } if (skill === 24 || skill === 25){
-            this.state.modifier = 7;
+            this.setState.modifier = 7;
         } if (skill === 26 || skill === 27){
-            this.state.modifier = 8;
+            this.setState.modifier = 8;
         } if (skill === 28 || skill === 29){
-            this.state.modifier = 9;
+            this.setState.modifier = 9;
         } if (skill === 30){
-            this.state.modifier = 10;
+            this.setState.modifier = 10;
         }
     }
 
@@ -196,7 +198,7 @@ class App extends Component {
         <div className="App">
 
             {this.printable()}
-            {this.basePoints()}
+            {this.baseHitPoints()}
 
             {/*/!*Uncomment The below line to enable testing*!/*/}
             {/*<ReactTest playerName={this.state.playerName} characterName={this.state.characterName} userClass={this.state.userClass} race={this.state.race} level={this.state.level} strength={this.state.strength} intelligence={this.state.intelligence} constitution={this.state.constitution} wisdom={this.state.wisdom} dexterity={this.state.dexterity} charisma={this.state.charisma}/>*/}
