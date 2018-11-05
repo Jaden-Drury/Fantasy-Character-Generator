@@ -3,19 +3,7 @@ import './App.css';
 import Selectors from './Selectors';
 import Printable from './Printable';
 import ClassSkills from './ClassSkills';
-//import ReactTest from './testRender/ReactTest.js';
-// import Barbarian from './classes/Barbarian.js';
-// import Bard from './classes/Bard.js';
-// import Cleric from './classes/Cleric.js';
-// import Druid from './classes/Druid.js';
-// import Fighter from './classes/Fighter.js';
-// import Monk from './classes/Monk.js';
-// import Paladin from './classes/Paladin.js';
-// import Ranger from './classes/Ranger.js';
-// import Rogue from './classes/Rogue.js';
-// import Sorcerer from './classes/Sorcerer.js';
-// import Warlock from './classes/Warlock.js';
-// import Wizard from './classes/Wizard.js';
+
 
 class App extends Component {
     constructor(props){
