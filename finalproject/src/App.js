@@ -83,6 +83,7 @@ class App extends Component {
     }
 
     printable(){
+        //this.racialBonuses();
         try{
             if (this.state.PrintableVisible === true){
                 return(
@@ -95,6 +96,20 @@ class App extends Component {
             }
         } catch (Exception){
             console.log(Exception);
+        }
+    }
+
+    racialBonuses(){
+        try {
+            switch (this.state.race){ 
+                case "Dragonborn": 
+                    console.log(this.state.strength);
+                    this.state.strength = this.state.strength +2;
+                    console.log(this.state.strength);
+                    break;
+            }
+        } catch (Exception) {
+            console.log(Exception)
         }
     }
 
@@ -197,8 +212,8 @@ class App extends Component {
     return (
         <div className="App">
 
+            {this.basePoints()}
             {this.printable()}
-            {this.baseHitPoints()}
 
             {/*/!*Uncomment The below line to enable testing*!/*/}
             {/*<ReactTest playerName={this.state.playerName} characterName={this.state.characterName} userClass={this.state.userClass} race={this.state.race} level={this.state.level} strength={this.state.strength} intelligence={this.state.intelligence} constitution={this.state.constitution} wisdom={this.state.wisdom} dexterity={this.state.dexterity} charisma={this.state.charisma}/>*/}
@@ -209,7 +224,6 @@ class App extends Component {
             </button>
 
             <ClassSkills setStr={(str)=>this.setStr(str)} setDex={(dex)=>this.setDex(dex)} setCon={(con)=>this.setCon(con)} setInt={(int)=>this.setInt(int)} setWis={(wis)=>this.setWis(wis)} setCha={(cha)=>this.setCha(cha)}/>
-            
         </div>
     );
   }
