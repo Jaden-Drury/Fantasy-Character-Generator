@@ -34,6 +34,7 @@ class App extends Component {
             wisdom: 0,
             charisma: 0,
             buttonText: "Generate Character",
+            buttonVisible: true,
             hitPoints: 0,
         };
         this.generate = this.generate.bind(this)
@@ -92,6 +93,20 @@ class App extends Component {
             } else {
                 return(
                     <Selectors setPlayerName={(playerNameParameter)=>this.setPlayerName(playerNameParameter)} setCharacterName={(characterNameParameter)=>this.setCharacterName(characterNameParameter)} setClass={(userClass)=>this.setClass(userClass)} setRace={(race)=>this.setRace(race)} setLevel={(level)=>this.setLevel(level)}/>
+                )
+            }
+        } catch (Exception){
+            console.log(Exception);
+        }
+    }
+
+    buttonToggle(){
+        try{
+            if (this.state.buttonVisible === true){
+                return(
+                <button className="generate" onClick={this.generate}>
+                    {this.state.buttonText}
+                </button> 
                 )
             }
         } catch (Exception){
@@ -198,7 +213,7 @@ class App extends Component {
         try{
             if (this.state.PrintableVisible ===false){
                 this.setState({PrintableVisible: true})
-                this.setState({buttonText: "Generate New Sheet"});
+                this.setState({buttonVisible: false})
             } else{
                 this.setState({PrintableVisible: false})
                 this.setState({buttonText: "Generate Character"});
@@ -211,7 +226,7 @@ class App extends Component {
   render() {
     return (
         <div className="App">
-
+            {this.buttonToggle()}
             {this.baseHitPoints()}
             {this.printable()}
             {this.racialBonuses()}
@@ -220,9 +235,7 @@ class App extends Component {
             {/*<ReactTest playerName={this.state.playerName} characterName={this.state.characterName} userClass={this.state.userClass} race={this.state.race} level={this.state.level} strength={this.state.strength} intelligence={this.state.intelligence} constitution={this.state.constitution} wisdom={this.state.wisdom} dexterity={this.state.dexterity} charisma={this.state.charisma}/>*/}
             {/*/!*Uncomment The above line to enable testing*!/*/}
 
-            <button className="generate" onClick={this.generate}>
-                {this.state.buttonText}
-            </button>
+            
 
             <ClassSkills setStr={(str)=>this.setStr(str)} setDex={(dex)=>this.setDex(dex)} setCon={(con)=>this.setCon(con)} setInt={(int)=>this.setInt(int)} setWis={(wis)=>this.setWis(wis)} setCha={(cha)=>this.setCha(cha)}/>
         </div>
