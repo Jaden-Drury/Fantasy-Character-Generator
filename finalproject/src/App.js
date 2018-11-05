@@ -117,40 +117,40 @@ class App extends Component {
         try {
             switch (this.state.userClass){ 
                 case "Barbarian": 
-                    this.setState.hitPoints = 12;
+                    this.state.hitPoints = 12;
                     break;
                 case "Bard":
-                    this.setState.hitPoints = 8;
+                    this.state.hitPoints = 8;
                     break;
                 case "Cleric":
-                    this.setState.hitPoitns = 8;
+                    this.state.hitPoitns = 8;
                     break;
                 case "Druid":
-                    this.setState.hitPoints = 8;
+                    this.state.hitPoints = 8;
                     break;
                 case "Fighter": 
-                    this.setState.hitPoints = 10;
+                    this.state.hitPoints = 10;
                     break;
                 case "Monk":
-                    this.setState.hitPoints = 8;
+                    this.state.hitPoints = 8;
                     break;
                 case "Paladin":
-                    this.setState.hitPoitns = 10;
+                    this.state.hitPoitns = 10;
                     break;
                 case "Ranger":
-                    this.setState.hitPoints = 10;
+                    this.state.hitPoints = 10;
                     break;
                 case "Rogue": 
-                    this.setState.hitPoints = 8;
+                    this.state.hitPoints = 8;
                     break;
                 case "Sorcerer":
-                    this.setState.hitPoints = 6;
+                    this.state.hitPoints = 6;
                     break;
                 case "Warlock":
-                    this.setState.hitPoitns = 8;
+                    this.state.hitPoitns = 8;
                     break;
                 case "Wizard":
-                    this.setState.hitPoints = 6;
+                    this.state.hitPoints = 6;
                     break;
                 default:
                     break;
@@ -214,6 +214,7 @@ class App extends Component {
 
             {this.baseHitPoints()}
             {this.printable()}
+            {this.racialBonuses()}
 
             {/*/!*Uncomment The below line to enable testing*!/*/}
             {/*<ReactTest playerName={this.state.playerName} characterName={this.state.characterName} userClass={this.state.userClass} race={this.state.race} level={this.state.level} strength={this.state.strength} intelligence={this.state.intelligence} constitution={this.state.constitution} wisdom={this.state.wisdom} dexterity={this.state.dexterity} charisma={this.state.charisma}/>*/}
