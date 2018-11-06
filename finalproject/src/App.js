@@ -163,40 +163,6 @@ class App extends Component {
         }
     }
 
-    abilityModifiers(skill) {
-        if (skill === 1){
-            this.setState.modifier = -5;
-        } if (skill === 2 || skill === 3){
-            this.setState.modifier = -4;
-        } if (skill === 4 || skill === 5){
-            this.setState.modifier = -3;
-        } if (skill === 6 || skill === 7){
-            this.setState.modifier = -2;
-        } if (skill === 8 || skill === 9){
-            this.setState.modifier = -1;
-        } if (skill === 12 || skill === 13){
-            this.setState.modifier = 1;
-        } if (skill === 14 || skill === 15){
-            this.setState.modifier = 2;
-        } if (skill === 16 || skill === 17){
-            this.setState.modifier = 3;
-        } if (skill === 18 || skill === 19){
-            this.setState.modifier = 4;
-        } if (skill === 20 || skill === 21){
-            this.setState.modifier = 5;
-        } if (skill === 22 || skill === 23){
-            this.setState.modifier = 6;
-        } if (skill === 24 || skill === 25){
-            this.setState.modifier = 7;
-        } if (skill === 26 || skill === 27){
-            this.setState.modifier = 8;
-        } if (skill === 28 || skill === 29){
-            this.setState.modifier = 9;
-        } if (skill === 30){
-            this.setState.modifier = 10;
-        }
-    }
-
     generate(){
         try{
             if (this.state.PrintableVisible ===false){
