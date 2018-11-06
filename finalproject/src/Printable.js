@@ -12,37 +12,37 @@ class Printable extends Component{
 
     abilityModifiers(skill) {
         if (skill === 1){
-            return(this.setState.modifier = "-5");
+            return(this.setState.modifier = -5);
         } if (skill === 2 || skill === 3){
-            return(this.setState.modifier = "-4");
+            return(this.setState.modifier = -4);
         } if (skill === 4 || skill === 5){
-            return(this.setState.modifier = "-3");
+            return(this.setState.modifier = -3);
         } if (skill === 6 || skill === 7){
-            return(this.setState.modifier = "-2");
+            return(this.setState.modifier = -2);
         } if (skill === 8 || skill === 9){
-            return(this.setState.modifier = "-1");
+            return(this.setState.modifier = -1);
         }if (skill === 10 || skill === 11){
-            return(this.setState.modifier = "+0");
+            return(this.setState.modifier = 0);
         }if (skill === 12 || skill === 13){
-            return(this.setState.modifier = "+1");
+            return(this.setState.modifier = 1);
         } if (skill === 14 || skill === 15){
-            return(this.setState.modifier = "+2");
+            return(this.setState.modifier = 2);
         } if (skill === 16 || skill === 17){
-            return(this.setState.modifier = "+3");
+            return(this.setState.modifier = 3);
         } if (skill === 18 || skill === 19){
-            return(this.setState.modifier = "+4");
+            return(this.setState.modifier = 4);
         } if (skill === 20 || skill === 21){
-            return(this.setState.modifier = "+5");
+            return(this.setState.modifier = 5);
         } if (skill === 22 || skill === 23){
-            return(this.setState.modifier = "+6");
+            return(this.setState.modifier = 6);
         } if (skill === 24 || skill === 25){
-            return(this.setState.modifier = "+7");
+            return(this.setState.modifier = 7);
         } if (skill === 26 || skill === 27){
-            return(this.setState.modifier = "+8");
+            return(this.setState.modifier = 8);
         } if (skill === 28 || skill === 29){
-            return(this.setState.modifier = "+9");
+            return(this.setState.modifier = 9);
         } if (skill === 30){
-            return(this.setState.modifier = "+10");
+            return(this.setState.modifier = 10);
         }
     }
 
@@ -63,7 +63,7 @@ class Printable extends Component{
                     <h3>Class: {this.props.userClass}</h3>
                     <h3>Race: {this.props.race}</h3>
                     <h3>Level: {this.props.level}</h3>
-                    <h3>HP: {this.props.hitPoints}</h3>
+                    <h3>HP: {this.props.hitPoints + this.abilityModifiers(this.props.constitution)}</h3>
                 </div>
 
                 <ol className="statList">

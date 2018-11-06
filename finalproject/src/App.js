@@ -138,7 +138,7 @@ class App extends Component {
                     this.state.hitPoints = 8;
                     break;
                 case "Paladin":
-                    this.state.hitPoitns = 10;
+                    this.state.hitPoints = 10;
                     break;
                 case "Ranger":
                     this.state.hitPoints = 10;
@@ -150,7 +150,7 @@ class App extends Component {
                     this.state.hitPoints = 6;
                     break;
                 case "Warlock":
-                    this.state.hitPoitns = 8;
+                    this.state.hitPoints = 8;
                     break;
                 case "Wizard":
                     this.state.hitPoints = 6;
