@@ -126,7 +126,7 @@ class App extends Component {
                     this.state.hitPoints = 8;
                     break;
                 case "Cleric":
-                    this.state.hitPoitns = 8;
+                    this.state.hitPoints = 8;
                     break;
                 case "Druid":
                     this.state.hitPoints = 8;
