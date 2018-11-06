@@ -57,77 +57,78 @@ class Printable extends Component{
         try {
             switch (this.props.userClass){
                 case "Barbarian":
-                    if(this.props.level != 1) {
+                    if(this.props.level !== 1) {
                         const roll = this.rollD12()
                         console.log("roll " + roll)
                         console.log("con mod " + this.abilityModifiers(this.props.constitution))
                         console.log(roll + this.abilityModifiers(this.props.constitution))
                         return(roll + this.abilityModifiers(this.props.constitution));
-                    }else{return(0)}
-                    break;
+                    }else{
+                        return(0)
+                    }
 
                 case "Bard":
-                    if(this.props.level != 1) {
+                    if(this.props.level !== 1) {
                     console.log("Bard");
                 }
                 break;
 
                 case "Cleric":
-                    if(this.props.level != 1) {
+                    if(this.props.level !== 1) {
                         console.log("Cleric");
                     }
                     break;
 
                 case "Druid":
-                    if(this.props.level != 1) {
+                    if(this.props.level !== 1) {
                         console.log("Druid");
                     }
                     break;
 
                 case "Fighter":
-                    if(this.props.level != 1) {
+                    if(this.props.level !== 1) {
                         console.log("Fighter");
                     }
                     break;
 
                 case "Monk":
-                    if(this.props.level != 1) {
+                    if(this.props.level !== 1) {
                         console.log("Monk");
                     }
                     break;
 
                 case "Paladin":
-                    if(this.props.level != 1) {
+                    if(this.props.level !== 1) {
                         console.log("Paladin");
                     }
                     break;
 
                 case "Ranger":
-                    if(this.props.level != 1) {
+                    if(this.props.level !== 1) {
                         console.log("Ranger");
                     }
                     break;
 
                 case "Rogue":
-                    if(this.props.level != 1) {
+                    if(this.props.level !== 1) {
                         console.log("Rogue");
                     }
                     break;
 
                 case "Sorcerer":
-                    if(this.props.level != 1) {
+                    if(this.props.level !== 1) {
                         console.log("Sorcerer");
                     }
                     break;
 
                 case "Warlock":
-                    if(this.props.level != 1) {
+                    if(this.props.level !== 1) {
                         console.log("Warlock");
                     }
                     break;
 
                 case "Wizard":
-                    if(this.props.level != 1) {
+                    if(this.props.level !== 1) {
                         console.log("Wizard");
                     }
                     break;
