@@ -46,8 +46,103 @@ class Printable extends Component{
         }
     }
 
+    rollD12(level){
+        const min = 1;
+        const max = 12;
+        const randomNumber = Math.ceil(Math.random() * max-min + min);
+        return(randomNumber);
+    }
+
+    leveledHP(){
+        try {
+            switch (this.props.userClass){
+                case "Barbarian":
+                    if(this.props.level != 1) {
+                        const roll = this.rollD12()
+                        console.log("roll " + roll)
+                        console.log("con mod " + this.abilityModifiers(this.props.constitution))
+                        console.log(roll + this.abilityModifiers(this.props.constitution))
+                        return(roll + this.abilityModifiers(this.props.constitution));
+                    }else{return(0)}
+                    break;
+
+                case "Bard":
+                    if(this.props.level != 1) {
+                    console.log("Bard");
+                }
+                break;
+
+                case "Cleric":
+                    if(this.props.level != 1) {
+                        console.log("Cleric");
+                    }
+                    break;
+
+                case "Druid":
+                    if(this.props.level != 1) {
+                        console.log("Druid");
+                    }
+                    break;
+
+                case "Fighter":
+                    if(this.props.level != 1) {
+                        console.log("Fighter");
+                    }
+                    break;
+
+                case "Monk":
+                    if(this.props.level != 1) {
+                        console.log("Monk");
+                    }
+                    break;
+
+                case "Paladin":
+                    if(this.props.level != 1) {
+                        console.log("Paladin");
+                    }
+                    break;
+
+                case "Ranger":
+                    if(this.props.level != 1) {
+                        console.log("Ranger");
+                    }
+                    break;
+
+                case "Rogue":
+                    if(this.props.level != 1) {
+                        console.log("Rogue");
+                    }
+                    break;
+
+                case "Sorcerer":
+                    if(this.props.level != 1) {
+                        console.log("Sorcerer");
+                    }
+                    break;
+
+                case "Warlock":
+                    if(this.props.level != 1) {
+                        console.log("Warlock");
+                    }
+                    break;
+
+                case "Wizard":
+                    if(this.props.level != 1) {
+                        console.log("Wizard");
+                    }
+                    break;
+
+                default:
+                    break;
+            }
+        } catch (Exception) {
+            console.log(Exception)
+        }
+    }
+
+
     render(){
-        console.log(this.props)
+        // console.log(this.props)
         return(
 
             <div className="Printable">
@@ -63,7 +158,7 @@ class Printable extends Component{
                     <h3>Class: {this.props.userClass}</h3>
                     <h3>Race: {this.props.race}</h3>
                     <h3>Level: {this.props.level}</h3>
-                    <h3>HP: {this.props.hitPoints + this.abilityModifiers(this.props.constitution)}</h3>
+                    <h3>HP: {this.props.hitPoints + this.abilityModifiers(this.props.constitution) + this.leveledHP()}</h3>
                 </div>
 
                 <ol className="statList">
