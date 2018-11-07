@@ -118,8 +118,8 @@ class App extends Component {
 
     baseHitPoints(){
         try {
-            switch (this.state.userClass){ 
-                case "Barbarian": 
+            switch (this.state.userClass){
+                case "Barbarian":
                     this.state.hitPoints = 12;
                     break;
                 case "Bard":
@@ -131,7 +131,7 @@ class App extends Component {
                 case "Druid":
                     this.state.hitPoints = 8;
                     break;
-                case "Fighter": 
+                case "Fighter":
                     this.state.hitPoints = 10;
                     break;
                 case "Monk":
@@ -143,7 +143,7 @@ class App extends Component {
                 case "Ranger":
                     this.state.hitPoints = 10;
                     break;
-                case "Rogue": 
+                case "Rogue":
                     this.state.hitPoints = 8;
                     break;
                 case "Sorcerer":
