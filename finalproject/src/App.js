@@ -72,11 +72,6 @@ class App extends Component {
         this.setState({characterName:characterNameParameter});
     }
 
-    // <button className="print" onClick={window.print()}>
-    //                         Print Character Sheet
-    // </button>
-    //print button that won't work right
-
     printable(){
         try{
             if (this.state.PrintableVisible === true){

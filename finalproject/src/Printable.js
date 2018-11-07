@@ -150,11 +150,30 @@ class Printable extends Component{
         }
     }
 
+    printCharSheet(){
+        var content = document.getElementById("Printable");
+        var pri = document.getElementById("ifmcontentstoprint").contentWindow;
+        pri.document.open();
+        pri.document.write(content.innerHTML);
+        pri.document.close();
+        pri.focus();
+        pri.print();
+        var cssLink = document.createElement("link");
+        cssLink.href = "App.css"; 
+        cssLink.rel = "stylesheet"; 
+        cssLink.type = "text/css"; 
+        document.head.appendChild(cssLink);
+    }
+
+     
 
     render(){
         return(
+            <div>
+            
+            <iframe id="ifmcontentstoprint"></iframe>
 
-            <div className="Printable">
+            <div id="Printable">
 
                 <h3 id="charSheet">Character Sheet</h3>
 
@@ -210,6 +229,11 @@ class Printable extends Component{
 
                 <p id="footnote">Note: The above scores, modifiers, and hp are not including the two point additional ability score improvements that occur at 4th, 8th, 12th, 16th, and 19th level.</p>
 
+            </div>
+
+             <button className="print" onClick={this.printCharSheet}>
+                           Print Character Sheet
+            </button>
             </div>
         );
     }
