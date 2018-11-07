@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import ReactTest from './testRender/ReactTest.js';
 import Selectors from './Selectors';
 import Printable from './Printable';
 import ClassSkills from './ClassSkills';
@@ -222,7 +223,7 @@ class App extends Component {
             {this.racialBonuses()}
 
             {/*/!*Uncomment The below line to enable testing*!/*/}
-            {/*<ReactTest playerName={this.state.playerName} characterName={this.state.characterName} userClass={this.state.userClass} race={this.state.race} level={this.state.level} strength={this.state.strength} intelligence={this.state.intelligence} constitution={this.state.constitution} wisdom={this.state.wisdom} dexterity={this.state.dexterity} charisma={this.state.charisma}/>*/}
+            <ReactTest HP ={this.state.hitPoints} playerName={this.state.playerName} characterName={this.state.characterName} userClass={this.state.userClass} race={this.state.race} level={this.state.level} strength={this.state.strength} intelligence={this.state.intelligence} constitution={this.state.constitution} wisdom={this.state.wisdom} dexterity={this.state.dexterity} charisma={this.state.charisma}/>
             {/*/!*Uncomment The above line to enable testing*!/*/}
 
             

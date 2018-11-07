@@ -57,18 +57,31 @@ class ReactTest extends Component{
     }
 
     SkillsNotZero(){
-        if(this.props.strength === 0 || this.props.intelligence === 0 || this.props.constitution === 0 || this.props.wisdom === 0 || this.props.dexterity === 0 || this.props.charisma === 0 ){
-            console.log("Test is False and Fails")
-            return(
-                <Fail/>
-            )
-        }else{
-            console.log("Test is True and Passes")
+        if ( this.TestForLowestScore(this.props.HP) && this.TestForLowestScore(this.props.strength) && this.TestForLowestScore(this.props.intelligence) && this.TestForLowestScore(this.props.constitution) && this.TestForLowestScore(this.props.wisdom) && this.TestForLowestScore(this.props.dexterity) && this.TestForLowestScore(this.props.charisma)) {
+            console.log("All skills are equal to or greater than the lowest posible per level       i.e level 1 = 8, level 2 = 16")
             return(
                 <Pass/>
             )
-
         }
+        console.log("There is one skill that is not equal to or greater than the minimum possible score")
+        return (
+            <Fail/>
+        )
+    }
+
+    // This is a helper function to test for the lowest possible score per level
+    TestForLowestScore(skill) {
+        if ( skill >= (8*this.props.level) ) {
+            return true;
+        }
+
+        if ( skill === this.props.HP ) {
+            if ( this.props.HP >= 1 ) {
+                return true;
+            }
+        }
+        
+        return false;
     }
 
     render(){
@@ -77,8 +90,8 @@ class ReactTest extends Component{
 
             <div className="ReactTest">
 
-                {this.NameNotNull()}
-                {this.DropNotNull()}
+                {/* {this.NameNotNull()} */}
+                {/* {this.DropNotNull()} */}
                 {this.SkillsNotZero()}
 
             </div>
