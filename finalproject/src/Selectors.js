@@ -1,7 +1,3 @@
-/**
- * Created by jadendrury on 10/11/18.
- */
-
 import React, { Component } from 'react';
 import './App.css';
 import Printable from './Printable';

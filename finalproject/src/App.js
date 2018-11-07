@@ -71,8 +71,12 @@ class App extends Component {
         this.setState({characterName:characterNameParameter});
     }
 
+    // <button className="print" onClick={window.print()}>
+    //                         Print Character Sheet
+    // </button>
+    //print button that won't work right
+
     printable(){
-        //this.racialBonuses();
         try{
             if (this.state.PrintableVisible === true){
                 return(
@@ -106,9 +110,41 @@ class App extends Component {
         try {
             switch (this.state.race){ 
                 case "Dragonborn": 
-                    console.log(this.state.strength);
                     this.state.strength = this.state.strength +2;
-                    console.log(this.state.strength);
+                    this.state.charisma = this.state.charisma +1;
+                    break;
+                case "Dwarf": 
+                    this.state.constitution = this.state.constitution +2;
+                    break;
+                case "Elf": 
+                    this.state.dexterity = this.state.dexterity +2;
+                    break;
+                case "Gnome": 
+                    this.state.intelligence = this.state.intelligence +2;
+                    break;
+                case "Half-Elf": 
+                    this.state.charisma = this.state.charisma +2;
+                    break;
+                case "Half-Orc": 
+                    this.state.strength = this.state.strength +2;
+                    this.state.constitution = this.state.constitution +1;
+                    break;
+                case "Halfling": 
+                    this.state.dexterity = this.state.dexterity +2;
+                    break;
+                case "Human": 
+                    this.state.dexterity = this.state.dexterity +1;
+                    this.state.strength = this.state.strength +1;
+                    this.state.constitution = this.state.constitution +1;
+                    this.state.intelligence = this.state.intelligence +1;
+                    this.state.charisma = this.state.charisma +1;
+                    this.state.wisdom = this.state.wisdom +1;
+                    break;
+                case "Tiefling":
+                    this.state.charisma = this.state.charisma +2;
+                    this.state.intelligence = this.state.intelligence +1;
+                    break;
+                default:
                     break;
             }
         } catch (Exception) {

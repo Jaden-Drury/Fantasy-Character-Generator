@@ -48,15 +48,15 @@ class Printable extends Component{
 
 
     rollD12(diceNumber){
-    const min = 1;
-    const max = 12;
-    var sum = 0;
-    var random = 0;
-    for(var i=diceNumber;i>0;i--){
-        random = Math.ceil(Math.random() * max-min + min);
-        sum = sum + random;
-    }
-    return(sum + this.abilityModifiers(this.props.constitution)*diceNumber);
+        const min = 1;
+        const max = 12;
+        var sum = 0;
+        var random = 0;
+        for(var i=diceNumber;i>0;i--){
+            random = Math.ceil(Math.random() * max-min + min);
+            sum = sum + random;
+        }
+        return(sum + this.abilityModifiers(this.props.constitution)*diceNumber);
 }
 
     rollD8(diceNumber){
@@ -98,62 +98,50 @@ class Printable extends Component{
 
     leveledHP(){
         if(this.props.userClass === "Barbarian" && this.props.level>1){
-            const counter = this.props.level;
             const roll = this.rollD12(this.props.level-1)
             return(roll);
         }
         else if(this.props.userClass === "Bard" && this.props.level>1){
-            const counter = this.props.level;
             const roll = this.rollD8(this.props.level-1)
             return(roll);
         }
         else if(this.props.userClass === "Cleric" && this.props.level>1){
-            const counter = this.props.level;
             const roll = this.rollD8(this.props.level-1)
             return(roll);
         }
         else if(this.props.userClass === "Druid" && this.props.level>1){
-            const counter = this.props.level;
             const roll = this.rollD8(this.props.level-1)
             return(roll);
         }
         else if(this.props.userClass === "Fighter" && this.props.level>1){
-            const counter = this.props.level;
             const roll = this.rollD10(this.props.level-1)
             return(roll);
         }
         else if(this.props.userClass === "Monk" && this.props.level>1){
-            const counter = this.props.level;
             const roll = this.rollD8(this.props.level-1)
             return(roll);
         }
         else if(this.props.userClass === "Paladin" && this.props.level>1){
-            const counter = this.props.level;
             const roll = this.rollD10(this.props.level-1)
             return(roll);
         }
         else if(this.props.userClass === "Ranger" && this.props.level>1){
-            const counter = this.props.level;
             const roll = this.rollD10(this.props.level-1)
             return(roll);
         }
         else if(this.props.userClass === "Rogue" && this.props.level>1){
-            const counter = this.props.level;
             const roll = this.rollD8(this.props.level-1)
             return(roll);
         }
         else if(this.props.userClass === "Sorcerer" && this.props.level>1){
-            const counter = this.props.level;
             const roll = this.rollD6(this.props.level-1)
             return(roll);
         }
         else if(this.props.userClass === "Warlock" && this.props.level>1){
-            const counter = this.props.level;
             const roll = this.rollD8(this.props.level-1)
             return(roll);
         }
         else if(this.props.userClass === "Wizard" && this.props.level>1){
-            const counter = this.props.level;
             const roll = this.rollD6(this.props.level-1)
             return(roll);
         }
@@ -220,7 +208,7 @@ class Printable extends Component{
                     </li>
                 </ol>
 
-                <p id="footnote">Note: The above scores, modifiers, and hp, are not including the two point additional ability score improvements that occur at 4th, 8th, 12th, 16th, and 19th level.</p>
+                <p id="footnote">Note: The above scores, modifiers, and hp are not including the two point additional ability score improvements that occur at 4th, 8th, 12th, 16th, and 19th level.</p>
 
             </div>
         );
