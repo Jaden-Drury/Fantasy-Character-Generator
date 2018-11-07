@@ -86,6 +86,19 @@ class Printable extends Component{
         return(sum + this.abilityModifiers(this.props.constitution)*diceNumber);
     }
 
+    rollD6(diceNumber){
+        const min = 1;
+        const max = 6;
+        var sum = 0;
+        var random = 0;
+        for(var i=diceNumber;i>0;i--){
+            random = Math.ceil(Math.random() * max-min + min);
+            console.log("random is " + random)
+            sum = sum + random;
+        }
+        return(sum + this.abilityModifiers(this.props.constitution)*diceNumber);
+    }
+
 
     leveledHP(){
         if(this.props.userClass === "Barbarian" && this.props.level>1){
@@ -131,6 +144,11 @@ class Printable extends Component{
         else if(this.props.userClass === "Rogue" && this.props.level>1){
             const counter = this.props.level;
             const roll = this.rollD8(this.props.level-1)
+            return(roll);
+        }
+        else if(this.props.userClass === "Sorcerer" && this.props.level>1){
+            const counter = this.props.level;
+            const roll = this.rollD6(this.props.level-1)
             return(roll);
         }
         else{
