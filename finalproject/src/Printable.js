@@ -151,6 +151,16 @@ class Printable extends Component{
             const roll = this.rollD6(this.props.level-1)
             return(roll);
         }
+        else if(this.props.userClass === "Warlock" && this.props.level>1){
+            const counter = this.props.level;
+            const roll = this.rollD8(this.props.level-1)
+            return(roll);
+        }
+        else if(this.props.userClass === "Wizard" && this.props.level>1){
+            const counter = this.props.level;
+            const roll = this.rollD6(this.props.level-1)
+            return(roll);
+        }
         else{
             return(0);
         }
