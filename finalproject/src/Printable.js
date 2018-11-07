@@ -54,7 +54,6 @@ class Printable extends Component{
     var random = 0;
     for(var i=diceNumber;i>0;i--){
         random = Math.ceil(Math.random() * max-min + min);
-        console.log("random is " + random)
         sum = sum + random;
     }
     return(sum + this.abilityModifiers(this.props.constitution)*diceNumber);
@@ -67,7 +66,6 @@ class Printable extends Component{
         var random = 0;
         for(var i=diceNumber;i>0;i--){
             random = Math.ceil(Math.random() * max-min + min);
-            console.log("random is " + random)
             sum = sum + random;
         }
         return(sum + this.abilityModifiers(this.props.constitution)*diceNumber);
@@ -80,7 +78,6 @@ class Printable extends Component{
         var random = 0;
         for(var i=diceNumber;i>0;i--){
             random = Math.ceil(Math.random() * max-min + min);
-            console.log("random is " + random)
             sum = sum + random;
         }
         return(sum + this.abilityModifiers(this.props.constitution)*diceNumber);
@@ -93,7 +90,6 @@ class Printable extends Component{
         var random = 0;
         for(var i=diceNumber;i>0;i--){
             random = Math.ceil(Math.random() * max-min + min);
-            console.log("random is " + random)
             sum = sum + random;
         }
         return(sum + this.abilityModifiers(this.props.constitution)*diceNumber);
@@ -166,95 +162,8 @@ class Printable extends Component{
         }
     }
 
-    // {/*leveledHP(){*/}
-    //     {/*try {*/}
-    //         {/*switch (this.props.userClass){*/}
-    //             {/*case "Barbarian":   //problem here is that the else statment prevents other classes from being rolled*/}
-    //                     {/*const counter = this.props.level;*/}
-    //                     {/*const roll = this.rollD12()*/}
-    //                     {/*console.log("roll " + roll)*/}
-    //                     {/*console.log("con mod " + this.abilityModifiers(this.props.constitution))*/}
-    //                     {/*console.log(roll + this.abilityModifiers(this.props.constitution))*/}
-    //                     {/*return(roll + this.abilityModifiers(this.props.constitution));*/}
-    //                 {/*break;*/}
-    //
-    //             {/*case "Bard":*/}
-    //                 {/*if(this.props.level > 1) {*/}
-    //                     {/*console.log("Bard");*/}
-    //                 {/*}*/}
-    //             {/*break;*/}
-    //
-    //             {/*case "Cleric":*/}
-    //                 {/*if(this.props.level > 1) {*/}
-    //                     {/*console.log("Cleric");*/}
-    //                 {/*}*/}
-    //                 {/*break;*/}
-    //
-    //             {/*case "Druid":*/}
-    //                 {/*if(this.props.level > 1) {*/}
-    //                     {/*console.log("Druid");*/}
-    //                 {/*}*/}
-    //                 {/*break;*/}
-    //
-    //             {/*case "Fighter":*/}
-    //                 {/*if(this.props.level > 1) {*/}
-    //                     {/*console.log("Fighter");*/}
-    //                 {/*}*/}
-    //                 {/*break;*/}
-    //
-    //             {/*case "Monk":*/}
-    //                 {/*if(this.props.level > 1) {*/}
-    //                     {/*console.log("Monk");*/}
-    //                 {/*}*/}
-    //                 {/*break;*/}
-    //
-    //             {/*case "Paladin":*/}
-    //                 {/*if(this.props.level > 1) {*/}
-    //                     {/*console.log("Paladin");*/}
-    //                 {/*}*/}
-    //                 {/*break;*/}
-    //
-    //             {/*case "Ranger":*/}
-    //                 {/*if(this.props.level > 1) {*/}
-    //                     {/*console.log("Ranger");*/}
-    //                 {/*}*/}
-    //                 {/*break;*/}
-    //
-    //             {/*case "Rogue":*/}
-    //                 {/*if(this.props.level > 1) {*/}
-    //                     {/*console.log("Rogue");*/}
-    //                 {/*}*/}
-    //                 {/*break;*/}
-    //
-    //             {/*case "Sorcerer":*/}
-    //                 if(this.props.level > 1) {
-    //                     console.log("Sorcerer");
-    //                 }
-    //                 break;
-    //
-    //             case "Warlock":
-    //                 if(this.props.level > 1) {
-    //                     console.log("Warlock");
-    //                 }
-    //                 break;
-    //
-    //             case "Wizard":
-    //                 if(this.props.level > 1) {
-    //                     console.log("Wizard");
-    //                 }
-    //                 break;
-    //
-    //             default:
-    //                 break;
-    //         }
-    //     } catch (Exception) {
-    //         console.log(Exception)
-    //     }
-    // }
-
 
     render(){
-        // console.log(this.props)
         return(
 
             <div className="Printable">
