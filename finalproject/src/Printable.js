@@ -220,6 +220,8 @@ class Printable extends Component{
                     </li>
                 </ol>
 
+                <p id="footnote">Note: These are not including the two point additional ability score improvements that occur at 4th, 8th, 12th, 16th, and 19th level.</p>
+
             </div>
         );
     }
