@@ -150,6 +150,21 @@ class Printable extends Component{
         }
     }
 
+    // proficiency(level){
+    //     console.log(level);
+    //     if(level===1 || 2 || 3 || 4){
+    //         return("+2");
+    //     }else if(level===5 || 6 || 7|| 8){
+    //         return("+3");
+    //     }else if(level===9 || 10 || 11 || 12){
+    //         return("+4");
+    //     }else if(level===13 || 14 || 15 || 16){
+    //         return("+5");
+    //     }else{
+    //         return("+6");
+    //     }
+    // }
+
     printCharSheet(){
         var content = document.getElementById("Printable");
         var pri = document.getElementById("ifmcontentstoprint").contentWindow;
@@ -187,6 +202,8 @@ class Printable extends Component{
                     <h3>Race: {this.props.race}</h3>
                     <h3>Level: {this.props.level}</h3>
                     <h3>HP: {this.props.hitPoints + this.abilityModifiers(this.props.constitution) + this.leveledHP()}</h3>
+                    <h3>Base AC: {this.abilityModifiers(this.props.dexterity) + 10}</h3>
+                    {/*<h3>Proficiency Bonus: {this.proficiency(this.props.level)}</h3>*/}
                 </div>
 
                 <ol className="statList">
