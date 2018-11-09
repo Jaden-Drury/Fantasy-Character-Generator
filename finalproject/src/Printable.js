@@ -175,16 +175,16 @@ class Printable extends Component{
     //     pri.print();
     // }
 
-    printDiv() {
-        var printContents = document.querySelector("#Printable").innerHTML;
-        var originalContents = document.body.innerHTML;
+//     printDiv() {
+//         var printContents = document.querySelector("#Printable").innerHTML;
+//         var originalContents = document.body.innerHTML;
    
-        document.body.innerHTML = printContents;
+//         document.body.innerHTML = printContents;
    
-        window.print();
+//         window.print();
    
-        document.body.innerHTML = originalContents;
-   }
+//         document.body.innerHTML = originalContents;
+//    }
 
      
 
@@ -250,11 +250,11 @@ class Printable extends Component{
 
                 <p id="footnote">Note: The above scores, modifiers, and hp are not including the two point additional ability score improvements that occur at 4th, 8th, 12th, 16th, and 19th level.</p>
 
-            </div>,
+            </div>
 
-             <button className="print" onClick={this.printDiv()}>
-                           Print Character Sheet
-            </button>
+            //  <button className="print" onClick={this.printDiv()}>
+            //                Print Character Sheet
+            // </button>
         );
     }
 }
