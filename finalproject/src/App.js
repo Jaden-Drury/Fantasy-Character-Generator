@@ -102,99 +102,6 @@ class App extends Component {
         }
     }
 
-    racialBonuses(){
-        try {
-            switch (this.state.race){ 
-                case "Dragonborn": 
-                    this.state.strength = this.state.strength +2;
-                    this.state.charisma = this.state.charisma +1;
-                    break;
-                case "Dwarf": 
-                    this.state.constitution = this.state.constitution +2;
-                    break;
-                case "Elf": 
-                    this.state.dexterity = this.state.dexterity +2;
-                    break;
-                case "Gnome": 
-                    this.state.intelligence = this.state.intelligence +2;
-                    break;
-                case "Half-Elf": 
-                    this.state.charisma = this.state.charisma +2;
-                    break;
-                case "Half-Orc": 
-                    this.state.strength = this.state.strength +2;
-                    this.state.constitution = this.state.constitution +1;
-                    break;
-                case "Halfling": 
-                    this.state.dexterity = this.state.dexterity +2;
-                    break;
-                case "Human": 
-                    this.state.dexterity = this.state.dexterity +1;
-                    this.state.strength = this.state.strength +1;
-                    this.state.constitution = this.state.constitution +1;
-                    this.state.intelligence = this.state.intelligence +1;
-                    this.state.charisma = this.state.charisma +1;
-                    this.state.wisdom = this.state.wisdom +1;
-                    break;
-                case "Tiefling":
-                    this.state.charisma = this.state.charisma +2;
-                    this.state.intelligence = this.state.intelligence +1;
-                    break;
-                default:
-                    break;
-            }
-        } catch (Exception) {
-            console.log(Exception)
-        }
-    }
-
-    baseHitPoints(){
-        try {
-            switch (this.state.userClass){
-                case "Barbarian":
-                    this.state.hitPoints = 12;
-                    break;
-                case "Bard":
-                    this.state.hitPoints = 8;
-                    break;
-                case "Cleric":
-                    this.state.hitPoints = 8;
-                    break;
-                case "Druid":
-                    this.state.hitPoints = 8;
-                    break;
-                case "Fighter":
-                    this.state.hitPoints = 10;
-                    break;
-                case "Monk":
-                    this.state.hitPoints = 8;
-                    break;
-                case "Paladin":
-                    this.state.hitPoints = 10;
-                    break;
-                case "Ranger":
-                    this.state.hitPoints = 10;
-                    break;
-                case "Rogue":
-                    this.state.hitPoints = 8;
-                    break;
-                case "Sorcerer":
-                    this.state.hitPoints = 6;
-                    break;
-                case "Warlock":
-                    this.state.hitPoints = 8;
-                    break;
-                case "Wizard":
-                    this.state.hitPoints = 6;
-                    break;
-                default:
-                    break;
-            }
-        } catch (Exception) {
-            console.log(Exception)
-        }
-    }
-
     generate(){
         try{
             if (this.state.PrintableVisible ===false){
@@ -210,12 +117,10 @@ class App extends Component {
     }
 
   render() {
-    return (
+      return (
         <div className="App">
             {this.buttonToggle()}
-            {this.baseHitPoints()}
             {this.printable()}
-            {this.racialBonuses()}
 
             {/*/!*Uncomment The below line to enable testing*!/*/}
             {/*<ReactTest HP ={this.state.hitPoints} playerName={this.state.playerName} characterName={this.state.characterName} userClass={this.state.userClass} race={this.state.race} level={this.state.level} strength={this.state.strength} intelligence={this.state.intelligence} constitution={this.state.constitution} wisdom={this.state.wisdom} dexterity={this.state.dexterity} charisma={this.state.charisma}/>*/}

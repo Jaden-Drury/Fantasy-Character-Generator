@@ -6,8 +6,19 @@ class Printable extends Component{
     constructor(props){
         super(props);
         this.state = {
-
+            hitPoints: 0,
+            charisma: this.props.charisma,
+            strength: this.props.strength,
+            constitution: this.props.constitution,
+            wisdom: this.props.wisdom,
+            intelligence: this.props.intelligence,
+            dexterity: this.props.dexterity,
         };
+    }
+
+    componentDidMount(){
+        this.baseHitPoints();
+        this.racialBonuses();
     }
 
     abilityModifiers(skill) {
@@ -56,7 +67,7 @@ class Printable extends Component{
             random = Math.ceil(Math.random() * max-min + min);
             sum = sum + random;
         }
-        return(sum + this.abilityModifiers(this.props.constitution)*diceNumber);
+        return(sum + this.abilityModifiers(this.state.constitution)*diceNumber);
 }
 
     rollD8(diceNumber){
@@ -68,7 +79,7 @@ class Printable extends Component{
             random = Math.ceil(Math.random() * max-min + min);
             sum = sum + random;
         }
-        return(sum + this.abilityModifiers(this.props.constitution)*diceNumber);
+        return(sum + this.abilityModifiers(this.state.constitution)*diceNumber);
     }
 
     rollD10(diceNumber){
@@ -80,7 +91,7 @@ class Printable extends Component{
             random = Math.ceil(Math.random() * max-min + min);
             sum = sum + random;
         }
-        return(sum + this.abilityModifiers(this.props.constitution)*diceNumber);
+        return(sum + this.abilityModifiers(this.state.constitution)*diceNumber);
     }
 
     rollD6(diceNumber){
@@ -92,7 +103,7 @@ class Printable extends Component{
             random = Math.ceil(Math.random() * max-min + min);
             sum = sum + random;
         }
-        return(sum + this.abilityModifiers(this.props.constitution)*diceNumber);
+        return(sum + this.abilityModifiers(this.state.constitution)*diceNumber);
     }
 
 
@@ -150,42 +161,99 @@ class Printable extends Component{
         }
     }
 
-    // proficiency(level){
-    //     console.log(level);
-    //     if(level===1 || 2 || 3 || 4){
-    //         return("+2");
-    //     }else if(level===5 || 6 || 7|| 8){
-    //         return("+3");
-    //     }else if(level===9 || 10 || 11 || 12){
-    //         return("+4");
-    //     }else if(level===13 || 14 || 15 || 16){
-    //         return("+5");
-    //     }else{
-    //         return("+6");
-    //     }
-    // }
+    baseHitPoints(){
+        try {
+            switch (this.props.userClass){
+                case "Barbarian":
+                    // this.state.hitPoints = 12;
+                    this.setState({hitPoints: 12})
+                    break;
+                case "Bard":
+                    this.setState({hitPoints: 8})
+                    break;
+                case "Cleric":
+                    this.setState({hitPoints: 8})
+                    break;
+                case "Druid":
+                    this.setState({hitPoints: 8})
+                    break;
+                case "Fighter":
+                    this.setState({hitPoints: 10})
+                    break;
+                case "Monk":
+                    this.setState({hitPoints: 8})
+                    break;
+                case "Paladin":
+                    this.setState({hitPoints: 10})
+                    break;
+                case "Ranger":
+                    this.setState({hitPoints: 10})
+                    break;
+                case "Rogue":
+                    this.setState({hitPoints: 8})
+                    break;
+                case "Sorcerer":
+                    this.setState({hitPoints: 6})
+                    break;
+                case "Warlock":
+                    this.setState({hitPoints: 8})
+                    break;
+                case "Wizard":
+                    this.setState({hitPoints: 6})
+                    break;
+                default:
+                    break;
+            }
+        } catch (Exception) {
+            console.log(Exception)
+        }
+    }
 
-    // printCharSheet(){
-    //     var content = document.getElementById("Printable");
-    //     var pri = document.getElementById("ifmcontentstoprint").contentWindow;
-    //     pri.document.open();
-    //     pri.document.write(content.innerHTML);
-    //     pri.document.close();
-    //     pri.focus();
-    //     pri.print();
-    // }
-
-//     printDiv() {
-//         var printContents = document.querySelector("#Printable").innerHTML;
-//         var originalContents = document.body.innerHTML;
-   
-//         document.body.innerHTML = printContents;
-   
-//         window.print();
-   
-//         document.body.innerHTML = originalContents;
-//    }
-
+    racialBonuses(){
+        try {
+            switch (this.props.race){
+                case "Dragonborn":
+                    this.setState({strength: this.state.strength+2})
+                    this.setState({charisma: this.state.charisma+1})
+                    break;
+                case "Dwarf":
+                    this.setState({constitution: this.state.constitution+2})
+                    break;
+                case "Elf":
+                    this.setState({dexterity: this.state.dexterity+2})
+                    break;
+                case "Gnome":
+                    this.setState({intelligence: this.state.intelligence+2})
+                    break;
+                case "Half-Elf":
+                    this.setState({charisma: this.state.charisma+2})
+                    break;
+                case "Half-Orc":
+                    this.setState({strength: this.state.strength+2})
+                    this.setState({constitution: this.state.constitution+1})
+                    break;
+                case "Halfling":
+                    this.setState({dexterity: this.state.dexterity+2})
+                    break;
+                case "Human":
+                    this.setState({dexterity: this.state.dexterity+1})
+                    this.setState({strength: this.state.strength+1})
+                    this.setState({constitution: this.state.constitution+1})
+                    this.setState({intelligence: this.state.intelligence+1})
+                    this.setState({charisma: this.state.charisma+1})
+                    this.setState({wisdom: this.state.wisdom+1})
+                    break;
+                case "Tiefling":
+                    this.setState({charisma: this.state.charisma+2})
+                    this.setState({intelligence: this.state.intelligence+1})
+                    break;
+                default:
+                    break;
+            }
+        } catch (Exception) {
+            console.log(Exception)
+        }
+    }
      
 
     render(){
@@ -205,46 +273,45 @@ class Printable extends Component{
                     <h3>Class: {this.props.userClass}</h3>
                     <h3>Race: {this.props.race}</h3>
                     <h3>Level: {this.props.level}</h3>
-                    <h3>HP: {this.props.hitPoints + this.abilityModifiers(this.props.constitution) + this.leveledHP()}</h3>
-                    <h3>Base AC: {this.abilityModifiers(this.props.dexterity) + 10}</h3>
-                    {/*<h3>Proficiency Bonus: {this.proficiency(this.props.level)}</h3>*/}
+                    <h3>HP: {this.state.hitPoints + this.abilityModifiers(this.state.constitution) + this.leveledHP()}</h3>
+                    <h3>Base AC: {this.abilityModifiers(this.state.dexterity) + 10}</h3>
                 </div>
 
                 <ol className="statList">
                     <li>Strength <br/>
-                        <label className="statNum">{this.props.strength}</label>
+                        <label className="statNum">{this.state.strength}</label>
                         <br/>
-                        <label className="modifier"> {this.abilityModifiers(this.props.strength)}</label>
+                        <label className="modifier"> {this.abilityModifiers(this.state.strength)}</label>
                     </li>
 
                     <li>Dexterity <br/>
-                        <label className="statNum">{this.props.dexterity}</label>
+                        <label className="statNum">{this.state.dexterity}</label>
                         <br/>
-                        <label className="modifier">{this.abilityModifiers(this.props.dexterity)}</label>
+                        <label className="modifier">{this.abilityModifiers(this.state.dexterity)}</label>
                     </li>
 
                     <li>Constitution <br/>
-                        <label className="statNum">{this.props.constitution}</label>
+                        <label className="statNum">{this.state.constitution}</label>
                         <br/>
-                        <label className="modifier">{this.abilityModifiers(this.props.constitution)}</label>
+                        <label className="modifier">{this.abilityModifiers(this.state.constitution)}</label>
                     </li>
 
                     <li>Intelligence <br/>
-                        <label className="statNum">{this.props.intelligence}</label>
+                        <label className="statNum">{this.state.intelligence}</label>
                         <br/>
-                        <label className="modifier">{this.abilityModifiers(this.props.intelligence)}</label>
+                        <label className="modifier">{this.abilityModifiers(this.state.intelligence)}</label>
                     </li>
 
                     <li>Wisdom <br/>
-                        <label className="statNum">{this.props.wisdom}</label>
+                        <label className="statNum">{this.state.wisdom}</label>
                         <br/>
-                        <label className="modifier">{this.abilityModifiers(this.props.wisdom)}</label>
+                        <label className="modifier">{this.abilityModifiers(this.state.wisdom)}</label>
                     </li>
 
                     <li>Charisma <br/>
-                        <label className="statNum">{this.props.charisma}</label>
+                        <label className="statNum">{this.state.charisma}</label>
                         <br/>
-                        <label className="modifier">{this.abilityModifiers(this.props.charisma)}</label>
+                        <label className="modifier">{this.abilityModifiers(this.state.charisma)}</label>
                     </li>
                 </ol>
 
