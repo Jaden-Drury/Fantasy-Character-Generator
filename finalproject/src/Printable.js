@@ -254,6 +254,51 @@ class Printable extends Component{
             console.log(Exception)
         }
     }
+
+    proficiencyBonusPerLevel(){
+        var level = this.props.level;
+        if (level === "1" || level === "2" || level === "3" || level === "4"){
+            return "2";
+        } if (level === "5" || level === "6" || level === "7" || level === "8") {
+            return "3";
+        } if (level === "9" || level === "10" || level === "11" || level === "12"){
+            return "4";
+        } if (level === "13" || level === "14" || level === "15" || level === "16"){
+            return "5";
+        } if (level === "17" || level === "18" || level === "19" || level === "20"){
+            return "6";
+        } return "0";
+    }
+
+    savingRoll(){
+        var savingRollDeterminer = this.props.userClass;
+
+        if (savingRollDeterminer === "Barbarian") {
+            return ("Strength / Constitution +" + this.proficiencyBonusPerLevel());
+        } if (savingRollDeterminer === "Bard"){
+            return ("Dexterity / Charisma +" + this.proficiencyBonusPerLevel());
+        } if (savingRollDeterminer === "Cleric"){
+            return ("Wisdom / Charisma +" + this.proficiencyBonusPerLevel());
+        } if (savingRollDeterminer === "Druid"){
+            return ("Intelligence / Wisdom +" + this.proficiencyBonusPerLevel());
+        } if (savingRollDeterminer === "Fighter"){
+            return ("Strength / Constitution +" + this.proficiencyBonusPerLevel());
+        } if (savingRollDeterminer === "Monk"){
+            return ("Strength / Dexterity +" + this.proficiencyBonusPerLevel());
+        } if (savingRollDeterminer === "Paladin"){
+            return ("Wisdom / Charisma +" + this.proficiencyBonusPerLevel());
+        } if (savingRollDeterminer === "Ranger"){
+            return ("Strength / Dexterity +" + this.proficiencyBonusPerLevel());
+        } if (savingRollDeterminer === "Rouge"){
+            return ("Dexterity / Intelligence +" + this.proficiencyBonusPerLevel());
+        } if (savingRollDeterminer === "Sorcerer"){
+            return ("Constitution / Charisma +" + this.proficiencyBonusPerLevel());
+        } if (savingRollDeterminer === "Warlock"){
+            return ("Wisdom / Charisma +" + this.proficiencyBonusPerLevel());
+        } if (savingRollDeterminer === "Wizard"){
+            return ("Intelligence / Wisdom +" + this.proficiencyBonusPerLevel());
+        } return "No Class was selected";
+    }
      
 
     render(){
@@ -275,6 +320,7 @@ class Printable extends Component{
                     <h3>Level: {this.props.level}</h3>
                     <h3>HP: {this.state.hitPoints + this.abilityModifiers(this.state.constitution) + this.leveledHP()}</h3>
                     <h3>Base AC: {this.abilityModifiers(this.state.dexterity) + 10}</h3>
+                    <h3>Saving Roll: {this.savingRoll()}</h3>
                 </div>
 
                 <ol className="statList">
