@@ -306,9 +306,6 @@ class Printable extends Component{
             
             <div id="Printable">
 
-            
-                <h3 id="charSheet">Character Sheet</h3>
-
                 <div className="wrapper">
                     <h3 className="names">Player Name: {this.props.playerName}</h3>
                     <h3 className="names">Character Name: {this.props.characterName}</h3>
@@ -323,43 +320,74 @@ class Printable extends Component{
                     <h3>Saving Roll: {this.savingRoll()}</h3>
                 </div>
 
-                <ol className="statList">
-                    <li>Strength <br/>
-                        <label className="statNum">{this.state.strength}</label>
-                        <br/>
-                        <label className="modifier"> {this.abilityModifiers(this.state.strength)}</label>
-                    </li>
+                <div id="statWrapper">
 
-                    <li>Dexterity <br/>
-                        <label className="statNum">{this.state.dexterity}</label>
-                        <br/>
-                        <label className="modifier">{this.abilityModifiers(this.state.dexterity)}</label>
-                    </li>
+                    <ol className="statList">
+                        <li>Strength <br/>
+                            <label className="statNum">{this.state.strength}</label>
+                            <br/>
+                            <br/>
+                            <label className="modifier"> {this.abilityModifiers(this.state.strength)}</label>
+                        </li>
 
-                    <li>Constitution <br/>
-                        <label className="statNum">{this.state.constitution}</label>
-                        <br/>
-                        <label className="modifier">{this.abilityModifiers(this.state.constitution)}</label>
-                    </li>
+                        <li>Dexterity <br/>
+                            <label className="statNum">{this.state.dexterity}</label>
+                            <br/>
+                            <br/>
+                            <label className="modifier">{this.abilityModifiers(this.state.dexterity)}</label>
+                        </li>
 
-                    <li>Intelligence <br/>
-                        <label className="statNum">{this.state.intelligence}</label>
-                        <br/>
-                        <label className="modifier">{this.abilityModifiers(this.state.intelligence)}</label>
-                    </li>
+                        <li>Constitution <br/>
+                            <label className="statNum">{this.state.constitution}</label>
+                            <br/>
+                            <br/>
+                            <label className="modifier">{this.abilityModifiers(this.state.constitution)}</label>
+                        </li>
 
-                    <li>Wisdom <br/>
-                        <label className="statNum">{this.state.wisdom}</label>
-                        <br/>
-                        <label className="modifier">{this.abilityModifiers(this.state.wisdom)}</label>
-                    </li>
+                        <li>Intelligence <br/>
+                            <label className="statNum">{this.state.intelligence}</label>
+                            <br/>
+                            <br/>
+                            <label className="modifier">{this.abilityModifiers(this.state.intelligence)}</label>
+                        </li>
 
-                    <li>Charisma <br/>
-                        <label className="statNum">{this.state.charisma}</label>
-                        <br/>
-                        <label className="modifier">{this.abilityModifiers(this.state.charisma)}</label>
-                    </li>
-                </ol>
+                        <li>Wisdom <br/>
+                            <label className="statNum">{this.state.wisdom}</label>
+                            <br/>
+                            <br/>
+                            <label className="modifier">{this.abilityModifiers(this.state.wisdom)}</label>
+                        </li>
+
+                        <li>Charisma <br/>
+                            <label className="statNum">{this.state.charisma}</label>
+                            <br/>
+                            <br/>
+                            <label className="modifier">{this.abilityModifiers(this.state.charisma)}</label>
+                        </li>
+                    </ol>
+
+                    <ol id="skillBonuses">
+                        <li>___ Acrobatics (Dex)</li>
+                        <li>___ Animal Handling (Wis)</li>
+                        <li>___ Arcana (Int)</li>
+                        <li>___ Athletics (Str)</li>
+                        <li>___ Deception (Cha)</li>
+                        <li>___ History (Int)</li>
+                        <li>___ Insight (Wis)</li>
+                        <li>___ Intimidation (Wis)</li>
+                        <li>___ Investigation (Int)</li>
+                        <li>___ Medicine (Wis)</li>
+                        <li>___ Nature (Int)</li>
+                        <li>___ Perception (Wis)</li>
+                        <li>___ Performance (Cha)</li>
+                        <li>___ Persuasion (Cha)</li>
+                        <li>___ Religion (Int)</li>
+                        <li>___ Sleight of Hand (Dex)</li>
+                        <li>___ Stealth (Dex)</li>
+                        <li>___ Survival (Wis)</li>
+                    </ol>
+
+                </div>
 
                 <p id="footnote">Note: The above scores, modifiers, and hp are not including the two point additional ability score improvements that occur at 4th, 8th, 12th, 16th, and 19th level.</p>
 

@@ -8,7 +8,6 @@
   background-position: center;
   width:auto;
   height: 1000px;
-
 }
 
 #ifmcontentstoprint{
@@ -76,19 +75,11 @@ button {
     font-size:30px;
 }
 
-#charSheet{
-    margin:0px auto;
-    padding:10px;
-    text-align: center;
-    font-size:32pt;
-    text-decoration: underline;
-}
-
 #Printable h3{
     margin-top: 0px;
     padding-top: 0px;
     text-align: center;
-    margin: 30px 20px;
+    margin: 0px 20px 30px 20px;
 }
 
 .caller{
@@ -97,7 +88,7 @@ button {
 
 #Printable{
     width:70%;
-    height:100vh;
+    height:1000px;
     margin:0px auto;
     background-color: white;
     font-family: 'VT323', monospace;
@@ -105,16 +96,16 @@ button {
 
 .statList{
     list-style: none;
-    margin:0 auto;
+    margin:10px;
     padding:0;
     display:flex;
     flex-wrap:wrap;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
 }
 
 .statList li{
-    padding:15px 0px 50px 0px;
+    padding:15px 0px 30px 0px;
     width:100px;
     border:1px black solid;
     text-align: center;
@@ -174,4 +165,28 @@ form input{
     margin-right: 50px;
     text-indent: -38px;
 
+}
+
+.modifier{
+    border:2px solid red;
+    border-radius: 15px 15px 15px;
+    padding:5px 15px;
+}
+
+#skillBonuses{
+    display: flex;
+    border:1px solid black;
+    flex-direction: column;
+    width:200px;
+    list-style: none;
+    margin:10px;
+    height:650px;
+}
+
+#skillBonuses li{
+    padding:10px;
+}
+
+#statWrapper{
+    display: flex;
 }
