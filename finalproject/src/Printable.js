@@ -315,7 +315,6 @@ class Printable extends Component{
                     <h3>Class: {this.props.userClass}</h3>
                     <h3>Race: {this.props.race}</h3>
                     <h3>Level: {this.props.level}</h3>
-                    <h3>HP: {this.state.hitPoints + this.abilityModifiers(this.state.constitution) + this.leveledHP()}</h3>
                     <h3>Base AC: {this.abilityModifiers(this.state.dexterity) + 10}</h3>
                     <h3>Saving Roll: {this.savingRoll()}</h3>
                 </div>
@@ -386,6 +385,13 @@ class Printable extends Component{
                         <li>___ Stealth (Dex)</li>
                         <li>___ Survival (Wis)</li>
                     </ol>
+
+                    <div id="hp">
+                        <p>Current HP</p>
+                        <label className="circle">   </label>
+                        <p>Base HP</p>
+                        <label>{this.state.hitPoints + this.abilityModifiers(this.state.constitution) + this.leveledHP()}</label>
+                    </div>
 
                 </div>
 
