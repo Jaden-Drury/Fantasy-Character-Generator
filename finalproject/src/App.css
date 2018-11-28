@@ -64,7 +64,7 @@ button{
     text-shadow: 2px 2px 6px #000000;
 }
 
-select{
+select, input{
     font-family: 'Balthazar', serif;
     margin: 10px auto;
     display: block;
@@ -73,6 +73,8 @@ select{
     width:180px;
     border:1px solid black;
 }
+
+
 
 .Custom{
     padding-bottom:100px;

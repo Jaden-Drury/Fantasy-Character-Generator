@@ -30,7 +30,7 @@ class App extends Component {
             hitPoints: 0,
         };
         this.generate = this.generate.bind(this)
-        this.InputGenerate = this.generate.bind(this)
+        this.InputGenerate = this.InputGenerate.bind(this)
     }
 
     setClass(userClass){
