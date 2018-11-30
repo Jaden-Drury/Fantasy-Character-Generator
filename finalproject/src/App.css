@@ -193,11 +193,26 @@ form input{
     width:200px;
     list-style: none;
     margin:10px;
-    height:650px;
+    padding-top:35px;
+    height:550px;
 }
 
 #skillBonuses li{
-    padding:10px;
+    padding:7px;
+}
+
+.skillLabel{
+    position: absolute;
+    margin-left:240px;
+    margin-top:20px;
+    font-size: 14pt;
+}
+
+.skillLabel2{
+    position: absolute;
+    margin-left:680px;
+    margin-top:20px;
+    font-size: 14pt;
 }
 
 #statWrapper{
@@ -235,4 +250,46 @@ form input{
     width:9px;
     text-align: center;
     display: block;
+}
+
+#ac{
+    border:1px solid black;
+    width:100px;
+    height:120px;
+}
+
+#ac p{
+    font-size: 12pt;
+    margin:0;
+    padding-top:10px;
+    text-align: center;
+}
+
+#ac label{
+    font-size: 20pt;
+    display: block;
+    text-align: center;
+    padding-bottom:10px;
+    margin-bottom:5px;
+}
+
+#savingThrows{
+    border:1px solid black;
+    width:100px;
+    height:120px;
+}
+
+#savingThrows p{
+    font-size: 12pt;
+    margin:0;
+    padding-top:10px;
+    text-align: center;
+}
+
+#savingThrows label{
+    font-size: 12pt;
+    display: block;
+    text-align: center;
+    padding-top:30px;
+    margin-bottom:5px;
 }
