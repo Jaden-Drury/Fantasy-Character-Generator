@@ -388,9 +388,9 @@ class Printable extends Component{
 
                     <div id="ac">
                         <p>Current AC</p>
-                        <label className="circle">   </label>
-                        <p>Base AC</p> 
-                        <label>{this.abilityModifiers(this.state.dexterity) + 10}</label>
+                        <label className="circle"> </lable>
+                        <p>Base AC</p>
+                        <label>{this.abilityModifiers(this.state.dexterity) + 10}(this.</label>
                     </div>
 
                     <div id="hp">
