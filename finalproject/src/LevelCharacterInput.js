@@ -1,6 +1,9 @@
+/**
+ * Created by jadendrury on 12/1/18.
+ */
 import React, { Component } from 'react';
 
-class ClassSkills extends Component {
+class LevelCharacterInput extends Component {
 
     constructor(props){
         super(props);
@@ -60,4 +63,4 @@ class ClassSkills extends Component {
     }
 }
 
-export default ClassSkills;
+export default LevelCharacterInput;

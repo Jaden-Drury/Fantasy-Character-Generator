@@ -397,11 +397,15 @@ class Printable extends Component{
 
                 <p id="footnote">Note: The above scores, modifiers, and hp are not including the two point additional ability score improvements that occur at 4th, 8th, 12th, 16th, and 19th level.</p>
 
+                <p>{this.props.constitution}</p>
+                <p>{this.props.intelligence}</p>
+                <p>{this.props.wisdom}</p>
+                <p>{this.props.charisma}</p>
+                <p>{this.props.strength}</p>
+                <p>{this.props.dexterity}</p>
+
             </div>
 
-            //  <button className="print" onClick={this.printDiv()}>
-            //                Print Character Sheet
-            // </button>
         );
     }
 }
