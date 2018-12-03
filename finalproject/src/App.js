@@ -5,6 +5,7 @@ import Selectors from './Selectors';
 import Printable from './Printable';
 import ClassSkills from './ClassSkills';
 import CharacterInput from './CharacterInput';
+import LevelCharacterInput from './LevelCharacterInput.js'
 
 
 class App extends Component {
@@ -83,12 +84,13 @@ class App extends Component {
                 )
             }else if(this.state.CharacterInput === true){
                 return(
-                    <CharacterInput/>
-                )
+                    //<CharacterInput/>
+                    <CharacterInput setPlayerName={(playerNameParameter)=>this.setPlayerName(playerNameParameter)} setCharacterName={(characterNameParameter)=>this.setCharacterName(characterNameParameter)} setClass={(userClass)=>this.setClass(userClass)} setRace={(race)=>this.setRace(race)} setLevel={(level)=>this.setLevel(level)}/>
+            )
             } else {
                 return(
                     <Selectors setPlayerName={(playerNameParameter)=>this.setPlayerName(playerNameParameter)} setCharacterName={(characterNameParameter)=>this.setCharacterName(characterNameParameter)} setClass={(userClass)=>this.setClass(userClass)} setRace={(race)=>this.setRace(race)} setLevel={(level)=>this.setLevel(level)}/>
-                )
+            )
             }
     }
 
@@ -108,6 +110,20 @@ class App extends Component {
         }
     }
 
+    generate(){
+        try{
+            if (this.state.PrintableVisible === false){
+                this.setState({PrintableVisible: true})
+                this.setState({GenerateButton: false})
+                this.setState({CharacterInputButton: false})
+            } else{
+                this.setState({PrintableVisible: false})
+                this.setState({buttonText: "Generate Character"});
+            }
+        } catch (Exception){
+            console.log(Exception);
+        }
+    }
 
     InputButtonToggle(){
         try{
@@ -123,29 +139,14 @@ class App extends Component {
         }
     }
 
-    generate(){
-        console.log("This is running and shouldn't be")
-        try{
-            if (this.state.PrintableVisible ===false){
-                this.setState({PrintableVisible: true})
-                this.setState({GenerateButton: false})
-                this.setState({CharacterInputButton: false})
-            } else{
-                this.setState({PrintableVisible: false})
-                this.setState({buttonText: "Generate Character"});
-            }
-        } catch (Exception){
-            console.log(Exception);
-        }
-    }
-
     InputGenerate(){
         try{
             if (this.state.CharacterInput ===false){
+                console.log("CharacterInput is True")
                 this.setState({CharacterInput: true})
-                this.setState({GenerateButton: false})
+                this.setState({GenerateButton: true})
                 this.setState({CharacterInputButton: false})
-                this.setState({PritableVisable: false})
+                this.setState({PrintableVisable: false})
             } else{
                 this.setState({CharacterInput: false})
             }
@@ -154,20 +155,36 @@ class App extends Component {
         }
     }
 
+    setStats(){
+        if(CharacterInput === true){
+            console.log("Character Input");
+            return(
+                <LevelCharacterInput setStr={(str)=>this.setStr(str)} setDex={(dex)=>this.setDex(dex)} setCon={(con)=>this.setCon(con)} setInt={(int)=>this.setInt(int)} setWis={(wis)=>this.setWis(wis)} setCha={(cha)=>this.setCha(cha)}/>
+            )
+        }
+        else {
+            console.log("Default")
+            return(
+                <ClassSkills setStr={(str)=>this.setStr(str)} setDex={(dex)=>this.setDex(dex)} setCon={(con)=>this.setCon(con)} setInt={(int)=>this.setInt(int)} setWis={(wis)=>this.setWis(wis)} setCha={(cha)=>this.setCha(cha)}/>
+            )
+        }
+    }
+
   render() {
       return (
         <div className="App">
+            {this.InputButtonToggle()}
             {this.GenerateButtonToggle()}
             {this.printable()}
-            {this.InputButtonToggle()}
+            
 
             {/*/!*Uncomment The below line to enable testing*!/*/}
             {/*<ReactTest HP ={this.state.hitPoints} playerName={this.state.playerName} characterName={this.state.characterName} userClass={this.state.userClass} race={this.state.race} level={this.state.level} strength={this.state.strength} intelligence={this.state.intelligence} constitution={this.state.constitution} wisdom={this.state.wisdom} dexterity={this.state.dexterity} charisma={this.state.charisma}/>*/}
             {/*/!*Uncomment The above line to enable testing*!/*/}
 
-            
+            {this.setStats()}
 
-            <ClassSkills setStr={(str)=>this.setStr(str)} setDex={(dex)=>this.setDex(dex)} setCon={(con)=>this.setCon(con)} setInt={(int)=>this.setInt(int)} setWis={(wis)=>this.setWis(wis)} setCha={(cha)=>this.setCha(cha)}/>
+
         </div>
     );
   }

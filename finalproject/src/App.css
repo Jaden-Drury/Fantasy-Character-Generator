@@ -10,14 +10,6 @@
   height: 1000px;
 }
 
-#ifmcontentstoprint{
-    height:0;
-    width:0;
-    position: absolute;
-    margin:0;
-    padding:0;
-}
-
 h1{
     font-family: 'Balthazar', serif;
     text-align: center;
@@ -29,11 +21,11 @@ h1{
 }
 
 .generate{
-    left: 50%;
+    left: 70%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     position: absolute;
-    bottom:10px;
+    top: 50%;
     padding:10px;
     background-color:red;
     color:white;
@@ -41,6 +33,10 @@ h1{
     box-shadow: 2px 2px 6px #000000;
     border-radius:15px 15px 15px;
     font-weight:800;
+}
+
+.InputPage{
+    margin:0 auto;
 }
 
 button{
@@ -99,7 +95,6 @@ button {
 }
 
 #Printable{
-    width:70%;
     height:842px;
     margin:0px auto;
     background-color: white;
@@ -109,6 +104,8 @@ button {
 .statList{
     list-style: none;
     margin:10px;
+    margin-right:0;
+    margin-top: 0;
     padding:0;
     flex-wrap:wrap;
     flex-direction: column;
@@ -120,7 +117,11 @@ button {
     width:90px;
     border:1px black solid;
     text-align: center;
-    margin:5px 10px;
+    margin:10px 0px;
+}
+
+#strLi{
+    margin-top:0;
 }
 
 .statNum{
@@ -188,13 +189,17 @@ form input{
 
 #skillBonuses{
     display: flex;
-    border:1px solid black;
     flex-direction: column;
-    width:200px;
     list-style: none;
+}
+
+#skillDiv{
+    border:1px solid black;
     margin:10px;
-    padding-top:35px;
-    height:550px;
+    margin-top:0;
+    padding-top:15px;
+    height:600px;
+    width:250px;
 }
 
 #skillBonuses li{
@@ -202,17 +207,16 @@ form input{
 }
 
 .skillLabel{
-    position: absolute;
-    margin-left:240px;
-    margin-top:20px;
+    display: block;
+    margin:0;
+    padding:0;
+    text-align: center;
     font-size: 14pt;
 }
 
-.skillLabel2{
-    position: absolute;
-    margin-left:680px;
-    margin-top:20px;
-    font-size: 14pt;
+#moneyWrapper{
+    display: flex;
+    flex-direction: column;
 }
 
 #statWrapper{
@@ -222,8 +226,9 @@ form input{
 
 #hp{
     border:1px solid black;
-    width:100px;
+    width:120px;
     height:120px;
+    margin-bottom:10px;
 }
 
 #hp p{
@@ -254,8 +259,9 @@ form input{
 
 #ac{
     border:1px solid black;
-    width:100px;
+    width:120px;
     height:120px;
+    margin-bottom:10px;
 }
 
 #ac p{
@@ -275,8 +281,9 @@ form input{
 
 #savingThrows{
     border:1px solid black;
-    width:100px;
+    width:120px;
     height:120px;
+    margin-bottom:10px;
 }
 
 #savingThrows p{
@@ -313,4 +320,54 @@ form input{
     text-align: center;
     padding-top:10px;
     margin-bottom:5px;
+}
+
+#money{
+    border:1px solid black;
+    width:120px;
+    height:80px;
+    margin-bottom:10px;
+}
+
+#money div{
+    display: flex;
+}
+
+.coins{
+    font-size: 12pt;
+    display: block;
+    text-align: center;
+    padding-top:35px;
+    padding-left:5px;
+    padding-right:5px;
+    margin:0 auto;
+}
+
+#money p{
+    font-size: 12pt;
+    margin:0;
+    padding-top:10px;
+    text-align: center;
+}
+
+#notes{
+    border:1px solid black;
+    margin:10px;
+    margin-top:0;
+    padding-top:15px;
+    height:300px;
+    width:200px;
+}
+
+#noteTitle{
+    display: block;
+    margin:0;
+    padding:0;
+    text-align: center;
+    font-size: 14pt;
+}
+
+#spaces{
+    display: flex;
+    flex-direction: column;
 }

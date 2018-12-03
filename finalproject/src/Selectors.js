@@ -54,7 +54,7 @@ class Selectors extends Component {
             <div className="Selectors">
 
                 <div className="caller">
-                    <Printable passName={this.state.pName} passcName={this.state.cName} passClass={this.state.class} passRace={this.state.race} passLevel={this.state.level}/>
+                    <Printable passName={this.state.playerName} passcName={this.state.characterName} passClass={this.state.class} passRace={this.state.race} passLevel={this.state.level}/>
                 </div>
 
                 <div className="Custom">

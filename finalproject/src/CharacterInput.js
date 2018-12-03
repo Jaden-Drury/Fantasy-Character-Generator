@@ -11,7 +11,13 @@ class CharacterInput extends Component {
             race: "",
             level: "",
             playerName: null,
-            characterName: null
+            characterName: null,
+            strength: 0,
+            dexterity: 0,
+            constitution: 0,
+            intelligence: 0,
+            wisdom: 0,
+            charisma: 0,
         };
 
         // This binding is necessary to make `this` work in the callback
@@ -20,7 +26,43 @@ class CharacterInput extends Component {
         this.handleChangeLevel = this.handleChangeLevel.bind(this)
         this.handleChangeName = this.handleChangeName.bind(this)
         this.handleChangecName = this.handleChangecName.bind(this)
+        this.handleChangeStrength = this.handleChangeStrength.bind(this)
+        this.handleChangeDexterity = this.handleChangeDexterity.bind(this)
+        this.handleChangeConstitution = this.handleChangeConstitution.bind(this)
+        this.handleChangeIntelligence = this.handleChangeIntelligence.bind(this)
+        this.handleChangeWisdom = this.handleChangeWisdom.bind(this)
+        this.handleChangeCharisma = this.handleChangeCharisma.bind(this)
 
+    }
+
+    handleChangeStrength(event){
+        this.setState({strength: event.target.value});
+        this.props.setClass(event.target.value);
+    }
+
+    handleChangeDexterity(event){
+        this.setState({dexterity: event.target.value});
+        this.props.setClass(event.target.value);
+    }
+
+    handleChangeConstitution(event){
+        this.setState({constitution: event.target.value});
+        this.props.setClass(event.target.value);
+    }
+
+    handleChangeIntelligence(event){
+        this.setState({intelligence: event.target.value});
+        this.props.setClass(event.target.value);
+    }
+
+    handleChangeWisdom(event){
+        this.setState({wisdom: event.target.value});
+        this.props.setClass(event.target.value);
+    }
+
+    handleChangeCharisma(event){
+        this.setState({charisma: event.target.value});
+        this.props.setClass(event.target.value);
     }
 
     handleChange(event){
@@ -54,7 +96,7 @@ class CharacterInput extends Component {
             <div className="Printable">
 
                 <div className="caller">
-                    <Printable passName={this.state.pName} passcName={this.state.cName} passClass={this.state.class} passRace={this.state.race} passLevel={this.state.level}/>
+                    <Printable passName={this.state.playerName} passcName={this.state.characterName} passClass={this.state.class} passRace={this.state.race} passLevel={this.state.level}/>
                 </div>
 
                 <div className="Custom">
@@ -128,28 +170,53 @@ class CharacterInput extends Component {
 
                     <h2>Strength:</h2>
 
-                    <input type="number" placeholder="0"></input>
+                    <input type="number" placeholder="0" onChange={this.handleChangeStrength}/>
 
                     <h2>Dexterity:</h2>
 
-                    <input type="number" placeholder="0"></input>
+                    <input type="number" placeholder="0" onChange={this.handleChangeDexterity}/>
 
                     <h2>Constitution:</h2>
 
-                    <input type="number" placeholder="0"></input>
+                    <input type="number" placeholder="0" onChange={this.handleChangeConstitution}/>
 
                     <h2>Intelligence:</h2>
 
-                    <input type="number" placeholder="0"></input>
+                    <input type="number" placeholder="0" onChange={this.handleChangeIntelligence}/>
 
                     <h2>Wisdom:</h2>
 
-                    <input type="number" placeholder="0"></input>
+                    <input type="number" placeholder="0" onChange={this.handleChangeWisdom}/>
 
                     <h2>Charisma:</h2>
 
-                    <input type="number" placeholder="0"></input>
+                    <input type="number" placeholder="0" onChange={this.handleChangeCharisma}/>
 
+                    <h2>Select Level You Would Like to Move To:</h2>
+
+                    <select value={this.state.level} onChange={this.handleChangeLevel}>
+                        <option value={""}>Select a Level</option>
+                        <option value={"1"}>1</option>
+                        <option value={"2"}>2</option>
+                        <option value={"3"}>3</option>
+                        <option value={"4"}>4</option>
+                        <option value={"5"}>5</option>
+                        <option value={"6"}>6</option>
+                        <option value={"7"}>7</option>
+                        <option value={"8"}>8</option>
+                        <option value={"9"}>9</option>
+                        <option value={"10"}>10</option>
+                        <option value={"11"}>11</option>
+                        <option value={"12"}>12</option>
+                        <option value={"13"}>13</option>
+                        <option value={"14"}>14</option>
+                        <option value={"15"}>15</option>
+                        <option value={"16"}>16</option>
+                        <option value={"16"}>17</option>
+                        <option value={"18"}>18</option>
+                        <option value={"19"}>19</option>
+                        <option value={"20"}>20</option>
+                    </select>
 
                 </div>
 

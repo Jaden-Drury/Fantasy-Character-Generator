@@ -315,13 +315,12 @@ class Printable extends Component{
                     <h3>Class: {this.props.userClass}</h3>
                     <h3>Race: {this.props.race}</h3>
                     <h3>Level: {this.props.level}</h3>
-                    <h3>Saving Roll: </h3>
                 </div>
 
                 <div id="statWrapper">
 
                     <ol className="statList">
-                        <li>Strength <br/>
+                        <li id="strLi">Strength <br/>
                             <label className="statNum">{this.state.strength}</label>
                             <br/>
                             <br/>
@@ -364,40 +363,54 @@ class Printable extends Component{
                         </li>
                     </ol>
 
-                    <label className="skillLabel">Skills</label>
-                    <ol id="skillBonuses">
-                        <li>___ Acrobatics (Dex)</li>
-                        <li>___ Animal Handling (Wis)</li>
-                        <li>___ Arcana (Int)</li>
-                        <li>___ Athletics (Str)</li>
-                        <li>___ Deception (Cha)</li>
-                        <li>___ History (Int)</li>
-                        <li>___ Insight (Wis)</li>
-                        <li>___ Intimidation (Wis)</li>
-                        <li>___ Investigation (Int)</li>
-                        <li>___ Medicine (Wis)</li>
-                        <li>___ Nature (Int)</li>
-                        <li>___ Perception (Wis)</li>
-                        <li>___ Performance (Cha)</li>
-                        <li>___ Persuasion (Cha)</li>
-                        <li>___ Religion (Int)</li>
-                        <li>___ Sleight of Hand (Dex)</li>
-                        <li>___ Stealth (Dex)</li>
-                        <li>___ Survival (Wis)</li>
-                    </ol>
-
-                    <div id="ac">
-                        <p>Current AC</p>
-                        <label className="circle"> </label>
-                        <p>Base AC</p>
-                        <label>{this.abilityModifiers(this.state.dexterity) + 10}</label>
+                    <div id="skillDiv">
+                        <label className="skillLabel">Skills</label>
+                        <ol id="skillBonuses">
+                            <li>___ Acrobatics (Dex)</li>
+                            <li>___ Animal Handling (Wis)</li>
+                            <li>___ Arcana (Int)</li>
+                            <li>___ Athletics (Str)</li>
+                            <li>___ Deception (Cha)</li>
+                            <li>___ History (Int)</li>
+                            <li>___ Insight (Wis)</li>
+                            <li>___ Intimidation (Wis)</li>
+                            <li>___ Investigation (Int)</li>
+                            <li>___ Medicine (Wis)</li>
+                            <li>___ Nature (Int)</li>
+                            <li>___ Perception (Wis)</li>
+                            <li>___ Performance (Cha)</li>
+                            <li>___ Persuasion (Cha)</li>
+                            <li>___ Religion (Int)</li>
+                            <li>___ Sleight of Hand (Dex)</li>
+                            <li>___ Stealth (Dex)</li>
+                            <li>___ Survival (Wis)</li>
+                        </ol>
                     </div>
 
-                    <div id="hp">
-                        <p>Current HP</p>
-                        <label className="circle">   </label>
-                        <p>Base HP</p>
-                        <label>{this.state.hitPoints + this.abilityModifiers(this.state.constitution) + this.leveledHP()}</label>
+                    <div id="moneyWrapper">
+                        <div id="hp">
+                            <p>Current HP</p>
+                            <label className="circle">   </label>
+                            <p>Base HP</p>
+                            <label>{this.state.hitPoints + this.abilityModifiers(this.state.constitution) + this.leveledHP()}</label>
+                        </div>
+
+                        <div id="ac">
+                            <p>Current AC</p>
+                            <label className="circle">   </label>
+                            <p>Base AC</p> 
+                            <label>{this.abilityModifiers(this.state.dexterity) + 10}</label>
+                        </div>
+
+                        <div id="money">
+                            <p>Money</p>
+                            <div>
+                                <label className="coins">CP</label>
+                                <label className="coins">SP</label>
+                                <label className="coins">GP</label>
+                                <label className="coins">PP</label>
+                            </div>
+                        </div>
                     </div>
 
                     <div id="savingThrows">
@@ -410,15 +423,45 @@ class Printable extends Component{
                         <label>{this.proficiencyBonusPerLevel()}</label>
                     </div>
 
+                        
+                    <div id="spaces">
+                        <div id="notes">
+                            <label id="noteTitle">Equipment</label>
+                            <p>_______________________________</p>
+                            <p>_______________________________</p>
+                            <p>_______________________________</p>
+                            <p>_______________________________</p>
+                            <p>_______________________________</p>
+                            <p>_______________________________</p>
+                            <p>_______________________________</p>
+                            <p>_______________________________</p>
+                        </div>
+
+                        <div id="notes">
+                            <label id="noteTitle">Notes</label>
+                            <p>_______________________________</p>
+                            <p>_______________________________</p>
+                            <p>_______________________________</p>
+                            <p>_______________________________</p>
+                            <p>_______________________________</p>
+                            <p>_______________________________</p>
+                            <p>_______________________________</p>
+                            <p>_______________________________</p>
+                        </div>
+                    </div>
                 </div>
 
                 <p id="footnote">Note: The above scores, modifiers, and hp are not including the two point additional ability score improvements that occur at 4th, 8th, 12th, 16th, and 19th level.</p>
 
+                <p>{this.props.constitution}</p>
+                <p>{this.props.intelligence}</p>
+                <p>{this.props.wisdom}</p>
+                <p>{this.props.charisma}</p>
+                <p>{this.props.strength}</p>
+                <p>{this.props.dexterity}</p>
+
             </div>
 
-            //  <button className="print" onClick={this.printDiv()}>
-            //                Print Character Sheet
-            // </button>
         );
     }
 }
