@@ -388,9 +388,9 @@ class Printable extends Component{
 
                     <div id="ac">
                         <p>Current AC</p>
-                        <label className="circle"> </lable>
+                        <label className="circle"> </label>
                         <p>Base AC</p>
-                        <label>{this.abilityModifiers(this.state.dexterity) + 10}(this.</label>
+                        <label>{this.abilityModifiers(this.state.dexterity) + 10}</label>
                     </div>
 
                     <div id="hp">
@@ -401,8 +401,13 @@ class Printable extends Component{
                     </div>
 
                     <div id="savingThrows">
-                        <p>Saving Throw Bonuses</p>
+                        <p>Saving Throws</p>
                         <label>{this.savingRoll()}</label>
+                    </div>
+
+                    <div id="proficiencyBonus">
+                        <p>Proficiency Bonus</p>
+                        <label>{this.proficiencyBonusPerLevel()}</label>
                     </div>
 
                 </div>
