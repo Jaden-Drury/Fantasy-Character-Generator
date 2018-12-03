@@ -274,28 +274,28 @@ class Printable extends Component{
         var savingRollDeterminer = this.props.userClass;
 
         if (savingRollDeterminer === "Barbarian" || savingRollDeterminer === "Fighter") {
-            return ("Strength / Constitution");
+            return ("Strength Constitution");
 
         } if (savingRollDeterminer === "Bard"){
-            return ("Dexterity / Charisma");
+            return ("Dexterity Charisma");
 
         } if (savingRollDeterminer === "Cleric" || savingRollDeterminer === "Warlock") {
-            return ("Wisdom / Charisma");
+            return ("Wisdom Charisma");
 
         } if (savingRollDeterminer === "Druid" || savingRollDeterminer === "Wizard") {
-            return ("Intelligence / Wisdom");
+            return ("Intelligence Wisdom");
 
         } if (savingRollDeterminer === "Monk" || savingRollDeterminer === "Ranger") {
-            return ("Strength / Dexterity");
+            return ("Strength Dexterity");
 
         } if (savingRollDeterminer === "Paladin"){
-            return ("Wisdom / Charisma");
+            return ("Wisdom Charisma");
 
         } if (savingRollDeterminer === "Rouge"){
-            return ("Dexterity / Intelligence");
+            return ("Dexterity Intelligence");
 
         } if (savingRollDeterminer === "Sorcerer"){
-            return ("Constitution / Charisma");
+            return ("Constitution Charisma");
 
         } return "No Class was selected";
     }
