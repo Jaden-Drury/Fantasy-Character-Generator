@@ -303,8 +303,9 @@ form input{
 
 #proficiencyBonus{
     border:1px solid black;
-    width:100px;
-    height:120px;
+    width:120px;
+    height:80px;
+    margin-bottom:10px;
 }
 
 #proficiencyBonus p{
