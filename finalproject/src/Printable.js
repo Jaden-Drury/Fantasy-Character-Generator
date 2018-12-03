@@ -405,6 +405,13 @@ class Printable extends Component{
                         <label>{this.savingRoll()}</label>
                     </div>
 
+                    <div id="money">
+                        <label>Copper</label>
+                        <label>Silver</label>
+                        <label>Gold</label>
+                        <label>Platinum</label>
+                    </div>
+
                 </div>
 
                 <p id="footnote">Note: The above scores, modifiers, and hp are not including the two point additional ability score improvements that occur at 4th, 8th, 12th, 16th, and 19th level.</p>

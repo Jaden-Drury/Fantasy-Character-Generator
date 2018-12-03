@@ -99,7 +99,6 @@ button {
 }
 
 #Printable{
-    width:70%;
     height:842px;
     margin:0px auto;
     background-color: white;
@@ -292,4 +291,21 @@ form input{
     text-align: center;
     padding-top:30px;
     margin-bottom:5px;
+}
+
+#money{
+    border:1px solid black;
+    width:200px;
+    height:70px;
+    display:flex;
+}
+
+#money label{
+    font-size: 12pt;
+    display: block;
+    text-align: center;
+    padding-top:30px;
+    padding-left:5px;
+    padding-right:5px;
+    bottom:0;
 }
