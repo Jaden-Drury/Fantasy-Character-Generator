@@ -146,7 +146,7 @@ class App extends Component {
                 this.setState({CharacterInput: true})
                 this.setState({GenerateButton: true})
                 this.setState({CharacterInputButton: false})
-                this.setState({PritableVisable: false})
+                this.setState({PrintableVisable: false})
             } else{
                 this.setState({CharacterInput: false})
             }
@@ -173,9 +173,10 @@ class App extends Component {
   render() {
       return (
         <div className="App">
+            {this.InputButtonToggle()}
             {this.GenerateButtonToggle()}
             {this.printable()}
-            {this.InputButtonToggle()}
+            
 
             {/*/!*Uncomment The below line to enable testing*!/*/}
             {/*<ReactTest HP ={this.state.hitPoints} playerName={this.state.playerName} characterName={this.state.characterName} userClass={this.state.userClass} race={this.state.race} level={this.state.level} strength={this.state.strength} intelligence={this.state.intelligence} constitution={this.state.constitution} wisdom={this.state.wisdom} dexterity={this.state.dexterity} charisma={this.state.charisma}/>*/}

@@ -10,14 +10,6 @@
   height: 1000px;
 }
 
-#ifmcontentstoprint{
-    height:0;
-    width:0;
-    position: absolute;
-    margin:0;
-    padding:0;
-}
-
 h1{
     font-family: 'Balthazar', serif;
     text-align: center;
@@ -44,7 +36,7 @@ h1{
 }
 
 .InputPage{
-    top: 50%;
+    margin:0 auto;
 }
 
 button{

@@ -36,32 +36,32 @@ class CharacterInput extends Component {
     }
 
     handleChangeStrength(event){
-        this.setState({class: event.target.value});
+        this.setState({strength: event.target.value});
         this.props.setClass(event.target.value);
     }
 
     handleChangeDexterity(event){
-        this.setState({class: event.target.value});
+        this.setState({dexterity: event.target.value});
         this.props.setClass(event.target.value);
     }
 
     handleChangeConstitution(event){
-        this.setState({class: event.target.value});
+        this.setState({constitution: event.target.value});
         this.props.setClass(event.target.value);
     }
 
     handleChangeIntelligence(event){
-        this.setState({class: event.target.value});
+        this.setState({intelligence: event.target.value});
         this.props.setClass(event.target.value);
     }
 
     handleChangeWisdom(event){
-        this.setState({class: event.target.value});
+        this.setState({wisdom: event.target.value});
         this.props.setClass(event.target.value);
     }
 
     handleChangeCharisma(event){
-        this.setState({class: event.target.value});
+        this.setState({charisma: event.target.value});
         this.props.setClass(event.target.value);
     }
 
