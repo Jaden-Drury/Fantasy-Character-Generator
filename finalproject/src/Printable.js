@@ -273,30 +273,30 @@ class Printable extends Component{
     savingRoll(){
         var savingRollDeterminer = this.props.userClass;
 
-        if (savingRollDeterminer === "Barbarian") {
-            return ("Strength / Constitution +" + this.proficiencyBonusPerLevel());
+        if (savingRollDeterminer === "Barbarian" || savingRollDeterminer === "Fighter") {
+            return ("Strength / Constitution");
+
         } if (savingRollDeterminer === "Bard"){
-            return ("Dexterity / Charisma +" + this.proficiencyBonusPerLevel());
-        } if (savingRollDeterminer === "Cleric"){
-            return ("Wisdom / Charisma +" + this.proficiencyBonusPerLevel());
-        } if (savingRollDeterminer === "Druid"){
-            return ("Intelligence / Wisdom +" + this.proficiencyBonusPerLevel());
-        } if (savingRollDeterminer === "Fighter"){
-            return ("Strength / Constitution +" + this.proficiencyBonusPerLevel());
-        } if (savingRollDeterminer === "Monk"){
-            return ("Strength / Dexterity +" + this.proficiencyBonusPerLevel());
+            return ("Dexterity / Charisma");
+
+        } if (savingRollDeterminer === "Cleric" || savingRollDeterminer === "Warlock") {
+            return ("Wisdom / Charisma");
+
+        } if (savingRollDeterminer === "Druid" || savingRollDeterminer === "Wizard") {
+            return ("Intelligence / Wisdom");
+
+        } if (savingRollDeterminer === "Monk" || savingRollDeterminer === "Ranger") {
+            return ("Strength / Dexterity");
+
         } if (savingRollDeterminer === "Paladin"){
-            return ("Wisdom / Charisma +" + this.proficiencyBonusPerLevel());
-        } if (savingRollDeterminer === "Ranger"){
-            return ("Strength / Dexterity +" + this.proficiencyBonusPerLevel());
+            return ("Wisdom / Charisma");
+
         } if (savingRollDeterminer === "Rouge"){
-            return ("Dexterity / Intelligence +" + this.proficiencyBonusPerLevel());
+            return ("Dexterity / Intelligence");
+
         } if (savingRollDeterminer === "Sorcerer"){
-            return ("Constitution / Charisma +" + this.proficiencyBonusPerLevel());
-        } if (savingRollDeterminer === "Warlock"){
-            return ("Wisdom / Charisma +" + this.proficiencyBonusPerLevel());
-        } if (savingRollDeterminer === "Wizard"){
-            return ("Intelligence / Wisdom +" + this.proficiencyBonusPerLevel());
+            return ("Constitution / Charisma");
+
         } return "No Class was selected";
     }
      
@@ -386,13 +386,6 @@ class Printable extends Component{
                         <li>___ Survival (Wis)</li>
                     </ol>
 
-                    <div id="ac">
-                        <p>Current AC</p>
-                        <label className="circle">   </label>
-                        <p>Base AC</p> 
-                        <label>{this.abilityModifiers(this.state.dexterity) + 10}</label>
-                    </div>
-
                     <div id="hp">
                         <p>Current HP</p>
                         <label className="circle">   </label>
@@ -400,27 +393,19 @@ class Printable extends Component{
                         <label>{this.state.hitPoints + this.abilityModifiers(this.state.constitution) + this.leveledHP()}</label>
                     </div>
 
-                    <div id="savingThrows">
-                        <p>Saving Throw Bonuses</p>
-                        <label>{this.savingRoll()}</label>
-                    </div>
-
-                    <div id="money">
-                        <label>Copper</label>
-                        <label>Silver</label>
-                        <label>Gold</label>
-                        <label>Platinum</label>
-                    </div>
-
                 </div>
 
                 <p id="footnote">Note: The above scores, modifiers, and hp are not including the two point additional ability score improvements that occur at 4th, 8th, 12th, 16th, and 19th level.</p>
 
+                <p>{this.props.constitution}</p>
+                <p>{this.props.intelligence}</p>
+                <p>{this.props.wisdom}</p>
+                <p>{this.props.charisma}</p>
+                <p>{this.props.strength}</p>
+                <p>{this.props.dexterity}</p>
+
             </div>
 
-            //  <button className="print" onClick={this.printDiv()}>
-            //                Print Character Sheet
-            // </button>
         );
     }
 }
