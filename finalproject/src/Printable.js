@@ -338,42 +338,42 @@ class Printable extends Component{
 
                     <ol className="statList">
                         <li id="strLi">Strength <br/>
-                            <label className="statNum">{this.state.strength}</label>
+                            <label className="statNum">{String(this.state.strength)}</label>
                             <br/>
                             <br/>
                             <label className="modifier"> {this.abilityModifiers(this.state.strength)}</label>
                         </li>
 
                         <li>Dexterity <br/>
-                            <label className="statNum">{this.state.dexterity}</label>
+                            <label className="statNum">{String(this.state.dexterity)}</label>
                             <br/>
                             <br/>
                             <label className="modifier">{this.abilityModifiers(this.state.dexterity)}</label>
                         </li>
 
                         <li>Constitution <br/>
-                            <label className="statNum">{this.state.constitution}</label>
+                            <label className="statNum">{String(this.state.constitution)}</label>
                             <br/>
                             <br/>
                             <label className="modifier">{this.abilityModifiers(this.state.constitution)}</label>
                         </li>
 
                         <li>Intelligence <br/>
-                            <label className="statNum">{this.state.intelligence}</label>
+                            <label className="statNum">{String(this.state.intelligence)}</label>
                             <br/>
                             <br/>
                             <label className="modifier">{this.abilityModifiers(this.state.intelligence)}</label>
                         </li>
 
                         <li>Wisdom <br/>
-                            <label className="statNum">{this.state.wisdom}</label>
+                            <label className="statNum">{String(this.state.wisdom)}</label>
                             <br/>
                             <br/>
                             <label className="modifier">{this.abilityModifiers(this.state.wisdom)}</label>
                         </li>
 
                         <li>Charisma <br/>
-                            <label className="statNum">{this.state.charisma}</label>
+                            <label className="statNum">{String(this.state.charisma)}</label>
                             <br/>
                             <br/>
                             <label className="modifier">{this.abilityModifiers(this.state.charisma)}</label>
@@ -409,14 +409,14 @@ class Printable extends Component{
                             <p>Current HP</p>
                             <label className="circle">   </label>
                             <p>Base HP</p>
-                            <label>{this.state.hitPoints + this.abilityModifiers(this.state.constitution) + this.leveledHP()}</label>
+                            <label>{String(this.state.hitPoints + this.abilityModifiers(this.state.constitution) + this.leveledHP())}</label>
                         </div>
 
                         <div id="ac">
                             <p>Current AC</p>
                             <label className="circle">   </label>
                             <p>Base AC</p> 
-                            <label>{this.abilityModifiers(this.state.dexterity) + 10}</label>
+                            <label>{String(this.abilityModifiers(this.state.dexterity) + 10)}</label>
                         </div>
 
                         <div id="savingThrows">
@@ -470,9 +470,6 @@ class Printable extends Component{
                 </div>
 
                 <p id="footnote">Note: The above scores, modifiers, and hp are not including the two point additional ability score improvements that occur at 4th, 8th, 12th, 16th, and 19th level.</p>
-
-                <p>Level New {this.state.newLevel}</p>
-
 
             </div>
 
