@@ -7,7 +7,7 @@
   background-size: cover;
   background-position: center;
   width:auto;
-  height: 1000px;
+  height: 1400px;
 }
 
 h1{
@@ -174,10 +174,10 @@ form input{
 
 #footnote{
     padding: 20px;
-    margin-left: 88px;
-    margin-right: 50px;
-    text-indent: -38px;
-
+    margin:0 auto;
+    text-align: center;
+    background-color:white;
+    width:500px;
 }
 
 .modifier{

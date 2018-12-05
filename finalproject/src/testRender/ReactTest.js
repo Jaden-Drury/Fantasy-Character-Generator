@@ -26,7 +26,7 @@ class ReactTest extends Component{
         }
     }
 
-    NameNotNull(){
+    nameNotNull(){
         if(this.props.playerName === null || this.props.characterName === null){ //this is a example of how testing is set up
             console.log("Test is False and Fails")
             return(
@@ -41,7 +41,7 @@ class ReactTest extends Component{
         }
     }
 
-    DropNotNull(){
+    dropNotNull(){
         if(this.props.userClass === null || this.props.race === null || this.props.level === null){ //this is a example of how testing is set up
             console.log("Test is False and Fails")
             return(
@@ -56,43 +56,130 @@ class ReactTest extends Component{
         }
     }
 
-    SkillsNotZero(){
-        if ( this.TestForLowestScore(this.props.HP) && this.TestForLowestScore(this.props.strength) && this.TestForLowestScore(this.props.intelligence) && this.TestForLowestScore(this.props.constitution) && this.TestForLowestScore(this.props.wisdom) && this.TestForLowestScore(this.props.dexterity) && this.TestForLowestScore(this.props.charisma)) {
-            console.log("All skills are equal to or greater than the lowest posible per level       i.e level 1 = 8, level 2 = 16")
-            return(
-                <Pass/>
-            )
+    testForSavingRoll() {
+        var savingRolls = this.savingRolls();
+
+        if ( this.props.userClass === "Barbarian" || this.props.userClass === "Fighter") {
+            if ( savingRolls === "Strength Constitution") {
+                return(
+                    <Pass/>
+                )
+            }
         }
-        console.log("There is one skill that is not equal to or greater than the minimum possible score")
+        if ( this.props.userClass === "Bard") {
+            if ( savingRolls === "Dexterity Charisma") {
+                return(
+                    <Pass/>
+                )
+            }    
+        }
+        if ( this.props.userClass === "Cleric" || this.props.userClass === "Warlock") {
+            if ( savingRolls === "Wisdom Charisma") {
+                return(
+                    <Pass/>
+                )
+            }
+        }
+        if ( this.props.userClass === "Druid" || this.props.userClass === "Wizard") {
+            if ( savingRolls === "Intelligence Wisdom") {
+                return(
+                    <Pass/>
+                )
+            }
+        }
+        if ( this.props.userClass === "Monk" || this.props.userClass === "Ranger") {
+            if ( savingRolls === "Strength Dexterity") {
+                return(
+                    <Pass/>
+                )
+            }
+        }
+        if ( this.props.userClass === "Paladin" ) {
+            if ( savingRolls === "Wisdom Charisma") {
+                return(
+                    <Pass/>
+                )
+            }
+        }
+        if ( this.props.userClass === "Rouge" ) {
+            if ( savingRolls === "Dexterity Intelligence") {
+                return(
+                    <Pass/>
+                )
+            }
+        }
+        if ( this.props.userClass === "Sorcerer" ) {
+            if ( savingRolls === "Constitution Charisma") {
+                return(
+                    <Pass/>
+                )
+            }
+        }
         return (
             <Fail/>
         )
     }
 
-    // This is a helper function to test for the lowest possible score per level
-    TestForLowestScore(skill) {
-        if ( skill >= (8*this.props.level) ) {
-            return true;
-        }
+    // This is a helping function to get the Saving Rolls; is located in Printable
+    savingRolls() {
+        var savingRollDeterminer = this.props.userClass;
 
-        if ( skill === this.props.HP ) {
-            if ( this.props.HP >= 1 ) {
-                return true;
-            }
+        if (savingRollDeterminer === "Barbarian" || savingRollDeterminer === "Fighter") {
+            return ("Strength Constitution");
+        } if (savingRollDeterminer === "Bard"){
+            return ("Dexterity Charisma");
+        } if (savingRollDeterminer === "Cleric" || savingRollDeterminer === "Warlock") {
+            return ("Wisdom Charisma");
+        } if (savingRollDeterminer === "Druid" || savingRollDeterminer === "Wizard") {
+            return ("Intelligence Wisdom");
+        } if (savingRollDeterminer === "Monk" || savingRollDeterminer === "Ranger") {
+            return ("Strength Dexterity");
+        } if (savingRollDeterminer === "Paladin"){
+            return ("Wisdom Charisma");
+        } if (savingRollDeterminer === "Rouge"){
+            return ("Dexterity Intelligence");
+        } if (savingRollDeterminer === "Sorcerer"){
+            return ("Constitution Charisma");
         }
-        
-        return false;
     }
 
+    testForProficiencyBonus(){
+        var bonus = this.proficiencyBonus();
+        if ( bonus === "2" || bonus === "3" || bonus === "4" || bonus === "5" || bonus === "6" ) {
+            return(
+                <Pass/>
+            )
+        }
+        return(
+            <Fail/>
+        )
+    }
+
+
+    // This is a helping function to get the Proficiency Bonus; is located in Printable
+    proficiencyBonus(){
+        var level = this.props.level;
+        if (level === "1" || level === "2" || level === "3" || level === "4"){
+            return ("2");
+        } if (level === "5" || level === "6" || level === "7" || level === "8") {
+            return ("3");
+        } if (level === "9" || level === "10" || level === "11" || level === "12"){
+            return ("4");
+        } if (level === "13" || level === "14" || level === "15" || level === "16"){
+            return ("5");
+        } if (level === "17" || level === "18" || level === "19" || level === "20"){
+            return ("6");
+        } return ("0");
+    }
     render(){
-        this.NameNotNull()
         return(
 
             <div className="ReactTest">
 
-                {/* {this.NameNotNull()} */}
-                {/* {this.DropNotNull()} */}
-                {this.SkillsNotZero()}
+                {this.nameNotNull()}
+                {this.dropNotNull()}
+                {this.testForSavingRoll()}
+                {this.testForProficiencyBonus()}
 
             </div>
         );
