@@ -10,6 +10,7 @@ class CharacterInput extends Component {
             class: "",
             race: "",
             level: "",
+            newLevel: "",
             playerName: null,
             characterName: null,
             strength: 0,
@@ -32,37 +33,38 @@ class CharacterInput extends Component {
         this.handleChangeIntelligence = this.handleChangeIntelligence.bind(this)
         this.handleChangeWisdom = this.handleChangeWisdom.bind(this)
         this.handleChangeCharisma = this.handleChangeCharisma.bind(this)
+        this.handleChangeNewLevel = this.handleChangeNewLevel.bind(this)
 
     }
 
     handleChangeStrength(event){
         this.setState({strength: event.target.value});
-        this.props.setClass(event.target.value);
+        this.props.setStr(event.target.value);
     }
 
     handleChangeDexterity(event){
         this.setState({dexterity: event.target.value});
-        this.props.setClass(event.target.value);
+        this.props.setDex(event.target.value);
     }
 
     handleChangeConstitution(event){
         this.setState({constitution: event.target.value});
-        this.props.setClass(event.target.value);
+        this.props.setCon(event.target.value);
     }
 
     handleChangeIntelligence(event){
         this.setState({intelligence: event.target.value});
-        this.props.setClass(event.target.value);
+        this.props.setInt(event.target.value);
     }
 
     handleChangeWisdom(event){
         this.setState({wisdom: event.target.value});
-        this.props.setClass(event.target.value);
+        this.props.setWis(event.target.value);
     }
 
     handleChangeCharisma(event){
         this.setState({charisma: event.target.value});
-        this.props.setClass(event.target.value);
+        this.props.setCha(event.target.value);
     }
 
     handleChange(event){
@@ -78,6 +80,11 @@ class CharacterInput extends Component {
     handleChangeLevel(event){
         this.setState({level: event.target.value}); //the function that pulls from the level selector and sets the state of level to it
         this.props.setLevel(event.target.value)
+    }
+
+    handleChangeNewLevel(event){
+        this.setState({newLevel: event.target.value}); //the function that pulls from the level selector and sets the state of level to it
+        this.props.setNewLevel(event.target.value)
     }
 
     handleChangeName(event){
@@ -145,6 +152,32 @@ class CharacterInput extends Component {
                     <h2>Level:</h2>
 
                     <select value={this.state.level} onChange={this.handleChangeLevel}>
+                        <option value={""}>Select Your Current Level</option>
+                        <option value={"1"}>1</option>
+                        <option value={"2"}>2</option>
+                        <option value={"3"}>3</option>
+                        <option value={"4"}>4</option>
+                        <option value={"5"}>5</option>
+                        <option value={"6"}>6</option>
+                        <option value={"7"}>7</option>
+                        <option value={"8"}>8</option>
+                        <option value={"9"}>9</option>
+                        <option value={"10"}>10</option>
+                        <option value={"11"}>11</option>
+                        <option value={"12"}>12</option>
+                        <option value={"13"}>13</option>
+                        <option value={"14"}>14</option>
+                        <option value={"15"}>15</option>
+                        <option value={"16"}>16</option>
+                        <option value={"17"}>17</option>
+                        <option value={"18"}>18</option>
+                        <option value={"19"}>19</option>
+                        <option value={"20"}>20</option>
+                    </select>
+
+                    <h2>Select the Level You Would Like to Move To:</h2>
+
+                    <select value={this.state.newLevel} onChange={this.handleChangeNewLevel}>
                         <option value={""}>Select a Level</option>
                         <option value={"1"}>1</option>
                         <option value={"2"}>2</option>
@@ -162,7 +195,7 @@ class CharacterInput extends Component {
                         <option value={"14"}>14</option>
                         <option value={"15"}>15</option>
                         <option value={"16"}>16</option>
-                        <option value={"16"}>17</option>
+                        <option value={"17"}>17</option>
                         <option value={"18"}>18</option>
                         <option value={"19"}>19</option>
                         <option value={"20"}>20</option>
@@ -192,31 +225,6 @@ class CharacterInput extends Component {
 
                     <input type="number" placeholder="0" onChange={this.handleChangeCharisma}/>
 
-                    <h2>Select Level You Would Like to Move To:</h2>
-
-                    <select value={this.state.level} onChange={this.handleChangeLevel}>
-                        <option value={""}>Select a Level</option>
-                        <option value={"1"}>1</option>
-                        <option value={"2"}>2</option>
-                        <option value={"3"}>3</option>
-                        <option value={"4"}>4</option>
-                        <option value={"5"}>5</option>
-                        <option value={"6"}>6</option>
-                        <option value={"7"}>7</option>
-                        <option value={"8"}>8</option>
-                        <option value={"9"}>9</option>
-                        <option value={"10"}>10</option>
-                        <option value={"11"}>11</option>
-                        <option value={"12"}>12</option>
-                        <option value={"13"}>13</option>
-                        <option value={"14"}>14</option>
-                        <option value={"15"}>15</option>
-                        <option value={"16"}>16</option>
-                        <option value={"16"}>17</option>
-                        <option value={"18"}>18</option>
-                        <option value={"19"}>19</option>
-                        <option value={"20"}>20</option>
-                    </select>
 
                 </div>
 

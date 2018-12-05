@@ -16,7 +16,7 @@ To Build The Project:
 
 To enable testing:
 
-1: Open the app.js file in a text editor. On or around line 110 there will be a tag for <ReactTest /> or in full
+1: Open the app.js file in a text editor. On or around line 185 there will be a tag for <ReactTest /> or in full
 
     <ReactTest playerName={this.state.playerName} characterName={this.state.characterName} userClass={this.state.userClass} race={this.state.race} level={this.state.level} strength={this.state.strength} intelligence={this.state.intelligence} constitution={this.state.constitution} wisdom={this.state.wisdom} dexterity={this.state.dexterity} charisma={this.state.charisma}/>
     

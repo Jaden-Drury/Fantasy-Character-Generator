@@ -19,6 +19,7 @@ class App extends Component {
             userClass: null,
             race:null,
             level:null,
+            newLevel: null,
             strength: 0,
             dexterity: 0,
             constitution: 0,
@@ -66,9 +67,14 @@ class App extends Component {
         this.setState({race:race})
     }
 
-    setLevel(level){
-        this.setState({level:level});
+    setNewLevel(level){
+        this.setState({newLevel:level});
     }
+
+    setLevel(level){
+            this.setState({level: level});
+    }
+
 
     setPlayerName(playerNameParameter){
         this.setState({playerName:playerNameParameter});
@@ -80,12 +86,12 @@ class App extends Component {
     printable(){
             if (this.state.PrintableVisible === true){
                 return(
-                        <Printable hitPoints={this.state.hitPoints} playerName={this.state.playerName} characterName={this.state.characterName} userClass={this.state.userClass} race={this.state.race} level={this.state.level} strength={this.state.strength} dexterity={this.state.dexterity}  constitution={this.state.constitution}  intelligence={this.state.intelligence}  wisdom={this.state.wisdom}  charisma={this.state.charisma}/>
+                        <Printable hitPoints={this.state.hitPoints} playerName={this.state.playerName} characterName={this.state.characterName} userClass={this.state.userClass} race={this.state.race} level={this.state.level} strength={this.state.strength} dexterity={this.state.dexterity}  constitution={this.state.constitution}  intelligence={this.state.intelligence}  wisdom={this.state.wisdom}  charisma={this.state.charisma} newLevel={this.state.newLevel}/>
                 )
             }else if(this.state.CharacterInput === true){
                 return(
                     //<CharacterInput/>
-                    <CharacterInput setPlayerName={(playerNameParameter)=>this.setPlayerName(playerNameParameter)} setCharacterName={(characterNameParameter)=>this.setCharacterName(characterNameParameter)} setClass={(userClass)=>this.setClass(userClass)} setRace={(race)=>this.setRace(race)} setLevel={(level)=>this.setLevel(level)}/>
+                    <CharacterInput setPlayerName={(playerNameParameter)=>this.setPlayerName(playerNameParameter)} setCharacterName={(characterNameParameter)=>this.setCharacterName(characterNameParameter)} setClass={(userClass)=>this.setClass(userClass)} setRace={(race)=>this.setRace(race)} setNewLevel={(newLevel)=>this.setNewLevel(newLevel)} setLevel={(level)=>this.setLevel(level)} setStr={(str)=>this.setStr(str)} setDex={(dex)=>this.setDex(dex)} setCon={(con)=>this.setCon(con)} setInt={(int)=>this.setInt(int)} setCha={(cha)=>this.setCha(cha)} setWis={(wis)=>this.setWis(wis)}/>
             )
             } else {
                 return(
@@ -142,7 +148,6 @@ class App extends Component {
     InputGenerate(){
         try{
             if (this.state.CharacterInput ===false){
-                console.log("CharacterInput is True")
                 this.setState({CharacterInput: true})
                 this.setState({GenerateButton: true})
                 this.setState({CharacterInputButton: false})
@@ -163,7 +168,6 @@ class App extends Component {
             )
         }
         else {
-            console.log("Default")
             return(
                 <ClassSkills setStr={(str)=>this.setStr(str)} setDex={(dex)=>this.setDex(dex)} setCon={(con)=>this.setCon(con)} setInt={(int)=>this.setInt(int)} setWis={(wis)=>this.setWis(wis)} setCha={(cha)=>this.setCha(cha)}/>
             )
