@@ -14,7 +14,7 @@ class LevelCharacterInput extends Component {
             intelligence: 0,
             wisdom: 0,
             charisma: 0,
-            basicStatArray:[15, 14, 13, 12, 10, 8],
+            basicStatArray:[],
         }
     }
 

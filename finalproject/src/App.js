@@ -168,7 +168,6 @@ class App extends Component {
             )
         }
         else {
-            console.log("Default")
             return(
                 <ClassSkills setStr={(str)=>this.setStr(str)} setDex={(dex)=>this.setDex(dex)} setCon={(con)=>this.setCon(con)} setInt={(int)=>this.setInt(int)} setWis={(wis)=>this.setWis(wis)} setCha={(cha)=>this.setCha(cha)}/>
             )

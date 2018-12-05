@@ -7,18 +7,23 @@ class Printable extends Component{
         super(props);
         this.state = {
             hitPoints: 0,
-            charisma: this.props.charisma,
-            strength: this.props.strength,
-            constitution: this.props.constitution,
-            wisdom: this.props.wisdom,
-            intelligence: this.props.intelligence,
-            dexterity: this.props.dexterity,
+            charisma: this.fixInts(this.props.charisma),
+            strength: this.fixInts(this.props.strength),
+            constitution: this.fixInts(this.props.constitution),
+            wisdom: this.fixInts(this.props.wisdom),
+            intelligence: this.fixInts(this.props.intelligence),
+            dexterity: this.fixInts(this.props.dexterity),
         };
     }
 
     componentDidMount(){
         this.baseHitPoints();
         this.racialBonuses();
+    }
+
+    fixInts(string){
+        const count = parseInt(string, 10);
+        return(count);
     }
 
     abilityModifiers(skill) {
@@ -409,7 +414,7 @@ class Printable extends Component{
 
                         <div id="proficiencyBonus">
                             <p>Proficiency Bonus</p>
-                            <label>{this.proficiencyBonusPerLevel()}</label>
+                            <label>{"+" + this.proficiencyBonusPerLevel()}</label>
                         </div>
 
                         <div id="money">
@@ -453,13 +458,6 @@ class Printable extends Component{
                 </div>
 
                 <p id="footnote">Note: The above scores, modifiers, and hp are not including the two point additional ability score improvements that occur at 4th, 8th, 12th, 16th, and 19th level.</p>
-
-                <p>{this.props.constitution}</p>
-                <p>{this.props.intelligence}</p>
-                <p>{this.props.wisdom}</p>
-                <p>{this.props.charisma}</p>
-                <p>{this.props.strength}</p>
-                <p>{this.props.dexterity}</p>
 
             </div>
 
