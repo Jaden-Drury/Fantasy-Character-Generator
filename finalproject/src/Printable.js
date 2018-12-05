@@ -13,6 +13,7 @@ class Printable extends Component{
             wisdom: this.fixInts(this.props.wisdom),
             intelligence: this.fixInts(this.props.intelligence),
             dexterity: this.fixInts(this.props.dexterity),
+            newLevel: this.props.newLevel,
         };
     }
 
@@ -304,7 +305,12 @@ class Printable extends Component{
 
         } return "No Class was selected";
     }
-     
+
+
+    levelUp(){
+
+    }
+
 
     render(){
         return(
@@ -458,6 +464,9 @@ class Printable extends Component{
                 </div>
 
                 <p id="footnote">Note: The above scores, modifiers, and hp are not including the two point additional ability score improvements that occur at 4th, 8th, 12th, 16th, and 19th level.</p>
+
+                <p>New Level {this.state.newLevel}</p>
+
 
             </div>
 

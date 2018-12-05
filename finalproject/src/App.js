@@ -30,6 +30,7 @@ class App extends Component {
             GenerateButton: true,
             CharacterInputButton: true,
             hitPoints: 0,
+            newLevel: "",
         };
         this.generate = this.generate.bind(this)
         this.InputGenerate = this.InputGenerate.bind(this)
@@ -85,7 +86,7 @@ class App extends Component {
     printable(){
             if (this.state.PrintableVisible === true){
                 return(
-                        <Printable hitPoints={this.state.hitPoints} playerName={this.state.playerName} characterName={this.state.characterName} userClass={this.state.userClass} race={this.state.race} level={this.state.level} strength={this.state.strength} dexterity={this.state.dexterity}  constitution={this.state.constitution}  intelligence={this.state.intelligence}  wisdom={this.state.wisdom}  charisma={this.state.charisma}/>
+                        <Printable hitPoints={this.state.hitPoints} playerName={this.state.playerName} characterName={this.state.characterName} userClass={this.state.userClass} race={this.state.race} level={this.state.level} strength={this.state.strength} dexterity={this.state.dexterity}  constitution={this.state.constitution}  intelligence={this.state.intelligence}  wisdom={this.state.wisdom}  charisma={this.state.charisma} newLevel={this.state.newLevel}/>
                 )
             }else if(this.state.CharacterInput === true){
                 return(
