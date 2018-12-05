@@ -116,52 +116,57 @@ class Printable extends Component{
 
 
     leveledHP(){
-        if(this.props.userClass === "Barbarian" && this.props.level>1){
-            const roll = this.rollD12(this.props.level-1)
+        if(this.state.newLevel == null){
+            var level = this.state.level;
+        }else{
+            level = this.state.newLevel;
+        }
+        if(this.props.userClass === "Barbarian" && level>1){
+            const roll = this.rollD12(level-1)
             return(roll);
         }
-        else if(this.props.userClass === "Bard" && this.props.level>1){
-            const roll = this.rollD8(this.props.level-1)
+        else if(this.props.userClass === "Bard" && level>1){
+            const roll = this.rollD8(level-1)
             return(roll);
         }
-        else if(this.props.userClass === "Cleric" && this.props.level>1){
-            const roll = this.rollD8(this.props.level-1)
+        else if(this.props.userClass === "Cleric" && level>1){
+            const roll = this.rollD8(level-1)
             return(roll);
         }
-        else if(this.props.userClass === "Druid" && this.props.level>1){
-            const roll = this.rollD8(this.props.level-1)
+        else if(this.props.userClass === "Druid" && level>1){
+            const roll = this.rollD8(level-1)
             return(roll);
         }
-        else if(this.props.userClass === "Fighter" && this.props.level>1){
-            const roll = this.rollD10(this.props.level-1)
+        else if(this.props.userClass === "Fighter" && level>1){
+            const roll = this.rollD10(level-1)
             return(roll);
         }
-        else if(this.props.userClass === "Monk" && this.props.level>1){
-            const roll = this.rollD8(this.props.level-1)
+        else if(this.props.userClass === "Monk" && level>1){
+            const roll = this.rollD8(level-1)
             return(roll);
         }
-        else if(this.props.userClass === "Paladin" && this.props.level>1){
-            const roll = this.rollD10(this.props.level-1)
+        else if(this.props.userClass === "Paladin" && level>1){
+            const roll = this.rollD10(level-1)
             return(roll);
         }
-        else if(this.props.userClass === "Ranger" && this.props.level>1){
-            const roll = this.rollD10(this.props.level-1)
+        else if(this.props.userClass === "Ranger" && level>1){
+            const roll = this.rollD10(level-1)
             return(roll);
         }
-        else if(this.props.userClass === "Rogue" && this.props.level>1){
-            const roll = this.rollD8(this.props.level-1)
+        else if(this.props.userClass === "Rogue" && level>1){
+            const roll = this.rollD8(level-1)
             return(roll);
         }
-        else if(this.props.userClass === "Sorcerer" && this.props.level>1){
-            const roll = this.rollD6(this.props.level-1)
+        else if(this.props.userClass === "Sorcerer" && level>1){
+            const roll = this.rollD6(level-1)
             return(roll);
         }
-        else if(this.props.userClass === "Warlock" && this.props.level>1){
-            const roll = this.rollD8(this.props.level-1)
+        else if(this.props.userClass === "Warlock" && level>1){
+            const roll = this.rollD8(level-1)
             return(roll);
         }
-        else if(this.props.userClass === "Wizard" && this.props.level>1){
-            const roll = this.rollD6(this.props.level-1)
+        else if(this.props.userClass === "Wizard" && level>1){
+            const roll = this.rollD6(level-1)
             return(roll);
         }
         else{
@@ -264,7 +269,11 @@ class Printable extends Component{
     }
 
     proficiencyBonusPerLevel(){
-        var level = this.props.level;
+        if(this.state.newLevel == null){
+            var level = this.state.level;
+        }else{
+            level = this.state.newLevel;
+        }
 
         if (level === "1" || level === "2" || level === "3" || level === "4"){
             return "2";
@@ -462,7 +471,7 @@ class Printable extends Component{
 
                 <p id="footnote">Note: The above scores, modifiers, and hp are not including the two point additional ability score improvements that occur at 4th, 8th, 12th, 16th, and 19th level.</p>
 
-                <p>New Level {this.state.newLevel}</p>
+                <p>Level New {this.state.newLevel}</p>
 
 
             </div>

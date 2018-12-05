@@ -35,17 +35,6 @@ class App extends Component {
         this.InputGenerate = this.InputGenerate.bind(this)
     }
 
-    componentWillMount(){
-        this.levelChange();
-
-    }
-
-    levelChange(){
-        if(this.state.newLevel != null){
-            console.log("not null")
-        }
-    }
-
     setClass(userClass){
         this.setState({userClass:userClass});
     }
