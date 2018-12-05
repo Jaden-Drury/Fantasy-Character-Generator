@@ -30,10 +30,20 @@ class App extends Component {
             GenerateButton: true,
             CharacterInputButton: true,
             hitPoints: 0,
-            newLevel: "",
         };
         this.generate = this.generate.bind(this)
         this.InputGenerate = this.InputGenerate.bind(this)
+    }
+
+    componentWillMount(){
+        this.levelChange();
+
+    }
+
+    levelChange(){
+        if(this.state.newLevel != null){
+            console.log("not null")
+        }
     }
 
     setClass(userClass){
@@ -68,13 +78,14 @@ class App extends Component {
         this.setState({race:race})
     }
 
-    setLevel(level){
-        this.setState({level:level});
-    }
-
     setNewLevel(level){
         this.setState({newLevel:level});
     }
+
+    setLevel(level){
+            this.setState({level: level});
+    }
+
 
     setPlayerName(playerNameParameter){
         this.setState({playerName:playerNameParameter});
@@ -91,7 +102,7 @@ class App extends Component {
             }else if(this.state.CharacterInput === true){
                 return(
                     //<CharacterInput/>
-                    <CharacterInput setPlayerName={(playerNameParameter)=>this.setPlayerName(playerNameParameter)} setCharacterName={(characterNameParameter)=>this.setCharacterName(characterNameParameter)} setClass={(userClass)=>this.setClass(userClass)} setRace={(race)=>this.setRace(race)} setLevel={(level)=>this.setLevel(level)} setNewLevel={(newLevel)=>this.setNewLevel(newLevel)} setStr={(str)=>this.setStr(str)} setDex={(dex)=>this.setDex(dex)} setCon={(con)=>this.setCon(con)} setInt={(int)=>this.setInt(int)} setCha={(cha)=>this.setCha(cha)} setWis={(wis)=>this.setWis(wis)}/>
+                    <CharacterInput setPlayerName={(playerNameParameter)=>this.setPlayerName(playerNameParameter)} setCharacterName={(characterNameParameter)=>this.setCharacterName(characterNameParameter)} setClass={(userClass)=>this.setClass(userClass)} setRace={(race)=>this.setRace(race)} setNewLevel={(newLevel)=>this.setNewLevel(newLevel)} setLevel={(level)=>this.setLevel(level)} setStr={(str)=>this.setStr(str)} setDex={(dex)=>this.setDex(dex)} setCon={(con)=>this.setCon(con)} setInt={(int)=>this.setInt(int)} setCha={(cha)=>this.setCha(cha)} setWis={(wis)=>this.setWis(wis)}/>
             )
             } else {
                 return(
@@ -148,7 +159,6 @@ class App extends Component {
     InputGenerate(){
         try{
             if (this.state.CharacterInput ===false){
-                console.log("CharacterInput is True")
                 this.setState({CharacterInput: true})
                 this.setState({GenerateButton: true})
                 this.setState({CharacterInputButton: false})

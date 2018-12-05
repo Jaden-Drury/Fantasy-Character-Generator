@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ce05456-cc53-4eeb-9513-9412e74900ab" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/finalproject/src/App.js" afterPath="$PROJECT_DIR$/finalproject/src/App.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/finalproject/src/Printable.js" afterPath="$PROJECT_DIR$/finalproject/src/Printable.js" />
     </list>
@@ -21,8 +22,8 @@
       <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/finalproject/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="88" column="458" lean-forward="false" selection-start-line="88" selection-start-column="458" selection-end-line="88" selection-end-column="458" />
+            <state relative-caret-position="270">
+              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -33,8 +34,8 @@
       <file leaf-file-name="CharacterInput.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/finalproject/src/CharacterInput.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="20" />
+            <state relative-caret-position="250">
+              <caret line="82" column="5" lean-forward="true" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -45,7 +46,7 @@
       <file leaf-file-name="LevelCharacterInput.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/finalproject/src/LevelCharacterInput.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
+            <state relative-caret-position="360">
               <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
               <folding />
             </state>
@@ -55,8 +56,8 @@
       <file leaf-file-name="ClassSkills.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/finalproject/src/ClassSkills.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="20" lean-forward="false" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+            <state relative-caret-position="160">
+              <caret line="27" column="16" lean-forward="false" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -77,8 +78,8 @@
       <file leaf-file-name="Printable.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/finalproject/src/Printable.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="320" column="71" lean-forward="true" selection-start-line="320" selection-start-column="71" selection-end-line="320" selection-end-column="71" />
+            <state relative-caret-position="160">
+              <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="17" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -127,36 +128,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>cla</find>
-      <find>Selectors</find>
-      <find>selectors</find>
-      <find>printa</find>
-      <find>select</find>
-      <find>5e</find>
-      <find>background</find>
-      <find>printable</find>
-      <find>this.prop</find>
-      <find>props</find>
-      <find>Printable</find>
-      <find>setCharacter</find>
-      <find>setCharacterName</find>
-      <find>GenerateButtonToggle(){         try{             if (this.state.GenerateButton === true){                 return(                     &lt;button className=&quot;generate&quot; onClick={this.generate}&gt;                         {this.state.buttonText}                     &lt;/button&gt;                 )             }         } catch (Exception){             console.log(Exception);         }     }</find>
-      <find>genera</find>
-      <find>handleChangeSt</find>
       <find>leveledHP</find>
       <find>charisma</find>
       <find>d6</find>
       <find>setIN</find>
-      <find>level</find>
       <find>generate</find>
       <find>setStren</find>
       <find>stre</find>
       <find>default</find>
-      <find>setStr</find>
-      <find>setNew</find>
       <find>setLevel</find>
       <find>proficie</find>
       <find>name</find>
+      <find>newLevel</find>
+      <find>levelU</find>
+      <find>componenet</find>
+      <find>setNew</find>
+      <find>base</find>
+      <find>prof</find>
+      <find>this.</find>
+      <find>proficiencyBonusPerLevel</find>
+      <find>this.props.level</find>
+      <find>this.state.level</find>
+      <find>var level</find>
+      <find>levelUp</find>
+      <find>set</find>
+      <find>setLe</find>
+      <find>setStr</find>
+      <find>level</find>
+      <find>console.log</find>
+      <find>newLe</find>
+      <find>true</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -190,9 +191,9 @@
         <option value="$PROJECT_DIR$/finalproject/src/CharacterInputLevel.js" />
         <option value="$PROJECT_DIR$/finalproject/src/App.css" />
         <option value="$PROJECT_DIR$/finalproject/src/Selectors.js" />
-        <option value="$PROJECT_DIR$/finalproject/src/CharacterInput.js" />
         <option value="$PROJECT_DIR$/finalproject/src/LevelCharacterInput.js" />
         <option value="$PROJECT_DIR$/finalproject/src/Printable.js" />
+        <option value="$PROJECT_DIR$/finalproject/src/CharacterInput.js" />
         <option value="$PROJECT_DIR$/finalproject/src/App.js" />
       </list>
     </option>
@@ -437,12 +438,12 @@
       <workItem from="1543604282807" duration="560000" />
       <workItem from="1543691562512" duration="4476000" />
       <workItem from="1543863160436" duration="1478000" />
-      <workItem from="1543976881156" duration="1528000" />
+      <workItem from="1543976881156" duration="4620000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105986000" />
+    <option name="totallyTimeSpent" value="109078000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -736,15 +737,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/finalproject/src/ClassSkills.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="20" lean-forward="false" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+        <state relative-caret-position="160">
+          <caret line="27" column="16" lean-forward="false" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/finalproject/src/LevelCharacterInput.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
+        <state relative-caret-position="360">
           <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
           <folding />
         </state>
@@ -752,8 +753,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/finalproject/src/CharacterInput.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="20" />
+        <state relative-caret-position="250">
+          <caret line="82" column="5" lean-forward="true" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -762,8 +763,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/finalproject/src/Printable.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="320" column="71" lean-forward="true" selection-start-line="320" selection-start-column="71" selection-end-line="320" selection-end-column="71" />
+        <state relative-caret-position="160">
+          <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="17" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -772,8 +773,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/finalproject/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="88" column="458" lean-forward="false" selection-start-line="88" selection-start-column="458" selection-end-line="88" selection-end-column="458" />
+        <state relative-caret-position="270">
+          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

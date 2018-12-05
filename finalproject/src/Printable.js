@@ -14,6 +14,7 @@ class Printable extends Component{
             intelligence: this.fixInts(this.props.intelligence),
             dexterity: this.fixInts(this.props.dexterity),
             newLevel: this.props.newLevel,
+            level: this.props.level,
         };
     }
 
@@ -21,6 +22,7 @@ class Printable extends Component{
         this.baseHitPoints();
         this.racialBonuses();
     }
+
 
     fixInts(string){
         const count = parseInt(string, 10);
@@ -263,6 +265,7 @@ class Printable extends Component{
 
     proficiencyBonusPerLevel(){
         var level = this.props.level;
+
         if (level === "1" || level === "2" || level === "3" || level === "4"){
             return "2";
         } if (level === "5" || level === "6" || level === "7" || level === "8") {
@@ -305,12 +308,6 @@ class Printable extends Component{
 
         } return "No Class was selected";
     }
-
-
-    levelUp(){
-
-    }
-
 
     render(){
         return(
