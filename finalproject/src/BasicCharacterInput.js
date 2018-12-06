@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Printable from './Printable';
 
-class CharacterInput extends Component {
+class BasicCharacterInput extends Component {
 
     constructor(props){
         super(props);
@@ -233,4 +233,4 @@ class CharacterInput extends Component {
     }
 }
 
-export default CharacterInput;
+export default BasicCharacterInput;

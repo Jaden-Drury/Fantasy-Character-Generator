@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import ReactTest from './testRender/ReactTest.js';
+//import ReactTest from './testRender/ReactTest.js';
 import Selectors from './Selectors';
 import Printable from './Printable';
 import ClassSkills from './ClassSkills';
-import CharacterInput from './CharacterInput';
+import CharacterInput from './BasicCharacterInput';
 import LevelCharacterInput from './LevelCharacterInput.js'
 
 
