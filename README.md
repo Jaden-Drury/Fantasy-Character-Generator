@@ -1,4 +1,4 @@
-CS222 Final Project - Team A
+As of now we can not claim the accuracy of any of the calcuations done in this program.
 
 Members: Nicki Manis, Jaden Drury, Brevin Wittmer
 
